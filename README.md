@@ -1,4 +1,4 @@
-[https://img.shields.io/badge/chat-On%20Slack!-blue.svg](https://fhbig.slack.com)
+[![Join the chat at https://fhbig.slack.com](https://img.shields.io/badge/chat-On%20Slack!-blue.svg)](https://fhbig.slack.com)
 
 # FHBig 
 The FredHutch Bioinformatics Insterest Group (FHBig) is created by a group of people who perform handson bioinformatics and data analysis at the Hutch. The purpose of this group is to exchange knowledge, support each other and improve collaboration and innovation.
