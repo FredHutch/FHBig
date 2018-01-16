@@ -1,3 +1,9 @@
+---
+layout: post
+title:     First Meeting Note
+date: 2018-01-03
+---
+
 ## Communication and cooperation
 - communication channel: slack 
 - code sharing: github
