@@ -1,11 +1,12 @@
 ---
 title: Hours
-layout: page
+layout: default
 permalink: /hours/
 ---
 
-# SciComp Office Hours
+# Hours
+## SciComp Office Hours
 - __Cloud__:
 - __General__: Wednesday 10am - 11pm, M4-???
 
-# Bioinformatics Consulting Hours
+## Bioinformatics Consulting Hours
