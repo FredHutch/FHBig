@@ -2,7 +2,7 @@ desc 'preview the site with drafts'
 task :preview do
   puts "## Generating site"
   puts "## Stop with ^C ( <CTRL>+C )"
-  system "jekyll serve --watch --drafts"
+  system "jekyll serve --watch --drafts --config=_config.yml,_config.dev.yml"
 end
 
 desc 'list tasks'

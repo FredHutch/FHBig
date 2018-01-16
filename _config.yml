@@ -3,6 +3,7 @@ description: FredHutch Bioinformatics Interest Group
 
 port: 4444
 
+page_root: /FHBig/
  
 theme: jekyll-theme-cayman
 
