@@ -1,6 +1,8 @@
 title: FHBig
 description: FredHutch Bioinformatics Interest Group
 
+date_format: "%b %-d, %Y"
+
 port: 4444
 
 page_root: /FHBig/
