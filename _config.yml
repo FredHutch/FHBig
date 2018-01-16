@@ -8,3 +8,8 @@ page_root: /FHBig/
 theme: jekyll-theme-cayman
 
 exclude: ["README.md", "Rakefile", "Gemfile", "Gemfile.lock"]
+
+plugins:
+  - jekyll-paginate
+
+paginate: 10
