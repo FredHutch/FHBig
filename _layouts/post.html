@@ -1,23 +1,24 @@
 ---
 layout: default
 ---
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {{ content }}
+</div>
 
-<div class="posts">
-    {% if paginator.page == 1 %}
-    {% endif %}
-    {% for post in paginator.posts %}
-      <div class="post py3">
-        <p class="post-meta">
-          {{ post.date | date: site.date_format }}
-        </p>
-        <h3 class="h2 post-title"><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></h3>
-        <div class="post-summary">
-          {% if post.summary %}
-            {{ post.summary }}
-          {% else %}
-            {{ post.excerpt }}
-          {% endif %}
-        </div>
-      </div>
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
     {% endfor %}
+  </ul>
 </div>
