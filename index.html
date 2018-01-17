@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="home">
+  
+  <div class="posts">
+    {% if paginator.page == 1 %}
+    {% endif %}
+    {% for post in paginator.posts %}
+      <div class="post py3">
+        <p class="post-meta">
+          {{ post.date | date: site.date_format }}
+        </p>
+        <h3 class="h2 post-title"><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></h3>
+        <div class="post-summary">
+          {% if post.summary %}
+            {{ post.summary }}
+          {% else %}
+            {{ post.excerpt }}
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+   </div>
+
+ {% include pagination.html %}
+</div>
+      
