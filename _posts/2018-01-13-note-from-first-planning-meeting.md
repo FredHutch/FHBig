@@ -1,7 +1,7 @@
 ---
 layout: post
 title:     First Meeting Note
-date: 2018-01-03
+date: 2018-01-13
 ---
 In our first planning meeting, we have discussed mainly about how the
 group operates. Topics include communication channels and things we can do.
