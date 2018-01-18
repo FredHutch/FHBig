@@ -22,5 +22,5 @@ Any member of FHBig such as
 ### Previewing the page locally
 1. Clone down the page repository (git clone
 `https://github.com/FredHutch/FHBig`)
-2. Run `rake preview` or `bundle exec jekyll serve` to preview server
+2. Run `rake preview` to preview server
 3. Visit `localhost:4444` in your browser to preview the page
