@@ -5,7 +5,9 @@ date: 2018-01-13
 tags: meeting organizing
 ---
 
-Our next FHBig meeting on Wed Jan 17th, 11am in M1A303 (Arnold). Below is the proposed agenda:
+Our next FHBig meeting on Wed Jan 17th, 11am in M1A303 (Arnold). Below
+is the proposed agenda:
+
 1. Some people haven't joined our Slack channel. Should we continue to use emails etc to be inclusive?
 2. Request for volunteers to set up and run a poll to determine times and days of meetings and next activities.
 3. Request for volunteers to help set up and run the FHGig Github pages.
