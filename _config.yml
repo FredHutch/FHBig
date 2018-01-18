@@ -5,7 +5,7 @@ date_format: "%b %-d, %Y"
 
 port: 4444
 
-page_root: /FHBig/
+page_root: /
 
 theme: jekyll-theme-cayman
 

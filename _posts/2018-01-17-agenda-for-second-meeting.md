@@ -2,6 +2,7 @@
 layout: post
 title:     Agenda for Second Meeting
 date: 2018-01-13
+tags: meeting organizing
 ---
 
 Our next FHBig meeting on Wed Jan 17th, 11am in M1A303 (Arnold). Below is the proposed agenda:

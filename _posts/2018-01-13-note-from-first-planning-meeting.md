@@ -2,12 +2,13 @@
 layout: post
 title:     First Meeting Note
 date: 2018-01-13
+tags: meeting organizing
 ---
 In our first planning meeting, we have discussed mainly about how the
 group operates. Topics include communication channels and things we can do.
 
 __Communication and cooperation__
-- communication channel: slack 
+- communication channel: slack
 - code sharing: github
 - documentation: Jupyterhub.fredhatch, github page (Markdown), Topics, AIST, TRAC?
 - webpage (blog posts, announcement, buzz news?) - Github page (jekyll/markdown) or sharepoint?
@@ -17,7 +18,7 @@ __Things we can do__
 - Journal club.
 - Hackathon.
 - Interactive workflows workshops:
-- Methods for different technology and platform 
+- Methods for different technology and platform
 - Resources (annotation, Galaxy, software, references)
 - Cloud: beagle
 - Sharing data with external collaborators
@@ -33,5 +34,3 @@ There are some discussion about cloud (beagle) and AWS. Sounds like getting a wo
 __Acknowledgement__
 - Thanks Hamid for bringing us together and initiating the group.
 - Thanks Stephen Tapscott for the coffee/tea and allowing Chao-Jen to work on organizing the meetings.
-
- 
