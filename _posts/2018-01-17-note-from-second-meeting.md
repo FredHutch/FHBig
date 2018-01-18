@@ -1,7 +1,8 @@
 ---
-layout: post
+layout:  post
 title:     Note From the Second Meeting
-date: 2018-01-17
+date:    2018-01-17
+tags:    meeting
 ---
 
 The second meeting is the last meeting before we get onto actions as a group. Further discussions and polls about lightning-talks and activities will continue on the slack channel. At this meeting we have asked for volunteers to coordinate certain tasks and discussed polls and potential group activties.
