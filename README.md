@@ -14,9 +14,10 @@ insterested in connecting with us or have questions, please join the
 
 ### Contact
 Any member of FHBig such as
-- Amy Paguirigan (gh-page)
+- Amy Paguirigan (github)
 - Hamid Bolouri
 - Chao-Jen Wong  (mailing list, slack administrator)
+- Jenny Smith (mailing list, slack administrator)
 
 ## Contributing
 ### Previewing the page locally
