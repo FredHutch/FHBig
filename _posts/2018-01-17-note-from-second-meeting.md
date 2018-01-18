@@ -15,7 +15,7 @@ The second meeting is the last meeting before we get onto actions as a group. Fu
   - Lightning- talk coordinator: Jenny Smith
   - Co-study groups?
   - fhbig.io (gh-page) : Lisa McFerrin, Sean Bennett, Jenny Smith and Chao-Jen Wong
-  - Public maling list (fhbig@lists.fhcrc.org): Jenny Smith and Chao-Jen Wong
+  - Public maling list: Jenny Smith and Chao-Jen Wong
   - Meeting note taker: Pattie Galipeau
 4. __Personal profiles on github wiki:__ We are trying to form a picture of who know what and whom.  Please edit your expertise on FHBig's github wiki. Ask SciComp to add your github account to FredHutch's github and add you to FHBig team.
 5. __Group activities:__
