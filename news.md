@@ -6,8 +6,12 @@ permalink: /news/
 
 # News
 
-## FHBig second planning meeting
-Jan. 17th, 2018, at 11am in M1-A303
+## Biostatistics & ATME Joint Seminar
+Network Enrichment Analysis
+- Speaker: Jing Ma, Assistant Member, Fred Hutch
+- Date: Wednesday, January 24, 2018
+- TIme: 12 - 1pm
+- Location: M1-A305/307, Arnold Building
 
 ## Computational Biology Program seminar
 Spatiotemporal Dynamics of Antibiotic Resistance in E. _faecalis_.
