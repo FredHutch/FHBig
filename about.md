@@ -16,5 +16,5 @@ If you are affiliated with FredHutch, Sage Bionetwork, or UW and
 insterested in connecting with us, please join the
 [FHBig](https://fhbig.slack.com) Slack workspace. 
 
-__Contact:__ Jenny Smith and Chao-Jen Wong 
+__Contact:__ Jenny Smith or Chao-Jen Wong 
 
