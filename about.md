@@ -1,5 +1,5 @@
 ---
-title: FHBig
+title: About
 layout: default
 permalink: /about/
 ---
