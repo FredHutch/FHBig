@@ -14,6 +14,7 @@ within the organization.
 ### Get Involved
 If you are affiliated with FredHutch, Sage Bionetwork, or UW and
 insterested in connecting with us, please join the
-[FHBig](https://fhbig.slack.com) Slack workspace. You can also contact our 
-Slack channel and mailing list admins, Jenny Smith and Chao-Jen Wong.
+[FHBig](https://fhbig.slack.com) Slack workspace. 
+
+__Contact:__ Jenny Smith and Chao-Jen Wong 
 
