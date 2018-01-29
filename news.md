@@ -6,12 +6,12 @@ permalink: /news/
 
 # News
 
-## Biostatistics & ATME Joint Seminar
-__Network Enrichment Analysis__
-- Speaker: Jing Ma, Assistant Member, Fred Hutch
-- Date: Wednesday, January 24, 2018
-- TIme: 12 - 1pm
-- Location: M1-A305/307, Arnold Building
+## FHBig Lightning-talk
+__Slack worspace, Github contribution, Multi-omic data intergration, and discussion__
+- Speaker: You, Dror Berel, Lisa MaFarrin, and Chao-Jen Wong
+- Data: Thursday, Februry 1, 2018
+- Time: 1 - 2pm
+- Location: M4-A805/817
 
 ## Computational Biology Program seminar
 __Spatiotemporal Dynamics of Antibiotic Resistance in E. _faecalis_.__
@@ -19,3 +19,6 @@ __Spatiotemporal Dynamics of Antibiotic Resistance in E. _faecalis_.__
 - Date: Thurday, February 1, 2018
 - Time: 10:30 - 11:30am
 - Location: Pelton Auditorium, Weintraub Building
+
+## Latest issue of The R Journal 
+[Volume 9/2, December 2017](https://journal.r-project.org/archive/2017-2/)
