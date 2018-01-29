@@ -16,7 +16,7 @@ __Slack worspace, Github contribution, [ImmuneSpaceR](https://www.bioconductor.o
 ## Computational Biology Program seminar
 __Spatiotemporal Dynamics of Antibiotic Resistance in E. _faecalis_.__
 - Speaker: Kevin Wood, PhD
-- Date: Thurday, Feb. 1, 2018
+- Date: Thursday, Feb. 1, 2018
 - Time: 10:30 - 11:30am
 - Location: Pelton Auditorium, Weintraub Building
 
