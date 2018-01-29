@@ -7,7 +7,7 @@ permalink: /news/
 # News
 
 ## FHBig Lightning-talk
-__Slack worspace, Github contribution, [ImmuneSpaceR](https://www.bioconductor.org/help/course-materials/2017/BioC2017/DDay/LightningTalk/SessionII/ImmuneSpaceR.pdf)(meta-analysis prototype)__
+__Slack worspace, Github contribution, [ImmuneSpaceR](https://www.bioconductor.org/help/course-materials/2017/BioC2017/DDay/LightningTalk/SessionII/ImmuneSpaceR.pdf) (meta-analysis prototype)__
 - Speaker: You, Dror Berel, Lisa MaFarrin, and Chao-Jen Wong
 - Data: Thursday, Februry 1, 2018
 - Time: 1 - 2pm
