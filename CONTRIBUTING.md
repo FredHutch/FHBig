@@ -21,6 +21,7 @@ To preview the blog page locally run `rake preview` and visit localhost:4444 in 
 ### Branches
 Branches are used to allow for separate work threads that do not disrupt the main code during development. Please create meaningful branch names and remove them when the task has been successfully merged.
 - Pull Requests & Review
+- commit messages
 - .gitignore
 
 ### Creating an issue
