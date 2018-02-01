@@ -7,7 +7,7 @@ Welcome to FHBig, the Fred Hutch Bioinformatics Interest Group. We are excited t
 This project and everyone participating in it is governed by the [Code of Conduct](../blob/master/Code_of_Conduct.md). By participating, you are expected to uphold this code. Please report any unacceptable behavior.
 
 ## Getting Started
-The folder structure within the repo is designed to support the [blog]() and communal contribution of scripts and workflows for bioinformatic tasks, while the wiki will house documentation for sharing knowledge or troubleshooting analysis workflows.  
+The folder structure within the repo is designed to support the [blog](https://fredhutch.github.io/FHBig/) and communal contribution of scripts and workflows for bioinformatic tasks, while the [wiki](https://github.com/FredHutch/FHBig/wiki) will house documentation for sharing knowledge or troubleshooting analysis workflows.  
 
 ## Contribute Code
 
