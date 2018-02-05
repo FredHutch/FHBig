@@ -6,10 +6,17 @@ permalink: /news/
 
 # News
 
+## Prentice Science & Statistics Integrative Seminar
+__Profiling the Immune System: From the Lab to Statistics to the Clinic__
+- Speaker: Steve DeRosa, Ollivier Hyrien, Raphael Gottardo 
+- Date: Wednesday, February 7, 2018
+- Time: 3:30 – 5:00 PM
+- Location: Pelton Auditorium - Weintraub Building 
+
 ## FHBig Lightning-talk
 __TBA__
 - Speaker: 
-- Data: Thursday, March 1, 2018
+- Date: Thursday, March 1, 2018
 - Time: 1 - 2pm
 - Location: M4-A805/817
 
