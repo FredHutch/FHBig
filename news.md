@@ -13,9 +13,9 @@ __Hutch Data Commonwealth Rockblock: HDC Data Platform and [Globus](www.globus.o
 - Time: 1 - 2pm
 - Location: M4-A813/815
 
-Thanks to HDC, Data and Software Products,Aubree Hoover.
+Thanks to HDC, Data and Software Products, and Aubree Hoover.
 
 ## Bioconductor International Conference 2018
-__Where Software and Biology Connect. July 25 - 27, Toronto, Canada.__
+__Where Software and Biology Connect. July 25 - 27, 2018, Toronto, Canada.__
 
 http://bioc2018.bioconductor.org/
