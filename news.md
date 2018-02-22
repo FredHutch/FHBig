@@ -6,19 +6,16 @@ permalink: /news/
 
 # News
 
-## Prentice Science & Statistics Integrative Seminar
-__Profiling the Immune System: From the Lab to Statistics to the Clinic__
-- Speaker: Steve DeRosa, Ollivier Hyrien, Raphael Gottardo 
-- Date: Wednesday, February 7, 2018
-- Time: 3:30 – 5:00 PM
-- Location: Pelton Auditorium - Weintraub Building 
-
 ## FHBig Lightning-talk
-__TBA__
-- Speaker: 
+__Hutch Data Commonwealth Rockblock: HDC Data Platform and [Globus](www.globus.org)__
+- Speakers: Sean Bethune (Data Architect) and Bret Dodson (Application Project Manager) 
 - Date: Thursday, March 1, 2018
 - Time: 1 - 2pm
-- Location: M4-A805/817
+- Location: M4-A813/815
 
-## Latest issue of The R Journal 
-[Volume 9/2, December 2017](https://journal.r-project.org/archive/2017-2/)
+Thanks to HDC, Data and Software Products,Aubree Hoover.
+
+## Bioconductor International Conference 2018
+__Where Software and Biology Connect. July 25 - 27, Toronto, Canada.__
+
+http://bioc2018.bioconductor.org/
