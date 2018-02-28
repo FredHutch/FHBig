@@ -11,7 +11,7 @@ __Hutch Data Commonwealth Rockblock: HDC Data Platform and [Globus](www.globus.o
 - Speakers: Sean Bethune (Data Architect) and Bret Dodson (Application Project Manager) 
 - Date: Thursday, March 1, 2018
 - Time: 1 - 2pm
-- Location: M4-A813/815
+- Location: M5-A813/815
 
 Thanks to HDC, Data and Software Products, and Aubree Hoover.
 
