@@ -1,7 +1,7 @@
 ---
 title: News
 layout: default
-permalink: /news/
+permalink: /events/
 ---
 
 # Events
