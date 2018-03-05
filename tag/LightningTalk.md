@@ -1,5 +1,5 @@
 ---
 layout: tagpage
 title: "Tag: lightning talk"
-tag: lightning talk
+tag: LightningTalk
 ---
