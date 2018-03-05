@@ -1,7 +1,7 @@
 ---
 title: Hours
 layout: default
-permalink: /Resources/
+permalink: /resources/
 ---
 
 # Hours
