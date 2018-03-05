@@ -1,7 +1,7 @@
 ---
 title: Hours
 layout: default
-permalink: /hours/
+permalink: /Resources/
 ---
 
 # Hours
@@ -19,5 +19,9 @@ The SciComp Next Gen HPC/Cloud Consulting hours are schedules from Jan
 - __General: Wednesdays, 10am - 12pm, M2-B102.__
 Any and all SciComp resources, questions, products, and services are covered at Office Hours. Come at any time.
 
+### [SciComp Wiki](https://teams.fhcrc.org/sites/citwiki/SciComp/)
 
 ## Bioinformatics Consulting Hours
+- __Drop-in hours__: Tuesday, 1:30PM-3:30PM in Thomas Building room DE-795. (Prefer email first) 
+- __By appointment__: contact bioinformatics [at] fredhutch [dot] org
+
