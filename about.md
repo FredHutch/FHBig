@@ -8,13 +8,18 @@ permalink: /about/
 The purpose of FredHutch Bioinformatics Insterest Group (FHBig) is to
 connect people who perform hands-on bioinformatics at the Hutch and
 to exchange knowledge and support each other. We hope to improve
-engagement, collaboration and innovation acrossed different labs
+engagement, collaboration and innovation across different labs
 within the organization.  
 
-### Get Involved
+We hold our monthly meeting on the first Thursday of the month at 1pm in M4-A805/A817. Our activities include, but not limited to, lightning-talks, workshops, hakathons, lunch, intellectual/non-intellectual discussions, and coffee-drinking.  
+
+### Get Involved 
+
 If you are affiliated with FredHutch, Sage Bionetwork, or UW and
 insterested in connecting with us, please join the
-[FHBig](https://fhbig.slack.com) Slack workspace. 
+[FHBig Slack workspace](https://fhbig.slack.com).
 
-__Contact:__ Jenny Smith or Chao-Jen Wong 
+__Get Annoucements:__ [Subscribe](https://lists.fhcrc.org/mailman/listinfo/fhbig)
+
+__Contact:__ Jenny Smith [jlsmith3] or Chao-Jen Wong [cwon2] 
 
