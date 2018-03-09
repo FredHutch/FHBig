@@ -42,6 +42,19 @@ You can create the post and commit directly on the
 Create new file -> Name your file -> Edit new file -> Commit
 ```
 
+You are done. Go to [fhbig.net](www.fhbig.net) to check your work.
+
+## About Tags
+To checkt the available tags you can use for posts, to go the `tag`
+folder. Or you can create a tag by adding a Markdown file in the `tag`
+folder. Here is an example:
+```
+---
+layout: tagpage
+title: "Tag: gh-pages"
+tag: gh-pages
+---
+```
 ## Take 2
 Alternatively,  you can create the post from your local repos. To do
 so, you need to install `jekyll`.
