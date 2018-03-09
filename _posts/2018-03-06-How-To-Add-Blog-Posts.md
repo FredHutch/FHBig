@@ -2,15 +2,15 @@
 layout: post
 title: How to Add Blog Posts to FHBig
 date: 2018-03-06
-tags: gh-pages
+tags: gh-pages 
 ---
 
 FHBig's website is powered by [GitHub](https://github.com) and
 [Jekyll](https://jekyllrb.com) and hosted on the
 [gh-pages branch](https://github.com/FredHutch/FHBig/tree/gh-pages). 
 We have both static pages (__About__,  __Resources__ and __Events__) and blog post
-pages on the gh-pages. The Markdown files (\*.md) of the former live on the main
-directory (*.md) and that of later on the `_post` folder.
+pages on our gh-pages. The markdown files (\*.md) of the former live on the main
+directory (*.md) and that of latter on the `_post` folder.
 
 Alougth the `gh-pages` branch is protected from being
 deleted and  force pushing, you can freely push without making
@@ -45,8 +45,8 @@ Create new file -> Name your file -> Edit new file -> Commit
 You are done. Go to [fhbig.net](www.fhbig.net) to check your work.
 
 ## About Tags
-To checkt the available tags you can use for posts, to go the `tag`
-folder. Or you can create a tag by adding a Markdown file in the `tag`
+Check the `tag` folder for available tags. To add a new tag, you can
+either file an issue or add a markdown file in the `tag` 
 folder. Here is an example:
 ```
 ---
@@ -55,6 +55,7 @@ title: "Tag: gh-pages"
 tag: gh-pages
 ---
 ```
+
 ## Take 2
 Alternatively,  you can create the post from your local repos. To do
 so, you need to install `jekyll`.
@@ -75,7 +76,9 @@ If your have added an SSH key on github, you can clone the repos this way
 > git checkout gh-pages
 ```
 Check which banch you are working on `> git branch`
-4. __Create a Markdown file and commit in the `_post` folder__.
+4. __Create a markdown file__ in the `_post` folder.  To preview the post locally, run
+   `rake preview` and visit localhost:4444 in your browser. 
+5. __Stage and commit the post:__
 ```
 > git add file_name.md
 > git commit file_name.md
