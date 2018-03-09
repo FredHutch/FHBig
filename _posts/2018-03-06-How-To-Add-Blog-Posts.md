@@ -8,23 +8,25 @@ tags: gh-pages
 FHBig's website is powered by [GitHub](https://github.com) and
 [Jekyll](https://jekyllrb.com) and hosted on the
 [gh-pages branch](https://github.com/FredHutch/FHBig/tree/gh-pages). 
-We have both static pages (__About__,  __Resources__ and __Events__) and blog post
-pages on our gh-pages. The markdown files (\*.md) of the former live on the main
-directory (*.md) and that of latter on the `_post` folder.
+It contains both static pages (__About__,  __Resources__ and
+__Events__) and blog posts. The markdown files (\*.md) of the former
+live on the main directory and that of latter on the `_post`
+folder. 
 
 Alougth the `gh-pages` branch is protected from being
-deleted and  force pushing, you can freely push without making
-_push request_ and waiting for approval.
+deleted and  force pushing, you can, unlike the master branch, freely
+push items without making _push request_ and waiting for approval.
 
-To create a new post, you need to create a Markdown file in the `_post`
+
+To create a new post, you need to create a markdown file in the `_post`
 folder. The name of the file must follow the following format:
 ```
-yyy-mm-dd-title.md
+yyyy-mm-dd-title.md
 ```
 
-The Markdown file must have a [YAML From
-Matter](https://jekyllrb.com/docs/frontmatter/) in the begining of the
-file. Here is an example:
+The markdown file must have a [YAML From
+Matter](https://jekyllrb.com/docs/frontmatter/) as the header.
+Here is an example:
 ```
 ---
 layout: post
@@ -42,8 +44,6 @@ You can create the post and commit directly on the
 Create new file -> Name your file -> Edit new file -> Commit
 ```
 
-You are done. Go to [fhbig.net](www.fhbig.net) to check your work.
-
 ## About Tags
 Check the `tag` folder for available tags. To add a new tag, you can
 either file an issue or add a markdown file in the `tag` 
@@ -57,8 +57,7 @@ tag: gh-pages
 ```
 
 ## Take 2
-Alternatively,  you can create the post from your local repos. To do
-so, you need to install `jekyll`.
+Alternatively,  you can create the post from your local repos.
 
 1. __Install Jekyll:__
 2. __Clone the repos:__
@@ -88,14 +87,14 @@ Check which banch you are working on `> git branch`
 > git push origin gh-pages 
 ```
 
-You can also create local branch and then merge your changes back to
-the gh-pages brach. If you want to avoid type username and password
+You can also create local branch and merge back to
+the gh-pages brach. If you want to avoid typing username and password
 when pushing to github, you can add an SSH key to github.
 
 ## Resources
 - [Cute GitHub tutorial](https://try.github.io)
-- [posts folder](https://jekyllrb.com/docs/posts/#the-posts-folder)
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [_posts folder](https://jekyllrb.com/docs/posts/#the-posts-folder)
+- [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 
 By Chao-Jen Wong
