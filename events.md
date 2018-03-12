@@ -13,7 +13,12 @@ __TBA__
 - Time: 1 - 2pm
 - Location: M4-A805
 
+## 4th Annual Summer Institute in Statistics for Big Data (SISBID)
+__July 11-27, 2018__
+
+Find more information about SISBID [here](http://www.biostat.washington.edu/suminst/sisbid).
+
 ## Bioconductor International Conference 2018
 __Where Software and Biology Connect. July 25 - 27, 2018, Toronto, Canada.__
 
-[Bioc2018](http://bioc2018.bioconductor.org/)
+Find more information about Bioc2018 [here](http://bioc2018.bioconductor.org/).
