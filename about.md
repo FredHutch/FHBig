@@ -27,4 +27,4 @@ __Contact:__ Jenny Smith [jlsmith3] or Chao-Jen Wong [cwon2]
 
 __Join FHBig Github team:__ Contact SciComp and give them your GitHub username. 
 
-Let us know who you are by editing our [local experts wiki page](https://github.com/FredHutch/FHBig/wiki/Expertise).
+Let us know who you are by editing our [local experts wiki page](https://github.com/FredHutch/FHBig/wiki/Expertise). You must be a member of FHBig GitHub team to edit the page.
