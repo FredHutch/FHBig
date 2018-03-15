@@ -18,8 +18,8 @@ We hold our monthly meeting on the first Thursday of the month at 1pm in M4-A805
 ### Get Involved 
 
 If you are affiliated with FredHutch, Sage Bionetwork, or UW and
-insterested in connecting with us, please join the
-[FHBig Slack workspace](https://fhbig.slack.com).
+insterested in connecting with us, sharing your thoughts, giving or proposing a talk, please join the
+[FHBig Slack workspace](https://fhbig.slack.com). 
 
 __Get Annoucements:__ [Subscribe](https://lists.fhcrc.org/mailman/listinfo/fhbig)
 
