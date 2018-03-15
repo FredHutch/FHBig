@@ -1,5 +1,5 @@
 ---
-title: News
+title: Events
 layout: default
 permalink: /events/
 ---
