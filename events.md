@@ -6,7 +6,8 @@ permalink: /events/
 
 # Events
 
-## ATME Affinity Group - Analysis tools and methods for high-throughput genomic data
+## ATME Affinity Group 
+Analysis tools and methods for high-throughput genomic data - presents
 __Vignettes from Final Studies by the Cancer Genome Atlas (TCGA) Research Network__
 
 The TCGA has had a wide impact on cancer genomics, through the generation of multi-platform molecular data on over 10,000 tumor samples, for 33 tumor types. We will discuss analysis methods applied in the TCGA studies on gastrointestinal tumors (colorectal, gastric and esophageal) and results drawn from those analyses. We will also illustrate aspects of analyses performed by the TCGA PanCancer Atlas initiative, a large collaborative effort that aims to identify aspects of cancer that are shared across multiple tumor types.
