@@ -22,7 +22,7 @@ push items without creating _push request_ and waiting for approval.
 To create a new post, you need to create a markdown file in the `_post`
 folder. The name of the file must follow the following format:
 ```
-yyyy-mm-dd-title.md
+yyyy-mm-dd-title.
 ```
 
 The post file must have a [YAML Front
@@ -53,7 +53,7 @@ whole content.
 ## About Tags
 Check the `tag` folder for available tags.  To add a new tag, you can
 either create an issue on our GitHub repo or add a markdown file in the `tag` 
-folde that follows the format below:
+folder that follows the format below:
 ```
 ---
 layout: tagpage
@@ -90,7 +90,7 @@ To check which banch you are working on, run `> git branch`
   Run `rake preview` and visit
   localhost:4444 in your browser.  Because the page root is different
   when you run the page on GitHub and on local machine, `Rakefile` and
-  `_config.dev.yml` are created to handle it.  
+  `_config.dev.yml` are created find the right page root.  
 6. __Stage and commit the post.__
 ```
 > git add file_name.md
