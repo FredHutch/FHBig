@@ -9,8 +9,8 @@ FHBig's website is powered by [GitHub](https://github.com) and
 [Jekyll](https://jekyllrb.com) and hosted on the
 [gh-pages branch](https://github.com/FredHutch/FHBig/tree/gh-pages) in
 our GitHub repo. 
-The site contains both static pages (__About__,  __Resources__ and
-__Events__) and blog posts. The markdown files (\*.md) of the former
+The site contains both static pages (About, Resources and
+Events) and blog posts. The markdown files (\*.md) of the former
 live on the main directory and that of latter on the `_post`
 folder. 
 
@@ -65,13 +65,13 @@ tag: gh-pages
 ## Take 2
 Alternatively,  you can create the post from your local repo.
 
-1. __Install Jekyll and Bundler__ through RubyGems.
+1. Install Jekyll and Bundler through RubyGems.
   - Requirement: GNU/Linux, Uix, or macOS. Ruby version 2.2.5. RubyGems.
 ```
 > sudo gem install jekyll bundler 
 ```
-If you have troubles installing jekyll, go to GitHub help document [here](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/).
-2. __Clone the repo__ to your local machine.
+Havng troubles installing jekyll? Find GitHub help document [here](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/).
+2. Clone the repo to your local machine.
 ```
 > cd my_path
 > git clone https://github.com/FredHutch/FHBig.git
@@ -80,23 +80,23 @@ If your have a SSH key on your GitHub account, you can clone the repo this way
 ```
 > git clone git@github.com:FredHutch/FHBig.git
 ```
-3. __Locate the `gh-pages` branch.__
+3. ocate the `gh-pages` branch.
 ```
 > git checkout gh-pages
 ```
 To check which banch you are working on, run `> git branch`
-4. __Create a markdown file__ in the `_post` folder, as describe above.
-5. __Preview the post locally.__
+4. Create a markdown file in the `_post` folder, as describe above.
+5. Preview the post locally.
   Run `rake preview` and visit
   localhost:4444 in your browser.  Because the page root is different
   when you run the page on GitHub and on local machine, `Rakefile` and
   `_config.dev.yml` are created find the right page root.  
-6. __Stage and commit the post.__
+6. Stage and commit the post.
 ```
 > git add file_name.md
 > git commit file_name.md
 ```
-7. __Push to the `gh-pages` branch.__
+7. Push to the `gh-pages` branch.
 ```
 > git push origin gh-pages 
 ```
