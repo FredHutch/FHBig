@@ -5,4 +5,11 @@ date: 2018-03-06
 tags: gh-pages
 ---
 
+#From the command line 
+```
+ > ssh username@rhino 
+```
+
+    
+
 
