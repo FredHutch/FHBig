@@ -25,3 +25,6 @@ Any and all SciComp resources, questions, products, and services are covered at 
 - __Drop-in hours__: Tuesday, 1:30PM-3:30PM in Thomas Building room DE-795. (Prefer email first) 
 - __By appointment__: contact bioinformatics [at] fredhutch [dot] org
 
+## Fredhutch.IO
+__[Fredhutch.IO](www.fredhutch.io) - Education about and promote access to computational resources at Fred Hutch.__ The initiative was started by Erick Matsen and Brian Claywell.
+
