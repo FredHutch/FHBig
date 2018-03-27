@@ -4,7 +4,7 @@ layout: default
 permalink: /resources/
 ---
 
-# Hours
+# FredHutch Computational Resources
 
 ## SciComp Office Hours
 
