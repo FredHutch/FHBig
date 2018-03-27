@@ -9,7 +9,7 @@ permalink: /events/
 ## FHBig Lightning-talk/workshop
 AWS Batch Use Case Demo + Discussion + Questions 
 - Speakers: Jenny Smith 
-- Guest: Dan Tenenbarum from SciComp
+- Guest: Dan Tenenbaum from SciComp
 - Date: Thursday, April 5, 2018
 - Time: 1 - 2pm
 - Location: M4-A805/813
