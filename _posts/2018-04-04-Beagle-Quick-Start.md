@@ -29,12 +29,13 @@ There are three classes available: F, G  and H, each of which has 16GB, 60GB and
 |H |16 | 244GB | largenode, r4.8xlarge |
 
 ### Example
-- Partition on G class with one task and have the whole RAM, 
+- Partition on G class with one task and have the whole RAM:
 ```
 sbatch -M beagle --exclusive -n1 -p largenode my_job.sh
 ```
+With `--exclusive` you get the whole computer with 18 cores and 60 GB RAM (if partition on G class) and not share with others.
 
-- Partition on G class with one task and a few cores,
+- Partition on G class with one task and a few cores:
 ```
 sbatch -M beagle -n1 -c4 -p largenode my_job.sh
 ```
