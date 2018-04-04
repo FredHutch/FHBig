@@ -2,7 +2,7 @@
 layout: post
 title: How to Add Blog Posts to FHBig
 date: 2018-03-06
-tags: gh-pages 
+tags: gh-pages technical_note
 ---
 
 FHBig's website is powered by [GitHub](https://github.com) and
