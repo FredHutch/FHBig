@@ -35,7 +35,7 @@ squeue -M beagle -u my_username
 There are three classes available: F, G  and H, each of which has 16GB, 60GB and 244GB, respectively. The default partition is the F class (campus).
 
 | Class |CPUs | RAM | Partition|
-|:---|:---|:---|:---|:---|
+|:---|:---|:---|:---|
 |F  | 4 | 16GB | campus, c4.2xlarge |
 |G | 18 | 60 GB | largenode, c4.8large |
 |H | 16 | 244GB | largenode, r4.8xlarge |
