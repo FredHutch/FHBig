@@ -40,7 +40,7 @@ There are three classes available: F, G  and H, each of which has 16GB, 60GB and
 |G | 18 | 60 GB | largenode, c4.8large |
 |H | 16 | 244GB | largenode, r4.8xlarge |
 
-There no limit to the number of nodes for each classes. 
+There no limit to the number of nodes for each classes. If load is heavy, SciComp will acquire more nodes.
 
 ### Examples
 - Partition on G class with one task and have the whole RAM:
