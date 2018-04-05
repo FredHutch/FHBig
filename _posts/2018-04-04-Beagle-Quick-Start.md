@@ -34,11 +34,13 @@ squeue -M beagle -u my_username
 ## Partition
 There are three classes available: F, G  and H, each of which has 16GB, 60GB and 244GB, respectively. The default partition is the F class (campus).
 
-| Class | CPUs | RAM | Partition|
-|:---|:---|:---|:---|
+| Class |CPUs | RAM | Partition|
+|:---|:---|:---|:---|:---|
 |F  | 4 | 16GB | campus, c4.2xlarge |
 |G | 18 | 60 GB | largenode, c4.8large |
-|H |16 | 244GB | largenode, r4.8xlarge |
+|H | 16 | 244GB | largenode, r4.8xlarge |
+
+There no limit to the number of nodes for each classes. 
 
 ### Examples
 - Partition on G class with one task and have the whole RAM:
