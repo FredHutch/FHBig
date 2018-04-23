@@ -3,6 +3,7 @@ title: Events
 layout: default
 permalink: /events/
 ---
+# Events
 
 ## Data Science Affinity Group and FHBig Seminar
 __The Future is Now: Current Topics in Biomedical Data Science and Bioinformatics Outreach for
@@ -37,6 +38,8 @@ experience, for educators and trainees alike.
 - Location: Sze Combo Rooms, The Thomas building
 - Acknowledgment: Sean Maden and Amy Leonardson
 
+---
+
 ## FHBig Lightning-talk, May, 2018
 __Synapes Use Cases__
 
@@ -46,6 +49,7 @@ __Synapes Use Cases__
 - Time: 1 - 2pm
 - Location: M4-A805/817
 
+---
 
 ## FHBig Lightning-talk, June, 2018
 __Cut&Run-Seq Technology and Analysis?__
@@ -55,11 +59,14 @@ __Cut&Run-Seq Technology and Analysis?__
 - Time: 1 - 2pm
 - Location: M4-A805/817
 
+---
 
 ## 4th Annual Summer Institute in Statistics for Big Data (SISBID)
 __July 11-27, 2018__
 
 Find more information about SISBID [here](http://www.biostat.washington.edu/suminst/sisbid).
+
+---
 
 ## Bioconductor International Conference 2018
 __Where Software and Biology Connect. July 25 - 27, 2018, Toronto, Canada.__
