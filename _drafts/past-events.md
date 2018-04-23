@@ -1,10 +1,7 @@
 ---
-title: Events
+title: Past Events
 layout: default
-permalink: /events/
 ---
-
-# Events
 
 ## FHBig Lightning-talk
 __AWS Batch pipeline use case for transcriptomic data processing__
