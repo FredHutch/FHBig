@@ -46,7 +46,7 @@ experience, for educators and trainees alike.
 - Date: Monday, May 21, 2018
 - Time: 1 - 2pm
 - Location: Sze Combo Rooms, The Thomas building
-- Acknowledgment: Sean Madsen and Amy Leonardson
+- Acknowledgment: Sean Maden and Amy Leonardson
 
 
 ## FHBig Lightning-talk, June, 2018
