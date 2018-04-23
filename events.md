@@ -4,17 +4,6 @@ layout: default
 permalink: /events/
 ---
 
-# Events
-
-## FHBig Lightning-talk, May, 2018
-__Synapes Use Cases__
-
-[Synapse](https://www.synapse.org/) use cases presented by experienced users.
-- Speakers: Amy Paguirigan and Nasim Sanati
-- Date: Thursday,  May 3, 2018
-- Time: 1 - 2pm
-- Location: M4-A805/817
-
 ## Data Science Affinity Group and FHBig Seminar
 __The Future is Now: Current Topics in Biomedical Data Science and Bioinformatics Outreach for
 Scientists__
@@ -47,6 +36,15 @@ experience, for educators and trainees alike.
 - Time: 1 - 2pm
 - Location: Sze Combo Rooms, The Thomas building
 - Acknowledgment: Sean Maden and Amy Leonardson
+
+## FHBig Lightning-talk, May, 2018
+__Synapes Use Cases__
+
+[Synapse](https://www.synapse.org/) use cases presented by experienced users.
+- Speakers: Amy Paguirigan and Nasim Sanati
+- Date: Thursday,  May 3, 2018
+- Time: 1 - 2pm
+- Location: M4-A805/817
 
 
 ## FHBig Lightning-talk, June, 2018
