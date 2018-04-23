@@ -10,7 +10,7 @@ permalink: /events/
 __Synapes Use Cases__
 
 [Synapse](https://www.synapse.org/) use cases presented by experienced users.
-- Speakers: Amy and Nasim
+- Speakers: Amy Paguirigan and Nasim Sanati
 - Date: Thursday,  May 3, 2018
 - Time: 1 - 2pm
 - Location: M4-A805/817
@@ -20,7 +20,7 @@ __The Future is Now: Current Topics in Biomedical Data Science and Bioinformatic
 Scientists__
 
 ### Abstract
-[Ben Busby]((url: http://linkedin.com/in/dcgenomics), Ph.D, is the
+[Ben Busby](http://linkedin.com/in/dcgenomics), Ph.D, is the
 Genomics Outreach Coordinator and Bioinformatics Training Lead at the
 National Library of Medicine. He has an extensive background in
 bioinformatics teaching, mentorship, and technical training, including
@@ -41,16 +41,18 @@ hackathons. Ben will contextualize this overview of data science
 topics with insights from his extensive teaching and outreach
 experience, for educators and trainees alike.
 
+### When
 - Speakers: Ben Busby
 - Date: Monday, May 21, 2018
 - Time: 1 - 2pm
--Location: Sze Combo Rooms, The Thomas building
+- Location: Sze Combo Rooms, The Thomas building
+- Acknowledgment: Sean Madsen and Amy Leonardson
 
 
 ## FHBig Lightning-talk, June, 2018
-__Cut&Run-Seq Technology and Analysis__
+__Cut&Run-Seq Technology and Analysis?__
 
-- Speakers: TBD
+- Speakers: Michael Meer and TBD
 - Date: Thursday,  June 7, 2018
 - Time: 1 - 2pm
 - Location: M4-A805/817
