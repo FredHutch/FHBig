@@ -4,6 +4,15 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-meta">{{ page.date | date: site.date_format }}
+      {% if page.tags != empty %}
+            &nbsp;|&nbsp; <i class="fa fa-tags" aria-hidden="true"></i>
+            {% assign tags = '' %}
+            {% for tag in page.tags %}
+              {% capture linkified_tag %}|<a href="{{ site.page_root }}/tag/{{ tag }}">{{ tag }}</a>{% endcapture %}
+              {% assign tags = tags | append: linkified_tag %}
+            {% endfor %}
+	    {{ tags | remove_first: '|' | split: '|' | join: ', ' }}
+      {% endif %}
       {% if page.author %}
           &nbsp;|&nbsp; <i class="fa fa-child" aria-hidden="true"></i>
               {{ page.author }}
@@ -11,12 +20,3 @@ layout: default
   </span>
   {{ content }}
 </div>
-
-
-
-<span>[
-  {% for tag in page.tags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="{{ site.page_root }}/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
-  {% endfor %}
-]</span>
