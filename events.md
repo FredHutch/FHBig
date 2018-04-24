@@ -15,10 +15,9 @@ Genomics Outreach Coordinator and Bioinformatics Training Lead at the
 National Library of Medicine. He has an extensive background in
 bioinformatics teaching, mentorship, and technical training, including
 over three years; experience hosting successful data science
-[hackathons](https://github.com/NCBI-Hackathons)  at the National
-Institutes of Health. He has further facilitated the establishment of
-new data science and bioinformatics training courses, seminars, and
-training events nation-wide.
+[hackathons  at the National Institutes of Health](https://github.com/NCBI-Hackathons). He 
+has further facilitated the establishment of new data science and
+bioinformatics training courses, seminars, and training events nation-wide.
 
 For his talk, Ben will discuss modern tools for the practice of data science
 in biomedicine. He will cover a full range of fundamentals, including
@@ -31,12 +30,12 @@ hackathons. Ben will contextualize this overview of data science
 topics with insights from his extensive teaching and outreach
 experience, for educators and trainees alike.
 
-### When
+### When/Where
 - Speakers: Ben Busby
 - Date: Monday, May 21, 2018
 - Time: 1 - 2pm
-- Location: Sze Combo Rooms, The Thomas building
-- Acknowledgment: Sean Maden and Amy Leonardson
+- Location: M1-A305/307, The Arnold building
+- Acknowledgment to Sean Maden and Amy Leonardson
 
 ---
 
