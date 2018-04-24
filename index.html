@@ -8,8 +8,9 @@ layout: default
     {% if paginator.page == 1 %}
     {% endif %}
     {% for post in paginator.posts %}
-      <div class="post py3">
-        <p class="post-meta">
+    <div class="post py3">
+      <h3 class="h2 post-title"><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></h3>
+      <p class="post-meta">
           {{ post.date | date: site.date_format }}
           {% if post.tags != empty %}
             &nbsp;|&nbsp; <i class="fa fa-tags" aria-hidden="true"></i>
@@ -25,7 +26,6 @@ layout: default
             {{ post.author }}
           {% endif %}
         </p>
-        <h3 class="h2 post-title"><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></h3>
         <div class="post-summary">
           {% if post.summary %}
             {{ post.summary }}
