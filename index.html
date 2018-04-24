@@ -20,7 +20,7 @@ layout: default
             {% endfor %}
 	    {{ tags | remove_first: '|' | split: '|' | join: ', ' }}
           {% endif %}
-          {% if post.author != empty %}
+          {% if post.author %}
             &nbsp;|&nbsp; <i class="fa fa-child" aria-hidden="true"></i>
             {{ post.author }}
           {% endif %}
