@@ -35,7 +35,8 @@ the content. The file with YAML Front Matter will be processed by
 layout: post
 title: How to Add Blog Posts to FHBig
 date: 2018-03-06
-tags: gh-pages
+tags: your_tag
+author: your_name
 ---
 ```
 
@@ -58,10 +59,11 @@ folder that follows the format below:
 ```
 ---
 layout: tagpage
-title: "Tag: gh-pages"
-tag: gh-pages
+title: "Tag: new-tag"
+tag: new-tag
 ---
 ```
+Note that the tag should not contain space.
 
 ## Take 2
 Alternatively,  you can create the post from your local repo.
