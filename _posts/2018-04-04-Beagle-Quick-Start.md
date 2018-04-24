@@ -3,6 +3,7 @@ layout: post
 title: Beagle Quick Start
 date: 2018-04-04
 tags: technical_note
+author: Chao-Jen Wong
 ---
 
 Lately I have experienced traffic jam on our gizmo cluster and cannot acquired largenode without waiting for a couple days. So it is time for me to migrate to beagle - a bridge to AWS cloud computing. The complete beagle cluster user guide is [here](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/beagle%20Cluster%20User%20Guide.aspx) on SciComp's wiki. Below is a just quick start. (click on the title to continue.)
