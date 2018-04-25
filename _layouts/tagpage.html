@@ -2,10 +2,10 @@
 layout: default
 ---
 <div class="post">
-<h1>Tag: {{ page.tag }}</h1>
+  <i class="fa fa-tags fa-3x" aria-hidden="true"></i> <h1>{{ page.tag }}</h1>
 <ul>
 {% for post in site.tags[page.tag] %}
-  <li><a href="{{site.page_root}}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
+  <li><a href="{{site.page_root}}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: site.date_format }})<br>
     {{ post.description }}
   </li>
 {% endfor %}
