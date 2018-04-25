@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="post">
-  <i class="fa fa-tags fa-3x" aria-hidden="true"></i>{{ page.tag }}
+  <i class="fa fa-tags fa-3x" aria-hidden="true"></i>&nbsp; &nbsp; <font size="14">{{ page.tag }}</font>
 <ul>
 {% for post in site.tags[page.tag] %}
   <li><a href="{{site.page_root}}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: site.date_format }})<br>
