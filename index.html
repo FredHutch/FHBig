@@ -16,7 +16,7 @@ layout: default
             &nbsp;|&nbsp; <i class="fa fa-tags" aria-hidden="true"></i>
             {% assign tags = '' %}
             {% for tag in post.tags %}
-              {% capture linkified_tag %}|<a href="{{ site.page_root }}/tag/{{ tag }}">{{ tag }}</a>{% endcapture %}
+              {% capture linkified_tag %}|<a href="{{ site.page_root }}tag/{{ tag }}">{{ tag }}</a>{% endcapture %}
               {% assign tags = tags | append: linkified_tag %}
             {% endfor %}
 	    {{ tags | remove_first: '|' | split: '|' | join: ', ' }}
