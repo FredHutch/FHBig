@@ -6,6 +6,9 @@ permalink: /resources/
 
 # FredHutch Computational Resources
 
+## FHBig Slack Workspace
+Have quesions and want to talk to a person? Chat with us on [FHBig Slack Workspace](https://fhbig.slack.com). If we don't know the anwer, we know who knows.
+
 ## SciComp Office Hours
 
 - __HPC/Cloud: Tuesdays 3pm in Thomas D3-106.__
