@@ -32,6 +32,6 @@ Any and all SciComp resources, questions, products, and services are covered at 
 
 ---
 
-## Fredhutch.IO
-__[Fredhutch.IO](www.fredhutch.io) - Education about and promote access to computational resources at Fred Hutch.__ The initiative was started by Erick Matsen and Brian Claywell.
+## FredHutch.IO
+__[FredHutch.IO](www.fredhutch.io) - Education about and promote access to computational resources at Fred Hutch.__ The initiative was started by Erick Matsen and Brian Claywell.
 
