@@ -8,9 +8,9 @@ permalink: /events/
 ## FredHutch Wiki Project
 
 We have an on-going [wiki project](https://fredhutch.github.io/wiki/) lead 
-by Amy, Jorden and Ben. We will meeet regularly on Thursday at 1:10 - 2pm 
-in M4-A220. Join us on wiki-contributors channel on FHBig Slack Workspace 
-to chat about your ideas.
+by Amy Paguirigan, Jorden Smith and Ben McGough,. We will meeet regularly on 
+Thursday at 1:10 - 2pm in M4-A220. To chat about your ideas, join us on the 
+wiki-contributors slack channel (https://fhbig.slack.com).
 
 ---
 
