@@ -3,6 +3,18 @@ title: Past Events
 layout: default
 ---
 
+## FHBig Lightning-talk, May 3, 2018
+__Intro to the Translational Genomics Data Commons__
+
+This lightening talk will be a quick overview of the progress the Translational Genomics Data Coordination Center has made in integrating systems to coordinate data collection, management and bioinformatics at the Fred Hutch.  The platform employs a modular suite of tools to capture and coordinate data from the level of human specimen banking all the way through the laboratory and the cloud to a [Synapse](https://www.synapse.org/) based Data Commons. After the overview there will be time for questions and suggestions.  The group is currently beginning the process of identifying possible groups to collaborate to pilot the system
+
+- Speaker: Amy Paguirigan
+- Guests: Nasim Sanati and Meredeith Slota (Sage Bionetworks)
+- Date: Thursday,  May 3, 2018
+- Time: 1 - 2pm
+- Location: M4-A805/817
+---
+
 ## FHBig Lightning-talk
 __AWS Batch pipeline use case for transcriptomic data processing__
 
