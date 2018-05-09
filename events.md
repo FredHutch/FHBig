@@ -5,6 +5,15 @@ permalink: /events/
 ---
 # Events
 
+## FredHutch Wiki Project
+
+We have an on-going [wiki project](https://fredhutch.github.io/wiki/) lead 
+by Amy, Jorden and Ben. We will meeet regularly on Thursday at 1:10 - 2pm 
+in M4-A220. Join us on wiki-contributors channel on FHBig Slack Workspace 
+to chat about your ideas.
+
+---
+
 ## Data Science Affinity Group and FHBig Seminar, May 21, 2018
 __The Future is Now: Current Topics in Biomedical Data Science and Bioinformatics Outreach for
 Scientists__
@@ -42,7 +51,7 @@ experience, for educators and trainees alike.
 ## FHBig Lightning-talk, June 7, 2018
 __TBA__
 
-- Speakers: Michael Meer and TBD
+- Speakers: TBD
 - Date: Thursday,  June 7, 2018
 - Time: 1 - 2pm
 - Location: M4-A805/817
