@@ -3,7 +3,7 @@ title: Events
 layout: default
 permalink: /events/
 ---
-# Events
+# FHBig Events
 
 ## FredHutch Wiki Project
 
@@ -30,7 +30,7 @@ Scientists__
 
 Slide can be found [here](https://www.slideshare.net/benbusby)
 
----
+# External Events
 
 ## 4th Annual Summer Institute in Statistics for Big Data (SISBID)
 __July 11-27, 2018__
