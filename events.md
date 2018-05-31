@@ -16,7 +16,7 @@ We have an on-going [wiki project](https://fredhutch.github.io/wiki/) of collect
 - Chime in on [FHBig Slack](https://fhbig.slack.com) in the #wiki-contributors  channel about what you like or what you see is missing.
 - Meet one on one with Amy Paguirigan to collaboratively curate content about your research domain even without using GitHub or doing the writing yourself.  Amy has sat down with the Genomics Shared Resource members and basically interviewed them, wrote what she perceived to be the essential material and then they edited my writing and approved it.  She can do the same for others too should that be of interest!!
 
-We meet regularly on every __Thursday at 1:10 - 2pm in C2M-027__, except June 21 (C1M-025). 
+We meet regularly on every __Thursday at 1:10 - 2pm in C2M-027__, except June 21 (C1M-025). After July 12th, the meeting room changes to M4-B104.
 
 ---
 
