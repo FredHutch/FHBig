@@ -29,11 +29,20 @@ We attempt to have one lightning-talk session about CutAndRun-seq technology/ana
 ## 4th Annual Summer Institute in Statistics for Big Data (SISBID)
 __July 11-27, 2018__
 
+- Module 1: Data Wrangling with R
+- Module 2: Reproducible Research for Biomedical Big Data
+- Module 3: Supervised Methods for Statistical Machine Learning
+- Module 4: Unsupervised Methods for Statistical Machine Learning
+- Module 5: Visualization of Biomedical Big Data
+
 Find more information about SISBID [here](http://www.biostat.washington.edu/suminst/sisbid).
 
 ---
 
 ## Bioconductor International Conference 2018
-__Where Software and Biology Connect. July 25 - 27, 2018, Toronto, Canada.__
+__Where Software and Biology Connect. July 25 - 27, 2018, University of Toronto, Canada.__
 
+```
+This conference highlights current developments within and beyond Bioconductor. Morning scientific talks and afternoon workshops provide conference participants with insights and tools required for the analysis and comprehension of high-throughput genomic data. ‘Developer Day’ precedes the main conference on July 25, providing developers and would-be developers an opportunity to gain insights into project direction and software development best practices.
+```
 Find more information about Bioc2018 [here](http://bioc2018.bioconductor.org/).
