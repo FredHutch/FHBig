@@ -42,7 +42,6 @@ Find more information about SISBID [here](http://www.biostat.washington.edu/sumi
 ## Bioconductor International Conference 2018
 __Where Software and Biology Connect. July 25 - 27, 2018, University of Toronto, Canada.__
 
-```
-This conference highlights current developments within and beyond Bioconductor. Morning scientific talks and afternoon workshops provide conference participants with insights and tools required for the analysis and comprehension of high-throughput genomic data. ‘Developer Day’ precedes the main conference on July 25, providing developers and would-be developers an opportunity to gain insights into project direction and software development best practices.
-```
+> This conference highlights current developments within and beyond Bioconductor. Morning scientific talks and afternoon workshops provide conference participants with insights and tools required for the analysis and comprehension of high-throughput genomic data. ‘Developer Day’ precedes the main conference on July 25, providing developers and would-be developers an opportunity to gain insights into project direction and software development best practices.
+
 Find more information about Bioc2018 [here](http://bioc2018.bioconductor.org/).
