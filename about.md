@@ -10,6 +10,7 @@ The FredHutch Bioinformatics Interest Group (FHBig) was created by a group of pe
 We hold our monthly meeting on the first Thursday of the month at 1pm in M4-A805/A817. Our activities include, but not limited to, lightning-talks, workshops, intellectual/non-intellectual discussions, collaborative work, and happy hour.  
 
 [Local experts wiki page](https://github.com/FredHutch/FHBig/wiki/Expertise)
+
 [FHBig Wiki](https://github.com/FredHutch/FHBig/wiki)
 
 ### Get Involved 
