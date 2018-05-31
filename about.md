@@ -5,14 +5,11 @@ permalink: /about/
 ---
 
 # About
-The purpose of FredHutch Bioinformatics Insterest Group (FHBig) is to
-connect people who perform hands-on bioinformatics at the Hutch and
-to exchange knowledge and support each other. We hope to improve
-engagement, collaboration and innovation across different labs
-within the organization.  
+The FredHutch Bioinformatics Interest Group (FHBig) was created by a group of people who perform hands-on bioinformatics and data analysis at the Hutch or are interested in learning. The purpose of this group is to exchange knowledge, support each other and improve collaboration and innovation across different groups at the Hutch.
 
-We hold our monthly meeting on the first Thursday of the month at 1pm in M4-A805/A817. Our activities include, but not limited to, lightning-talks, workshops, lunch, intellectual/non-intellectual discussions, collaborative work, and coffee-drinking.  
+We hold our monthly meeting on the first Thursday of the month at 1pm in M4-A805/A817. Our activities include, but not limited to, lightning-talks, workshops, intellectual/non-intellectual discussions, collaborative work, and happy hour.  
 
+[Local experts wiki page](https://github.com/FredHutch/FHBig/wiki/Expertise)
 [FHBig Wiki](https://github.com/FredHutch/FHBig/wiki)
 
 ### Get Involved 
