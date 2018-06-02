@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Agenda for June Meeting
+title: Detailed Agenda for June Meeting
 date: 2018-06-01
 tags: meeting organizing
 author: Jenny Smith
