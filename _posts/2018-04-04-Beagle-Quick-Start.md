@@ -24,24 +24,31 @@ To summit a job, use _sbatch_ in a similar manner as on gizmo and add `-M beagle
 ```
 sbatch -M beagle -n1 my_job.sh
 ```
-This way you are partitioning one F class note (16GB RAM) and will share memory with other jobs.
+This way you are partitioning one F class note (16GB RAM) and will share CPU and memory with other jobs.
 
 ## Managing jobs
-Similarly, use _squeue_, _sacct_ and _scancel_ and add `-M beagle` to the commend. Note that _srun_ and _salloc_ does not work on beagle.
+Similarly, use _squeue_, _sacct_ and _scancel_ and add `-M beagle` to the commend..
+
 ```
 squeue -M beagle -u my_username
 ```
 
-## Partition
-There are three classes available: F, G  and H, each of which has 16GB, 60GB and 244GB, respectively. The default partition is the F class (campus).
+Note that _srun_ and _salloc_ do not support the `-M` option: for interactive use you need to first log into the host fitzroy where you can run any of the Slurm commands without `-M`.
+
+## Partitions
+There are three classes available: F, G  and H, each of which has 16GB, 60GB and 244GB, respectively. The default partition is _campus_ which contains only F class nodes.  The other two classes of nodes are in the _largenode_ partition.
 
 | Class |CPUs | RAM | Partition|
 |:---|:---|:---|:---|
-|F  | 4 | 16GB | campus, c4.2xlarge |
-|G | 18 | 60 GB | largenode, c4.8large |
+|F  | 4 | 16GB | campus, c5.2xlarge |
+|G | 18 | 60 GB | largenode, c5.9xlarge |
 |H | 16 | 244GB | largenode, r4.8xlarge |
 
-There no limit to the number of nodes for each classes. If load is heavy, SciComp will acquire more nodes.
+Use `-p <partition name>` to select the partition.  When selecting the largenode partition you will get a G node unless you request more memory than available on the G class.
+
+### Limits
+
+Limits on beagle are enforced in the same way as they are on gizmo: a core limit per PI.  The limits are typically higher and can be increased upon request.
 
 ### Examples
 - Partition on G class with one task and have the whole RAM:
@@ -54,7 +61,12 @@ With `--exclusive` you get the whole computer with 18 cores and 60 GB RAM (if pa
 ```
 sbatch -M beagle -n1 -c4 -p largenode my_job.sh
 ```
-Without using `--exclusive`, you will share memory with other submitted jobs.
+Without using `--exclusive`, you may share CPU and memory with other submitted jobs.
+
+- Get a larger allocation on an H node
+```
+sbatch -M beagle --mem=200G -p largenode my_job.sh
+```
 
 Please edit this page is you have more useful information.
 
