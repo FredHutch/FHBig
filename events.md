@@ -5,6 +5,17 @@ permalink: /events/
 ---
 # FHBig Events
 
+## FHBig lightning-talk: Shiny App Deployment, Sep. 6, 2018
+Jenny Zhang will give an overview on application deployment in general and how to use the application deployment pipeline developed by Scientific Computing at Hutch for Shiny Apps. During the talk, a demo will be given with detailed explanation on the purpose of each step.
+
+- Speakers: Jenny Zhang
+- Guest: Robert McDermott
+- Date: Thursday,  September 6, 2018
+- Time: 1 - 2pm
+- Location: M4-A805/817
+
+---
+
 ## Fred Hutch Wiki Project
 The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [this link.](http://sciwiki.fredhutch.org/)
 
@@ -21,6 +32,8 @@ We meet regularly so please contact Amy Paguirigan (`apaguiri`) to get the curre
 
 ---
 
+## Pop Up Workshop
+- Data science book club
 
 # External Events
 
