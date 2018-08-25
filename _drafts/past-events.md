@@ -3,6 +3,18 @@ title: Past Events
 layout: default
 ---
 
+## FHBig lightning-talk and open discussion sessions, June 7, 2018
+We attempt to have one lightning-talk session about CutAndRun-seq followd by open discussion about FHBig's future plans.
+
+> Mike Meers from the Henikoff Lab will present a talk on analysis strategies for CUT&RUN, an epigenome profiling technique developed in the Henikoff Lab. His talk will focus on the basics of the CUT&RUN technique that are important when considering analysis approaches, comparisons with ChIP-seq analysis, and using both existing and new analysis techniques for QC, detecting enriched regions, and elucidating direct factor binding at base-pair resolution
+
+- Speakers: Michael Meers and FHBig members
+- Date: Thursday,  June 7, 2018
+- Time: 1 - 2pm
+- Location: M4-A805/817
+
+---
+
 ## Data Science Affinity Group and FHBig Seminar, May 21, 2018
 __The Future is Now: Current Topics in Biomedical Data Science and Bioinformatics Outreach for
 Scientists__
