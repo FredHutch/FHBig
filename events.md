@@ -49,6 +49,6 @@ The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [thi
 
 ## RSG with DREAM 2018 by ISCB
 
-- [Home({https://www.iscb.org/recomb-regsysgen2018)
+- [Home](https://www.iscb.org/recomb-regsysgen2018)
 - Date: December 8-10, 2018
 - Where: New York, USA 
