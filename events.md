@@ -16,7 +16,7 @@ Jenny Zhang will give an overview on application deployment in general and how t
 
 ---
 
-## Pop up workshop:  Intro to Shiny App
+## Pop Up Workshop:  Intro to Shiny App
 - lead: Jenny Zhang
 - Date: Thursday, September 7, 2018
 - Time: 12 - 1pm
@@ -29,7 +29,7 @@ The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [thi
 
 ---
 
-## Book Club: Data Science on Google Cloud Platform
+## Pup Up Workshop: Data Science on Google Cloud Platform
 - ebook from Seattle Public Library: [Data Science on Google Clud Platform](https://seattle.bibliocommons.com/v2/search?query=data+science+on+the+google+cloud+platform&searchType=title)
 - Data: Thursday, September 13, 20, 27, October 4, 11, 18, 26
 - Time: 2:30 - 4pm
