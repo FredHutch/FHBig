@@ -35,6 +35,8 @@ The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [thi
 - Time: 2:30 - 4pm
 - Location: M4-220
 
+---
+
 # External Events
 
 ## Rocky218 by International Society for COmputational Biology
@@ -42,6 +44,8 @@ The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [thi
 - [Home]{https://www.iscb.org/rocky2018}
 - Date: Dec. 6 - 8, 2018
 - Where: Aspen/Snowmass CO
+
+---
 
 ## RSG with DREAM 2018 by ISCB
 
