@@ -5,7 +5,7 @@ permalink: /events/
 ---
 # FHBig Events
 
-## FHBig lightning-talk: Shiny App Deployment, Sep. 6, 2018
+## Lightning-talk: Shiny App Deployment, Sep. 6, 2018
 Jenny Zhang will give an overview on application deployment in general and how to use the application deployment pipeline developed by Scientific Computing at Hutch for Shiny Apps. During the talk, a demo will be given with detailed explanation on the purpose of each step.
 
 - Speakers: Jenny Zhang
@@ -13,6 +13,14 @@ Jenny Zhang will give an overview on application deployment in general and how t
 - Date: Thursday,  September 6, 2018
 - Time: 1 - 2pm
 - Location: M4-A805/817
+
+---
+
+## Pop up workshop:  Intro to Shiny App
+- lead: Jenny Zhang
+- Date: Thursday, September 7, 2018
+- Time: 12 - 1pm
+- Location: M4-220
 
 ---
 
@@ -32,27 +40,22 @@ We meet regularly so please contact Amy Paguirigan (`apaguiri`) to get the curre
 
 ---
 
-## Pop Up Workshop
-- Data science book club
+## Book Club: Data Science on Google Cloud Platform
+-[ebook](https://seattle.bibliocommons.com/v2/search?query=data+science+on+the+google+cloud+platform&searchType=title)
+- Data: Thursday, September 13, 20, 27, October 4, 11, 18, 26
+- Time: 2:30 - 4pm
+- Location: M4-220
 
 # External Events
 
-## 4th Annual Summer Institute in Statistics for Big Data (SISBID)
-__July 11-27, 2018__
+## Rocky218 by International Society for COmputational Biology
 
-- Module 1: Data Wrangling with R
-- Module 2: Reproducible Research for Biomedical Big Data
-- Module 3: Supervised Methods for Statistical Machine Learning
-- Module 4: Unsupervised Methods for Statistical Machine Learning
-- Module 5: Visualization of Biomedical Big Data
+- [Home]{https://www.iscb.org/rocky2018}
+- Date: Dec. 6 - 8, 2018
+- Where: Aspen/Snowmass CO
 
-Find more information about SISBID [here](http://www.biostat.washington.edu/suminst/sisbid).
+## RSG with DREAM 2018 by ISCB
 
----
-
-## Bioconductor International Conference 2018
-__Where Software and Biology Connect. July 25 - 27, 2018, University of Toronto, Canada.__
-
-> This conference highlights current developments within and beyond Bioconductor. Morning scientific talks and afternoon workshops provide conference participants with insights and tools required for the analysis and comprehension of high-throughput genomic data. ‘Developer Day’ precedes the main conference on July 25, providing developers and would-be developers an opportunity to gain insights into project direction and software development best practices.
-
-Find more information about Bioc2018 [here](http://bioc2018.bioconductor.org/).
+- [Home]{https://www.iscb.org/recomb-regsysgen2018}
+- Date: December 8-10, 2018
+- Where: New York, USA 
