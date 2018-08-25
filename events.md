@@ -25,7 +25,7 @@ Jenny Zhang will give an overview on application deployment in general and how t
 ---
 
 ## Fred Hutch Wiki Project
-The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [this link.](http://sciwiki.fredhutch.org/). We meet regularly so please contact Amy Paguirigan (`apaguiri`) to get the current location and times or go to [the FHBig Google Calendar](https://calendar.google.com/calendar?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) and look for "Wiki Contributors Meetings" events.  
+The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [this link](http://sciwiki.fredhutch.org/). We meet regularly so please contact Amy Paguirigan (`apaguiri`) to get the current location and times or go to [the FHBig Google Calendar](https://calendar.google.com/calendar?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) and look for "Wiki Contributors Meetings" events.  
 
 ---
 
@@ -41,7 +41,7 @@ The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [thi
 
 ## Rocky218 by International Society for COmputational Biology
 
-- [Home]{https://www.iscb.org/rocky2018}
+- [Home](https://www.iscb.org/rocky2018)
 - Date: Dec. 6 - 8, 2018
 - Where: Aspen/Snowmass CO
 
@@ -49,6 +49,6 @@ The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [thi
 
 ## RSG with DREAM 2018 by ISCB
 
-- [Home]{https://www.iscb.org/recomb-regsysgen2018}
+- [Home({https://www.iscb.org/recomb-regsysgen2018)
 - Date: December 8-10, 2018
 - Where: New York, USA 
