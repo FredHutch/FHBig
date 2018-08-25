@@ -17,8 +17,8 @@ Jenny Zhang will give an overview on application deployment in general and how t
 ---
 
 ## Pop Up Workshop:  Intro to Shiny App
-- lead: Jenny Zhang
-- Date: Thursday, September 7, 2018
+- Lead: Jenny Zhang
+- Date: Friday, September 7, 2018
 - Time: 12 - 1pm
 - Location: M4-220
 
