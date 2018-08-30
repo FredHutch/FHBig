@@ -39,7 +39,7 @@ The Fred Hutch Biomedical Data Science Wiki is now up in it's draft form at [thi
 
 # External Events
 
-## Rocky218 by International Society for Computational Biology
+## Rocky2018 by International Society for Computational Biology
 
 - [Home](https://www.iscb.org/rocky2018)
 - Date: Dec. 6 - 8, 2018
