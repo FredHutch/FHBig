@@ -7,8 +7,6 @@ author: Jenny Smith
 ---
 
 
-Good Morning Everyone,
-
 The next meeting for FHBig will be held on, **Thursday, Sept 6th at 1:00pm** in Arnold M4-A805/A817. Jenny Zhang will be hosting a discussion on deploying Shiny applications using the Fred Hutch pipeline developed by Scientific Computing. Shiny is an open source R package that provides a framework for building web applications; Shiny can be used to transform data analyses into interactive web applications without needing to code in HTML, CSS or JavaScript (http://shiny.rstudio.com/).
 
 In addition, Jenny will provide a demonstration of the workflow with detailed explanation about each step in the process. This will be followed by an interactive Pop-Up Session led by Jenny on *Friday Sept. 7th at 12pm in M4-A220*. This would be a great opportunity to learn about Shiny and its many uses, then get some hands-on experience in the Pop-Up.   
