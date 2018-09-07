@@ -11,15 +11,15 @@ using `Rscript my_code.R` on the commend line, you need two extra steps: (1) sta
 indicating the path of _Rscript_: `#!/app/easybuild/software/R/3.5.1-foss-2016b-fh1/bin/Rscript`, and (2) change the mode of the 
 script as an executable: `chmod +x my_code.R`. With these two steps, you can do `sbatch my_code.R`.
     
-## Running with shebang
-Suppose `my_code.R` look like the following
+## R script with shebang
+Choose R version of your preference on Rhino. Here I am using `R/3.5.1-foss-2016b-fh1`. First line of your R script should start with shebang:
 
 ```
 #!/app/easybuild/software/R/3.5.1-foss-2016b-fh1/bin/Rscript
 print("hello world!")
 ```
-Here I am using `R/3.5.1-foss-2016b-fh1` on Rhino. You can check whichever R version is available on _Rhino_ (`module avail`). 
 
+## Running R in batch mode
 On commend line, you can run `my_code.R` like the following:
 ```
 ./my_code.R
