@@ -34,12 +34,12 @@ my_code.R
 I use `g+x` so that my lab members can also use it as an executable. 
 
 ## Sending batch script to slurm
-If your R scripts means to analyze rather large dataset, you can conveniently send your R script as batch script to slurm. 
+If your R scripts means to analyze rather large dataset, you can conveniently send your R script as batch script to slurm. For example:
 
 ```
 sbatch my_code.R
 ```
-or beagle
+
 ```
 sbatch -M beagle my_code.R
 ```
