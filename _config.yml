@@ -26,8 +26,8 @@ minimal_mistakes_skin: "contrast"
 locale: en-US
 title: "FHBig"
 description: "Fred Hutch Bioinformatics Interest Group"
-url                      : https://fredhutch.github.io/FHBig
-baseurl                  : ""
+url                      : https://fredhutch.github.io
+baseurl                  : "/FHBig"
 repository               : "FredHutch/FHBig"
 
 
