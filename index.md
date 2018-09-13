@@ -1,7 +1,6 @@
 ---
-title: ""
-layout: single
-classes: wide
+title: FHBig
+layout: splash
 permalink: /
 header:
   overlay_image: http://www.sciencemag.org/sites/default/files/styles/inline__450w__no_aspect/public/images/13%20June%202014.jpg?itok=Eo7hIVqO
