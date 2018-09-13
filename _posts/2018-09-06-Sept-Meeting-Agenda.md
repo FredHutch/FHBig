@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Detailed Agenda for September Meeting
-date: 2018-08-30
 tags: meeting organizing
 author: Jenny Smith
 ---

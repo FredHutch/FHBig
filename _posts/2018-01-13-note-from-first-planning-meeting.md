@@ -1,8 +1,7 @@
 ---
-layout: post
-title:     First Meeting Note
-date: 2018-01-13
+title:  First Meeting Note
 tags: meeting organizing
+category: testing
 ---
 In our first planning meeting, we have discussed mainly about how the
 group operates. Topics include communication channels and things we can do.

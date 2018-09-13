@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Adjustments to repo structure
-date: 2018-02-06
 tags: organizing
 author: Amy Paguirigan
 ---

@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Detailed Agenda for July Meeting
-date: 2018-07-02
 tags: meeting organizing
 author: Jenny Smith
 ---

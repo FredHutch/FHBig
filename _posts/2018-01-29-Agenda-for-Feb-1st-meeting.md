@@ -1,11 +1,9 @@
 ---
-layout: post
-title: Agenda for Feburary 1st Meeting.
-date: 2018-01-29
+title: Agenda for February 1st Meeting.
 tags: meeting LightningTalk
 ---
 
-Our next FHBig meeting on Thursday, Feburary 1st, 1pm in Arnold M4-805/A817. 
+Our next FHBig meeting on Thursday, Feburary 1st, 1pm in Arnold M4-805/A817.
 Below is the agenda for the meeting:
 
 Lightning Talks on:
