@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Detailed Agenda for July Meeting
-date: 2018-07-02
-tags: meeting organizing
+tags: Meeting Lightning-Talk
 author: Jenny Smith
 ---
 

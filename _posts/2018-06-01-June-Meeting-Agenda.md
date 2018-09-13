@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Detailed Agenda for June Meeting
-date: 2018-06-01
-tags: meeting organizing
+tags: Meeting Organizing
 author: Jenny Smith
 ---
 

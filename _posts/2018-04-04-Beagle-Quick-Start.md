@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Beagle Quick Start
-date: 2018-04-04
-tags: technical_note
+tags: Technical-Note
 author: Chao-Jen Wong
 ---
 

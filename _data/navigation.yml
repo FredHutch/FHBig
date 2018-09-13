@@ -1,0 +1,13 @@
+frontpage:
+  - title: "Links"
+    children:
+      - title: "Calendar"
+        url: /calendar/
+      - title: "About"
+        url: /about/
+  - title: "Blog"
+    children:
+      - title: "Posts by Year"
+        url: /year-archive/
+      - title: "Posts by Tag"
+        url: /tags/

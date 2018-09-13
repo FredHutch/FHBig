@@ -1,12 +1,24 @@
-desc 'preview the site with drafts'
-task :preview do
-  puts "## Generating site"
-  puts "## Stop with ^C ( <CTRL>+C )"
-  system "bundle exec jekyll serve --watch --drafts --config=_config.yml,_config.dev.yml"
+require 'html-proofer'
+
+task :test do
+  sh "bundle exec jekyll build"
+  options = { :assume_extension => true,
+    :empty_alt_ignore => true, 
+    :url_ignore => [/feed.xml/, "#", /teams.fhcrc.org/, 
+                    /toolbox.fhcrc.org/, /galaxy.fredhutch.org/,
+                    /rstudio.fhcrc.org/, /jupyterhub.fhcrc.org/,
+                    /aspera.fhcrc.org/, /mydb.fredhutch.org/,
+                    /translationalgenomics.fredhutch.org/,
+                    /lists.fhcrc.org/, /slack.com/]}
+  HTMLProofer.check_directory("./_site", options).run
 end
 
-desc 'list tasks'
-task :list do
-  puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
-  puts "(type rake -T for more detail)\n\n"
+task :testlocal do
+  sh "bundle exec jekyll build"
+  options = { :assume_extension => true,
+    :empty_alt_ignore => true, 
+    # still excluding internal URLs that require authentication
+    :url_ignore => [/teams.fhcrc.org/, /feed.xml/, "#", /slack.com/,
+                    /sw2srv/]}
+  HTMLProofer.check_directory("./_site", options).run
 end
