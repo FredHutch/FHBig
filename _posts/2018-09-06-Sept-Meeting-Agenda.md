@@ -1,6 +1,6 @@
 ---
 title: Detailed Agenda for September Meeting
-tags: meeting organizing
+tags: Meeting Organizing
 author: Jenny Smith
 ---
 

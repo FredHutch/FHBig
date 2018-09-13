@@ -1,6 +1,6 @@
 ---
 title: YAML Front Matter Format for FHBig Blog Post
-tags: technical_note
+tags: Technical-Note
 author: Chao-Jen Wong
 ---
 

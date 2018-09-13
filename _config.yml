@@ -168,6 +168,7 @@ defaults:
     values:
       layout: single
       share: false
+      author_profile: true
       sidebar:
         nav: "frontpage"
 #_pages

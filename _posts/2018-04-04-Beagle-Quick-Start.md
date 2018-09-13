@@ -1,6 +1,6 @@
 ---
 title: Beagle Quick Start
-tags: technical_note
+tags: Technical-Note
 author: Chao-Jen Wong
 ---
 

@@ -1,7 +1,6 @@
 ---
 title:  First Meeting Note
-tags: meeting organizing
-category: testing
+tags: Meeting Organizing
 ---
 In our first planning meeting, we have discussed mainly about how the
 group operates. Topics include communication channels and things we can do.

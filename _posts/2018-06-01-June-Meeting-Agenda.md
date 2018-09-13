@@ -1,6 +1,6 @@
 ---
 title: Detailed Agenda for June Meeting
-tags: meeting organizing
+tags: Meeting Organizing
 author: Jenny Smith
 ---
 

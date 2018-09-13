@@ -1,6 +1,6 @@
 ---
 title: How to Add Blog Posts to FHBig
-tags: technical_note
+tags: Technical-Note
 author: Chao-Jen Wong
 ---
 

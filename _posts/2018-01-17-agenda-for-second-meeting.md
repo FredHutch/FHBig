@@ -1,6 +1,6 @@
 ---
 title:     Agenda for Second Meeting
-tags: meeting organizing
+tags: Meeting Organizing
 ---
 
 Our next FHBig meeting on Wed Jan 17th, 11am in M1A303 (Arnold). Below

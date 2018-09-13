@@ -1,6 +1,6 @@
 ---
 title: Detailed Agenda for July Meeting
-tags: meeting organizing
+tags: Meeting Lightning-Talk
 author: Jenny Smith
 ---
 

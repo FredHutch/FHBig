@@ -1,6 +1,6 @@
 ---
 title: Running R Script in Batch Mode on Rhino
-tags: technical_note
+tags: Technical-Note
 author: Chao-Jen Wong
 ---
 

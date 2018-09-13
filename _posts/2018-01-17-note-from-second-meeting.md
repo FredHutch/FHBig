@@ -1,6 +1,7 @@
 ---
 title:     Note From the Second Meeting
-tags:    meeting
+tags: Meeting
+author: Chao-Jen Wong
 ---
 
 The second meeting is the last meeting before we get onto actions as a group. Further discussions and polls about lightning-talks and activities will continue on the slack channel. At this meeting we have asked for volunteers to coordinate certain tasks and discussed polls and potential group activties.
@@ -21,11 +22,9 @@ The second meeting is the last meeting before we get onto actions as a group. Fu
    - Certainly people are interested in learning _Ducker_ and _AWS_. We agree to ask _SciComp_ to give toturials.
    - Lightgning-talks: Dror's mulit-omic R/Biocondutor package, gh-page and slack protocols, and etc. Whether you like to suggest topics or give a take, please make proposals on the slack lightning_talk channel.
   - Subject-specific co-study group (e.g. ‘clonal evolution analysis’, or ‘data integration methods’, or ‘simulation modeling’, etc.)
-5. __Common workspace:__ A place where we gether to work and help each other, huh! Matt has scouted a potential place in the library. We will try to see how it works out in the next couple weeks.
-6. __Outreach:__ How do we outreach to new comers? Brian Clayman (FH.IO) has a mailing list that we reach out to people who might be interested. (do i miss something here...)
+5. __Common workspace:__ A place where we gather to work and help each other, huh! Matt has scouted a potential place in the library. We will try to see how it works out in the next couple weeks.
+6. __Outreach:__ How do we outreach to new comers? Brian Claywell (fredhutch.io) has a mailing list that we reach out to people who might be interested. (do i miss something here...)
 7. __About FHBig.io:__ The FHBig.io (now as fredhutch.github.io/FHBig) is a blog page to share knowledge and information. It will also consolidate center-wide, bioinformatics-related (but not restricted to) seminars and traning information on the "News" static page. Please contact FHBig.io maintainers for contribution protocols.
 
 
 Please let me know if I miss anything.
-
-By Chao-Jen

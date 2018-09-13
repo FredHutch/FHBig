@@ -3,7 +3,11 @@ frontpage:
     children:
       - title: "Calendar"
         url: /calendar/
-      - title: "Blog"
-        url: /blog/
       - title: "About"
         url: /about/
+  - title: "Blog"
+    children:
+      - title: "Posts by Year"
+        url: /year-archive/
+      - title: "Posts by Tag"
+        url: /tags/
