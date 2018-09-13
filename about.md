@@ -1,5 +1,6 @@
 ---
 title: About FHBig
+permalink: /about/
 ---
 
 The Fred Hutch Bioinformatics Interest Group (FHBig) was created in 2018 by a group of people who perform hands-on bioinformatics and data analysis at the Hutch or are interested in learning. The purpose of this group is to exchange knowledge, support each other and improve collaboration and innovation across different groups at the Hutch.

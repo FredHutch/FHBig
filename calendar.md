@@ -1,5 +1,6 @@
 ---
 title: Calendar
+permalink: /calendar/
 ---
 Look for upcoming Fred Hutch events in our calendar or see relevant external events below.  
 ##  Fred Hutch Events
