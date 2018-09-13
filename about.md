@@ -23,6 +23,6 @@ __Join the conversation on Slack:__ Join the [FHBig Slack workspace](https://fhb
 
 __Join the Mailing list:__ Join [here](https://lists.fhcrc.org/mailman/listinfo/fhbig), though communications are primarily via the Slack Workspace, we do send monthly meeting reminders and occasional notifications to email as well.
 
-__Join the FHBig Github team:__ Email you GitHub username to `SciComp` to be added to the Fred Hutch GitHub institution.  
+__Join the FHBig Github team:__ Email your GitHub username to `SciComp` to be added to the Fred Hutch GitHub institution.  
 
-__Send suggestions for the Calendar:__ See an event that would be of interest to this community?  Email group leaders (Jenny Smith [jlsmith3] or Chao-Jen Wong [cwon2] at [fredhutch.org]) to have it added to our Google Calendar.   
+__Send suggestions for the Calendar:__ See an event that would be of interest to this community?  Post your event on Slack in the #general channel OR email group admins Jenny Smith `jlsmith3` or Chao-Jen Wong `cwon2` at [fredhutch.org] to have it added to our Google Calendar.   
