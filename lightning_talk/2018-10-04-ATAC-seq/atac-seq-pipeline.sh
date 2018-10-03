@@ -12,6 +12,10 @@ mkdir -p $trimmedOutDir
 
 hg38_genomeBuild=/shared/biodata/ngs/Reference/iGenomes/Homo_sapiens/UCSC/hg38/Sequence/Bowtie2Index/genome
 
+#' clean up the pre-loaded modules
+source /app/Lmod/lmod/lmod/init/bash
+ml purge
+
 ml bowtie2/2.2.5
 ml cutadapt/1.1
 ml picard/2.7.1-Java-1.8.0_92
@@ -59,11 +63,11 @@ java -jar ${EBROOTPICARD}/build/libs/picard.jar MarkDuplicates  \
      I=$sampleName.bam O=$sampleName\_filter.bam  \
      M=$sampleName\_dup\_matrics.txt REMOVE_DUPLICATES=true \
      ASSUME_SORTED=true \
-     TMP_DIR=$HOME/tmp
+     TMP_DIR=$SCRATCH
 
 mv $sampleName\_filter.bam $sampleName.bam
 
-# remove chrM: use Bioconductor?
+# 5. remove chrM (optional): it is very slow.
 echo "remove chrM"
 samtools view -h $sampleName.bam | awk '{if($3 != "chrM"){print $0}}' \
     | samtools view -Sb - > $sampleName\_filter.bam
