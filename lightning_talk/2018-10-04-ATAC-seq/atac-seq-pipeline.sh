@@ -61,7 +61,7 @@ java -jar ${EBROOTPICARD}/build/libs/picard.jar MarkDuplicates  \
      ASSUME_SORTED=true \
      TMP_DIR=$HOME/tmp
 
-mv $sampleName\_filer.bam $sampleName.bam
+mv $sampleName\_filter.bam $sampleName.bam
 
 # remove chrM: use Bioconductor?
 echo "remove chrM"
