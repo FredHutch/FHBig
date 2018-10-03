@@ -184,8 +184,8 @@ __Why setting `-X 1000` is reasonable?__
 
 ```sh
 # sort 
-samtools sort -@ 4 $sampleName.bam $sampleName.bam.sorted
-mv $sampleName.bam.sorted.bam $sampleName.bam
+samtools sort -@ 4 $sampleName.bam > $sampleName.sorted
+mv $sampleName.sorted.bam $sampleName.bam
 ```
 
 
