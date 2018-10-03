@@ -1,6 +1,6 @@
 #!/bin/bash
 #./atac-seq-pipeline.sh
-#SBATCH --exclusive ./do_bowtie2.sh --mail-type=ALL --mail-user=cwon2@fhcrc.org -A tapscott_s
+#SBATCH --exclusive ./atac-seq-pipeline.sh --mail-type=ALL --mail-user=cwon2@fhcrc.org -A tapscott_s
 
 fastqDir=$1
 sampleName=$2
