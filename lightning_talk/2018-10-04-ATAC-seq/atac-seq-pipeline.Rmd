@@ -2,7 +2,9 @@
 title: "ATAC-seq Data Pre-processing Pipeline"
 author: "Chao-Jen Wong"
 date: "October 1, 2018"
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+    widescreen: true
 ---
 
 ```{r setup, include=FALSE}
