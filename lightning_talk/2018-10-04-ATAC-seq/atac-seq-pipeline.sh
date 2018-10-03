@@ -54,7 +54,7 @@ bowtie2 --very-sensitive -p 4 --seed 123 -k 16 -I 20 -X 1000  -x $hg38_genomeBui
     | samtools view -Sb - > $sampleName.bam
 
 # sort
-samtools sort -@ 4 $sampleName.bam $sampleName.bam.sorted
+samtools sort -@ 4 $sampleName.bam > $sampleName.bam.sorted
 mv $sampleName.bam.sorted.bam $sampleName.bam
 
 # 4. PCR duplicates
