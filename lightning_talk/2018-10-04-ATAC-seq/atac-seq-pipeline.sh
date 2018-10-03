@@ -1,5 +1,5 @@
 #!/bin/bash
-#./do_bowtie2.sh
+#./atac-seq-pipeline.sh
 #SBATCH --exclusive ./do_bowtie2.sh --mail-type=ALL --mail-user=cwon2@fhcrc.org -A tapscott_s
 
 fastqDir=$1
@@ -49,12 +49,7 @@ bowtie2 --very-sensitive -p 4 --seed 123 -k 16 -I 20 -X 1000  -x $hg38_genomeBui
      -1 $trim1.gz -2 $trim2.gz \
     | samtools view -Sb - > $sampleName.bam
 
-#bowtie2 --very-sensitive -p 4 --seed 123 -k 16 -I 20 -X 1200 -x $hg38_genomeBuild \
-#	-1 $trim1.gz -2 $trim2.gz > $sampleName.sam
-
-# sam to bam and sort
-#samtools view -Sb $sampleName.sam > $sampleName.bam
-#rm $sampleName.sam
+# sort
 samtools sort -@ 4 $sampleName.bam $sampleName.bam.sorted
 mv $sampleName.bam.sorted.bam $sampleName.bam
 
