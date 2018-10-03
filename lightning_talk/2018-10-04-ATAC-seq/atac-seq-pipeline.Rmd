@@ -211,7 +211,7 @@ java -jar ${EBROOTPICARD}/build/libs/picard.jar MarkDuplicates  \
      I=$sampleName.bam O=$sampleName\_filter.bam  \
      M=$sampleName\_dup\_matrics.txt REMOVE_DUPLICATES=true \
      ASSUME_SORTED=true \
-     TMP_DIR=$HOME/tmp
+     TMP_DIR=$SCRATCH
 
 
 mv $sampleName\_filer.bam $sampleName.bam
