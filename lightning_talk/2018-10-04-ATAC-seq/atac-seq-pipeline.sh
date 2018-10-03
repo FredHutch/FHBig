@@ -16,10 +16,10 @@ hg38_genomeBuild=/shared/biodata/ngs/Reference/iGenomes/Homo_sapiens/UCSC/hg38/S
 source /app/Lmod/lmod/lmod/init/bash
 ml purge
 
-ml bowtie2/2.2.5
+ml Bowtie2/2.3.2-foss-2016b
 ml cutadapt/1.1
 ml picard/2.7.1-Java-1.8.0_92
-ml samtools/1.0
+ml SAMtools/1.8-foss-2016b
 
 # 1. cat all fastq.gz files
 cd $fastqDir
