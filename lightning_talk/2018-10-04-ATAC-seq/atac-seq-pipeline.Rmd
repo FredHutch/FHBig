@@ -76,7 +76,7 @@ done
 
     Tips: Hutbase.org offers FASTQC+Filtering pipeline
 
-##Pre Pre-Processing
+## Pre Pre-Processing
 __Concatenate sequence reads on multiple lanes __  
 
 Genomic Core sequence samples on multiple lanes may have separate files for each lane. 
@@ -89,7 +89,7 @@ or
 zcat $(ls *_R1_*.fastq.gz) > sampleName_R1.fastq
 ```
 
-## Apater removal
+## Adapter removal
 
 [cutadapt](https://cutadapt.readthedocs.io/en/stable/guide.html) searches input reads for a given adapter sequence and removes it.   
 
@@ -170,9 +170,9 @@ bowtie2 --very-sensitive -p 4 \
 
 __Why setting `-X 1000` is reasonable?__
 
-- necleosome (~147bps) + space in between (~20bps) ~= 160 bps
+- nucleosome (~147bps) + space in between (~20bps) ~= 160 bps
 - cover up at least three size of nucleosomes ~= 600 bps
-- cover up possible sikpped nucleosoms at TSS
+- cover up possible skipped nucleosoms near TSS
 - just to loosen up
 
 
