@@ -74,7 +74,7 @@ done
 
     Tips: Hutbase.org offers FASTQC+Filtering pipeline
 
-##Pre Pre-Processing
+## Pre Pre-Processing
 __Concatenate sequence reads on multiple lanes __  
 
 Genomic Core sequence samples on multiple lanes may have separate files for each lane. 
