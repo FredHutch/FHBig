@@ -258,7 +258,7 @@ library(org.Hs.eg.db)
 library(TxDb.Hsapiens.UCSC.hg38.knownGene)
 ```
 
-## Annotaion
+## Annotation
 Bridge MACS2's narrowPeaks bed file to ChIPseeker
 ```{r annotation, echo=TRUE, eval=FALSE}
 #' peaks bed file -> GRanges
