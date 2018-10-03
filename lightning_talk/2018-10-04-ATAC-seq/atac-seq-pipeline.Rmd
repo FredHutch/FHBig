@@ -26,7 +26,7 @@ for mapping chromatin accessibility genome-wide._
 
 __Data Pre-processing__: make clean BAM files   
 
-- Adpator removel    
+- Adapter removal    
 - Alignments    
 - PCR duplicates    
 - Exclude chrM    
@@ -151,7 +151,7 @@ __Usual paramters__
 |`--very-sensitive`| better alignment results are frequently achieved with it | --sensitive|
 |`-p <int>`|Number of cores on which to run|1|
 |`--seed <int>`| number used to initialize a pseudorandom number generator| |
-|`-k <int>`| Search for one or more alignments, report <int> aligments| |
+|`-k <int>`| Search for one or more alignments, report <int> alignments| |
 |`-a`| Search for and report all alignments | |
 
 
@@ -172,7 +172,7 @@ __Why setting `-X 1000` is reasonable?__
 
 - nucleosome (~147bps) + space in between (~20bps) ~= 160 bps
 - cover up at least three size of nucleosomes ~= 600 bps
-- cover up possible skipped nucleosoms near TSS
+- cover up possible skipped nucleosome near TSS
 - just to loosen up
 
 
@@ -247,7 +247,7 @@ macs2 callpeak -f BAMPE -t $sampleName.bam \
     
 ## Annotation
 
-Biocondutor __ChIPseeker__ or __ChIPpeakAnno__ packages
+Bioconductor __ChIPseeker__ or __ChIPpeakAnno__ packages
 
 
 ```{r load lib, echo=TRUE, eval=FALSE}
