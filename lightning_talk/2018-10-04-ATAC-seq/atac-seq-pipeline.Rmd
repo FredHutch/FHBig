@@ -111,6 +111,10 @@ Read 2
 
 
 ```sh
+# clean up pre-loaded modules
+source /app/Lmod/lmod/lmod/init/bash
+ml purge
+# start trimming
 ml cutadapt
 cutadapt -g TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG \
     -O 5 -e 0.2 \
@@ -157,8 +161,8 @@ __Usual paramters__
 
 ## Alignment using Bowtie2
 ```sh
-ml bowtie2/2.2.5   # if not already loaded
-ml samtools/1.0
+ml Bowtie2/2.3.2-foss-2016b   # if not already loaded
+ml SAMtools/1.8-foss-2016b
 bowtie2 --very-sensitive -p 4 \
      -I 20 -X 1000  -x $hg38_genomeBuild \
      -1 $trim1.gz -2 $trim2.gz \
