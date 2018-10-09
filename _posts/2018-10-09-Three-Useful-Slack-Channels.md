@@ -10,9 +10,9 @@ We use this channel to make announcements, display the weekly calendar and ask g
 
 ## #co-working-poll
 This channel is for curating ideas for co-working projects, forming or joining co-working groups/journal clubs, and finding lunch buddies. You are strongly encouraged to create a poll and find people with similar interests. Here is an example of making a poll:
-
+```
 /poll Who wants to join a journal club on Thursday, October 18 at 1am at Arnold’s Atrium “Yes” “Maybe”
-
+```
 ## #question-and-answer
 This is the place to ask questions related to scientific computing, bioinformatics, data sciences, programming or anything technical/academic. And please share your knowledge here as well. 
 
