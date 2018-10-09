@@ -1,6 +1,6 @@
 ---
 title: Three Useful Channels in the FHBig Slack
-tags:  Organizing
+tags: Organizing
 author: Chao-Jen Wong
 ---
 How can you receive information and communicate with FHBig members without exploring hundreds of conversations across several Slack channels? These three channels can save you some hassle: `#general`, `#co-working-poll` and `#question-and-answer`. 
