@@ -4,7 +4,7 @@ tags: Technical-Note
 author: Chao-Jen Wong
 ---
 
-The protocol of the YAML front matter for FHBig blog post includes five paired-variables: layout, title, data, tags, and author. Below is an example:
+The YAML front matter for FHBig blog post requires three paired-variables: title, tags, and author. Below is an example:
 ```
 ---
 title: Your Post Title
