@@ -12,4 +12,5 @@ group :development, :test do
   gem 'jemoji', '~> 0.10.0'
   gem 'html-proofer', '~> 3.9.0'
   gem 'rake', '~> 12.3.0'
+  gem 'jekyll-include-cache'
 end

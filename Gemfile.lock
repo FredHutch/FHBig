@@ -131,6 +131,8 @@ GEM
     jekyll-github-metadata (2.9.4)
       jekyll (~> 3.1)
       octokit (~> 4.0, != 4.4.0)
+    jekyll-include-cache (0.1.0)
+      jekyll (~> 3.3)
     jekyll-mentions (1.4.1)
       html-pipeline (~> 2.3)
       jekyll (~> 3.0)
@@ -260,6 +262,7 @@ DEPENDENCIES
   github-pages
   html-proofer (~> 3.9.0)
   jekyll-gist (~> 1.5.0)
+  jekyll-include-cache
   jekyll-redirect-from (~> 0.14.0)
   jekyll-remote-theme (~> 0.3.0)
   jekyll-sitemap (~> 1.2.0)
@@ -268,4 +271,4 @@ DEPENDENCIES
   rake (~> 12.3.0)
 
 BUNDLED WITH
-   1.16.2
+   1.16.6
