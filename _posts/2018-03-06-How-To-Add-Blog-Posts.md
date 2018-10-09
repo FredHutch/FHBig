@@ -30,9 +30,7 @@ the content. The file with YAML Front Matter will be processed by
 `jekyll`. Here is an example:
 ```
 ---
-layout: post
 title: How to Add Blog Posts to FHBig
-date: 2018-03-06
 tags: your_tag
 author: your_name
 ---
@@ -50,18 +48,6 @@ The new post will appear on the __Blog__ page, and only the first
 paragraph will be displayed. Click the title of the post to view the
 whole content.
 
-## About Tags
-Check the `tag` folder for available tags.  To add a new tag, you can
-either create an issue on our GitHub repo or add a markdown file in the `tag`
-folder that follows the format below:
-```
----
-layout: tagpage
-title: "Tag: new-tag"
-tag: new-tag
----
-```
-Note that the tag should not contain space.
 
 ## Take 2
 Alternatively,  you can create the post from your local repo.
@@ -81,17 +67,14 @@ If your have a SSH key on your GitHub account, you can clone the repo this way
 ```
 > git clone git@github.com:FredHutch/FHBig.git
 ```
-3. ocate the `gh-pages` branch.
+3. locate the `gh-pages` branch.
 ```
 > git checkout gh-pages
 ```
 To check which banch you are working on, run `> git branch`
 4. Create a markdown file in the `_post` folder, as describe above.
 5. Preview the post locally.
-  Run `rake preview` and visit
-  localhost:4444 in your browser.  Because the page root is different
-  when you run the page on GitHub and on local machine, `Rakefile` and
-  `_config.dev.yml` are created find the right page root.  
+  Run `bundle exec jekyll build` and visit the designated port.
 6. Stage and commit the post.
 ```
 > git add file_name.md
