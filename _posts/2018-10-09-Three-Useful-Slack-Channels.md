@@ -17,11 +17,11 @@ This channel is for curating ideas for co-working projects, forming or joining c
 This is the place to ask questions related to scientific computing, bioinformatics, data sciences, programming or anything technical/academic. And please share your knowledge here as well. 
 
 ## Other useful information about Slack
-Want to send private messages: `Direct Messages` allows you to send private messages to one or multiple person
-Want to share some interesting paper?  Share with us on #paper channel!
-Interested in hackathon? Some members have started conversation on #hackathon.
-Want to talk about R and Bioconductor packages? We have #r_and_bioconductor channel for discussion.
-Want to create a new channel for specific topic? Please go ahead and announce it on #general channel.
+- Want to send private messages: `Direct Messages` allows you to send private messages to one or multiple person
+- Want to share some interesting paper?  Share with us on #paper channel!
+- Interested in hackathon? Some members have started conversation on #hackathon.
+- Want to talk about R and Bioconductor packages? We have #r_and_bioconductor channel for discussion.
+- Want to create a new channel for specific topic? Please go ahead and announce it on #general channel.
 
 -----
 FHBig is a self-organized community.  Please feel free to throw out ideas or form your group of interest. If you need help finding meeting space, please contact coordinators Chao-Jen Wong, Jenny Smith and Amy Paguirigan. We will try our best to provide support. 
