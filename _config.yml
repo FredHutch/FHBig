@@ -6,6 +6,7 @@ plugins:
   - jemoji
   - jekyll-archives
   - jekyll-remote-theme
+  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -15,6 +16,7 @@ whitelist:
   - jemoji
   - jekyll-archives
   - jekyll-remote-theme
+  - jekyll-include-cache
 
 plugins:
 
