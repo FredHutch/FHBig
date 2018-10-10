@@ -6,12 +6,12 @@ author: Chao-Jen Wong
 How can you receive information and communicate with FHBig members
 without exploring hundreds of conversations across several Slack
 channels? These three channels can save you some hassle: `#general`,
-`#co-working-poll` and `#question-and-answer`.
+`#co-working-polls` and `#question-and-answer`.
 
 ## `#general`
 We use this channel to make announcements, display the weekly calendar and ask general questions. It’s a great place to make your voice reach most FHBig members.
 
-## `#co-working-poll`
+## `#co-working-polls`
 This channel is for curating ideas for co-working projects, forming or
 joining co-working groups/journal clubs, and finding lunch
 buddies. You are strongly encouraged to create a poll and find people
@@ -28,7 +28,7 @@ This is the place to ask questions related to scientific computing, bioinformati
 - __Want to send notification to all members on the channel?__  You can
   _mention_ everyone by `@everyone` or `@channel`.
 - __Want to send private messages?__ `Direct Messages` allows you to send private messages to one or multiple members.
-- __Want to share some interesting paper?__  Share with us on `#paper` channel!
+- __Want to share some interesting paper?__  Share with us on `#papers` channel!
 - __Interested in hackathon?__ Some members have started conversation
   on `#hackathon` already. 
 - __Want to create a new channel for specific topic?__ Please go ahead and announce it on `#general`.
