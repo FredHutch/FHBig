@@ -1,4 +1,3 @@
-# Plugins (previously gems:)
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -7,18 +6,6 @@ plugins:
   - jekyll-archives
   - jekyll-remote-theme
   - jekyll-include-cache
-
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jemoji
-  - jekyll-archives
-  - jekyll-remote-theme
-  - jekyll-include-cache
-
-plugins:
 
 remote_theme: "mmistakes/minimal-mistakes"
 
