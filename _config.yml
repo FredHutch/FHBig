@@ -170,7 +170,7 @@ defaults:
       type: pages
     values:
       layout: single
-      classes: wide
+#      classes: wide
       share: false
       sidebar:
         nav: "frontpage"
