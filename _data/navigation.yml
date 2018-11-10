@@ -1,6 +1,10 @@
 frontpage:
   - title: "Links"
     children:
+      - title: "Home"
+        url: /
+      - title: "What's New"
+        url: /whats-new/
       - title: "Calendar"
         url: /calendar/
       - title: "About"
