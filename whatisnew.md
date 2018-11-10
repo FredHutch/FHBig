@@ -5,7 +5,8 @@ permalink: /whatisnew/
 
 ## SciWiki and FHBig Milestone Party
 Party is featured by Ballard Pizza Company and local beer
-- Time: Dec. 6th, 2018
+- Date: Dec. 6th, 2018
+- Time: 1 - 2pm
 - Location: M4-A803/815
 - Guest: YOU
 
