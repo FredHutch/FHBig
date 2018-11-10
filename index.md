@@ -5,8 +5,8 @@ permalink: /
 header:
   overlay_image: http://www.sciencemag.org/sites/default/files/styles/inline__450w__no_aspect/public/images/13%20June%202014.jpg?itok=Eo7hIVqO
   actions:
-    - label: "What's New!"
-      url: /whatisnew/
+    - label: "What's New"
+      url: /whats-new/
 excerpt: "The Fred Hutch Bioinformatics Interest Group (FHBig) was
 created by staff who perform hands-on bioinformatics and data analysis
 at the Fred Hutch or are interested in learning. The purpose of this
