@@ -3,13 +3,14 @@ title: What's New
 permalink: /whats-new/
 ---
 
-<div class="notice--info">
+<div class="notice--info" style="text-align:center;">
     <h1><i class="fas fa-beer fa-2x"></i> SciWiki Milestone and FHBig Holiday Party</h1>
-  <p style="font-family:arial;font-size:130%;"> Party is featured by Ballard Pizza Company and local beer
+  <p style="font-family:cursive;font-size:130%;"> Thank you for your participation,<br> contribution and support<br>  in the year of 2018. 
   </p>
-
-
-  <p style="color:steelblue;font-size:130%;font-weight: bold;">Dec. 6th. 2018. 1-2pm. M4-A803/815.
+  <br>
+  <br>
+  <p style="color:steelblue;font-size:120%">
+  Ballard Pizza Company | Local beer <br>Thu 6 Dec 2018 | 1-2pm | M4-A803/815
   </p>
 </div> 
 
