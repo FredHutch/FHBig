@@ -8,10 +8,12 @@ without exploring hundreds of conversations across several Slack
 channels? These three channels can save you some hassle: `#general`,
 `#co-working-polls` and `#question-and-answer`.
 
+<p class="notice--info"><strong>ProTip:</strong> Anyone who has <code class="highlighter-rouge">@fredhutch.org</code>,  <code class="highlighter-rouge">@sagebase.org</code>, and <code class="highlighter-rouge">@uw.edu</code> email can join without invitation. The list can be expended upon request.</p>
+
 ## `#general`
 We use this channel to make announcements, display the weekly calendar and ask general questions. It’s a great place to make your voice reach most FHBig members.
 
-<p class="notice--info"><strong>ProTip:</strong> To mention or notify everyone on the channel, do <a href="#">@everyone</a> or <a href="#">@channel</a>. </p>
+<p class="notice--info"><strong>ProTip:</strong> To mention or notify everyone on the channel, embed <a href="#">@everyone</a> or <a href="#">@channel</a> in your message. </p>
 
 ## `#co-working-polls`
 This channel is for curating ideas for co-working projects, forming or
@@ -24,7 +26,7 @@ with similar interests. Here is an example of making a poll:
 at 1am at Arnold’s Atrium “Yes” “Maybe”
 ```
 
-<p class="notice--info"><strong>Into Notice:</strong> Once you form your group of interest and need a meetup space, email Amy Paguirigan, <a href="#">apaguiri</a> </p>
+<p class="notice--info"><strong>Into Notice:</strong> If you form your group of interest and need a meetup space, email Amy Paguirigan, <code class="highlighter-rouge">apaguiri</code>. </p>
 
 ## `#question-and-answer`
 This is the place to ask questions related to scientific computing, bioinformatics, data sciences, programming or anything technical/academic. And please help us and share your knowledge here as well. 
@@ -34,7 +36,7 @@ This is the place to ask questions related to scientific computing, bioinformati
 - __How to share some interesting paper?__  Share with us on `#papers` channel!
 - __Interested in hackathon?__ Some members have started conversation
   on `#hackathon` already. 
-- __How to announce to a new channel is created?__ Please announce and _mention_ everyone on `#general` so that people know its existance.
+- __How to announce a new channel?__ Please announce and _mention_ everyone on `#general` so that people know its existance.
 - __Who can join the Slack?__ Anyone with `@fredhutch.org`, `@sagebase.org`, and `@uw.edu` email can join without invitation. In addition, any member can send invitation to whom are interested to join.
 
 -----
