@@ -161,6 +161,8 @@ defaults:
       type: posts
     values:
       layout: single
+      author_profile: true
+      read_time: true
       share: false
       sidebar:
         nav: "frontpage"
