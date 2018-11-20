@@ -14,10 +14,10 @@ interested in connecting with us or have questions, please join the
 
 ### Contact for questions
 Any member of FHBig such as
-- Amy Paguirigan (github)
 - Hamid Bolouri
-- Chao-Jen Wong  (mailing list, slack administrator)
+- Chao-Jen Wong  (mailing list, github, slack administrator)
 - Jenny Smith (mailing list, slack administrator)
+- Amy Paguirigan (slack administrator)
 
 # Contributing to FHBig
 Welcome to FHBig, the Fred Hutch Bioinformatics Interest Group. We are excited to create a community for sharing code and resources that will facilitate workflows and spread knowledge. Your contributions help drive development, so create a pull request today!  Please read the materials below to get acquainted with the repo organization and process.
