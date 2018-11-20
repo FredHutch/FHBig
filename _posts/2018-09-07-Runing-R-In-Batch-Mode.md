@@ -4,9 +4,9 @@ tags: Technical-Note
 author: Chao-Jen Wong
 ---
 
-Running R script in batch mode might be helpful when you want to send your R script as batch script to slurm. For example, you might want to to do `sbatch my_code.R` or `sbatch -M beagle --exclusive -n1 my_code.R`. Unlike
-using `Rscript my_code.R` on the commend line, you need two extra steps: (1) start first line of your script with a shebang
-indicating the path of _Rscript_: `#!/app/easybuild/software/R/3.5.1-foss-2016b-fh1/bin/Rscript`, and (2) change the mode of the
+Running R script in batch mode is conveninent when using slurm scheduler: one comment would do the work: `sbatch my_code.R` or `sbatch -M beagle --exclusive -n1 my_code.R`. But unlike
+using `Rscript my_code.R`, you need to (1) start first line of your R script with a shebang
+indicating the path of _Rscript_, and (2) change the mode of the
 script as an executable: `chmod +x my_code.R`. With these two steps, you can do `sbatch my_code.R`.
 
 
@@ -42,3 +42,5 @@ sbatch my_code.R
 ```
 sbatch -M beagle my_code.R
 ```
+
+By Chao-Jen Wong
