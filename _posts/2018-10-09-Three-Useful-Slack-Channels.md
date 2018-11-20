@@ -25,13 +25,14 @@ at 1am at Arnold’s Atrium “Yes” “Maybe”
 This is the place to ask questions related to scientific computing, bioinformatics, data sciences, programming or anything technical/academic. And please share your knowledge here as well. 
 
 ## More info
-- __Want to send notification to all members on the channel?__  You can
+- __How to send notification to all members on the channel?__  You can
   _mention_ everyone by `@everyone` or `@channel`.
-- __Want to send private messages?__ `Direct Messages` allows you to send private messages to one or multiple members.
-- __Want to share some interesting paper?__  Share with us on `#papers` channel!
+- __How to send private messages?__ `Direct Messages` allows you to send private messages to one or multiple members.
+- __How to share some interesting paper?__  Share with us on `#papers` channel!
 - __Interested in hackathon?__ Some members have started conversation
   on `#hackathon` already. 
-- __Want to create a new channel for specific topic?__ Please go ahead and announce it on `#general`.
+- __How to announce to a new channel is created?__ Please announce and _mention_ everyone on `#general`.
+- __Who can join the Slack?__ Anyone with `@fredhutch.org`, `@sage.org`, and `@uw.edu` email. Any member can send invitation to whom are interested in joining. 
 
 -----
 FHBig is a self-organized community.  Please feel free to throw out ideas or form your group of interest. If you need help finding meeting space, please contact coordinators Chao-Jen Wong, Jenny Smith and Amy Paguirigan. We will try our best to provide support. 
