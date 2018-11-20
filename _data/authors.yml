@@ -14,6 +14,7 @@ Jenny Smith:
   name        : "Jenny Leopoldina Smith"
   bio         : "Research Bioinformatician at Fred Hutch"
   github      : jennylsmith 
+  avatar      : "/images/avatar-unknown.png"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -23,6 +24,7 @@ Amy Paguirigan:
   name        : "Amy Paguirigan"
   bio         : "Senior Scientist, Translational Genomics Data Science/Intratumoral Heterogeneity Research at Fred Hutch"
   github      : vortexing
+  avatar      : "/images/avatar-unknown.png"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
