@@ -5,13 +5,25 @@ Chao-Jen Wong:
   bio         : "Bioinformatics Analyst, Tapscott Lab at Fred Hutch"
   github      : TapscottLab
   avatar      : "/images/cjwong_lazy_egg.png"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:cwon2@fredhutch.org"
 
 Jenny Smith:
   name        : "Jenny Leopoldina Smith"
   bio         : "Research Bioinformatician at Fred Hutch"
   github      : jennylsmith 
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:jlsmith3@fredhutch.org"
 
 Amy Paguirigan:
   name        : "Amy Paguirigan"
   bio         : "Senior Scientist, Translational Genomics Data Science/Intratumoral Heterogeneity Research at Fred Hutch"
   github      : vortexing
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:apaguiri@fredhutch.org"
