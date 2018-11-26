@@ -69,7 +69,7 @@ Meow Good:
 ```
 
 2. Make sure include `author: xxx` in the post's YAML front matter and enable `author_profile`, i.e.,
-```
+```yml
 ---
 title: How to be a Good Cat
 tags: Technical_Note
