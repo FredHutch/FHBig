@@ -5,7 +5,7 @@ permalink: /whats-new/
 
 <div class="notice--info" style="text-align:center;">
     <h1><i class="fas fa-beer fa-2x"></i> SciWiki Milestone and FHBig Holiday Party</h1>
-  <p style="font-family:cursive;font-size:130%;"> Thank you for your participation,<br> contribution and support<br>  in the year of 2018. 
+  <p style="font-family:cursive;font-size:140%;"> Thank you for your participation,<br> contribution and support<br>  in the year of 2018. 
   </p>
   <br>
   <br>
