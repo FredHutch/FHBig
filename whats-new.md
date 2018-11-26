@@ -7,6 +7,7 @@ permalink: /whats-new/
     <h1><i class="fas fa-beer fa-2x"></i> SciWiki Milestone and FHBig Holiday Party</h1>
   <p style="font-family:cursive;font-size:140%;"> Thank you for your participation,<br> contribution and support<br>  in the year of 2018. 
   </p>
+    <a href="https://fredhutch.github.io/FHBig/Dec-Meeting-Agenda/">Details</a>
   <br>
   <br>
   <p style="color:steelblue;font-size:120%">
