@@ -10,7 +10,7 @@ FHBig's website is powered by [GitHub](https://github.com) and
 our GitHub repo.
 The site contains both static pages (About, Resources and
 Events) and blog posts. The markdown files (\*.md) of the former
-live on the main directory and that of latter on the `_post`
+live on the main directory and that of latter on the `_posts`
 folder.
 
 __Note.__ Alougth the `gh-pages` branch is protected from being
@@ -18,7 +18,7 @@ deleted and  force-pushing, you can, unlike the `master` branch, freely
 push items without creating _push request_ and waiting for approval.
 
 ## Get started
-To create a new post, you need to create a markdown file in the `_post`
+To create a new post, you need to create a markdown file in the `_posts`
 folder. The name of the file must follow the following format:
 ```
 yyyy-mm-dd-title.
@@ -105,7 +105,7 @@ If your have a SSH key on your GitHub account, you can clone the repo this way
 > git checkout gh-pages
 ```
 To check which banch you are working on, run `> git branch`
-4. Create a markdown file in the `_post` folder, as describe above.
+4. Create a markdown file in the `_posts` folder, as describe above.
 5. Preview the post locally.
   Run `bundle exec jekyll build` and visit the designated port.
 6. Stage and commit the post.
