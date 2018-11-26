@@ -52,6 +52,7 @@ whole content.
 ## Author sidebar (optional)
 To attribute author profile to a post: 
 1. Append author's profile to `/_data/authors.yml`, if not already, using the following format. Anything variables found under author in `_config.yml` can be used (e.g. _name_, _bio_, _avatar_, _links_, etc.).
+
 ```yml
 # /_data/authors.yml
 
@@ -69,6 +70,7 @@ Meow Good:
 ```
 
 2. Make sure include `author: xxx` in the post's YAML front matter and enable `author_profile`, i.e.,
+
 ```yml
 ---
 title: How to be a Good Cat
