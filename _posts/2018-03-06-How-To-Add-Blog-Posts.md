@@ -60,7 +60,7 @@ Meow Good:
   name        : "Meow Good"
   bio         : "Cat behavioral Scientist at Fred Hutch"
   github      : TapscottLab
-  avatar      : "/images/avatar-unknown.png"
+  avatar      : "/assets/images/avatar-unknown.png"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -80,7 +80,7 @@ author_profile: true
 ---
 ```
 
-3. Optional. Add author's avatar image to `/images` folder.
+3. Optional. Add author's avatar image to `/assets/images` folder.
 
 Reference: https://mmistakes.github.io/minimal-mistakes/layout-author-override/
 
