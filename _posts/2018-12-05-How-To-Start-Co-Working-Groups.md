@@ -9,11 +9,7 @@ FHBig was created to exchange knowledge, support each other, and improve collabo
 Members can  provide and recieve peer-to-peer support in bioinformatics and data science by freely organizing co-working groups, book clubs, journal clubs, hackathons, code reviews, etc. The guidelines on setting up a small group are below.
 
 **To Create a Co-working Group**
-1. Create a poll on the [#co-working-polls](https://fhbig.slack.com/messages/co-working-polls) channel. To create a poll, use the following in a new slack message.
-
-```
-/poll "Are you interested in a journal club on NGS technologies" "yes"
-```
+1. Create a poll on the [#co-working-polls](https://fhbig.slack.com/messages/co-working-polls) channel. 
 
 2. Start a thread from your poll on [#co-working-polls](https://fhbig.slack.com/messages/co-working-polls) for your group messages. Decide on meeting time(s) and getting set up. Use this thread as the main contact point for organizational decisions, since it will notify all participants of the poll.
 
