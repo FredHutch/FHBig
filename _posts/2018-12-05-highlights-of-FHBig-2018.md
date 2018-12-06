@@ -28,7 +28,7 @@ Almost a year ago we organized two community meetings and set up goals for FHBig
 | Chao-Jen Wong |  ATAG-seq analysis pipeline | 
 | Mi-Youn Brusniak | informatics analysis of heterogenous protein data |
 
-- __book club__: data sciense on google cloub platform
+- __book club__: data science on google cloub platform
 - __pop-up workshops__: _plyrange_(Bioconductor) and _shinny app_(R)
 - __co-working groups__: wiki, DNA-seq workflow on AWS
 - support on slack channels
