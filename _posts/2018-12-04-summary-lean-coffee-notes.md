@@ -48,6 +48,7 @@ activities and direction.  Below is the summary:
   </p>
 </div> 
 
+## And more
 - Should FHBig organize tutorials?
 - Topics in data science you are passinate about or interested in
 - Protips for commonly used programs like _picard_, _granges_, and etc
