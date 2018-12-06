@@ -13,7 +13,7 @@ Almost a year ago we organized two community meetings and set up goals for FHBig
 
 - two community meetings
 - created communication channel: gh-pages (fhbig.io), slack, and email list
-- Seveal __lightning talks__ given by volunteers:
+- __lightning talks__ given by volunteers:
 
 | Speaker/Organizers | Topics |
 | --- | --- |
