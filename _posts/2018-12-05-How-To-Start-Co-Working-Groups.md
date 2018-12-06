@@ -24,7 +24,12 @@ Members can  provide *and recieve* peer-to-peer support in bioinformatics and da
 
 5. Any information and chatter the co-working group wants to share with the rest of the community should go into channels for communities that the group might think relevant (r-user-comm, python-user-comm, clonality-comm, etc), *AND/OR* as a blog post on the FHBig website.
 
+**About Slack**
 
-For more information on polls, see the Simple Poll [FAQ](https://simplepoll.rocks/faq/). To start threads on Slack messages, see the [documentation](https://get.slack.help/hc/en-us/articles/115000769927-Message-and-file-threads).
+For more information on polls, see the Simple Poll [FAQ](https://simplepoll.rocks/faq/). To start threads on Slack messages, see the [documentation](https://get.slack.help/hc/en-us/articles/115000769927-Message-and-file-threads). FHBig specific information on the Slack workspace is found at the [blog post on slack channels](https://fredhutch.github.io/FHBig/Three-Useful-Slack-Channels/).  
 
-Amy Paguirigan's room is in M4-A220 in the Arnold Building and she can offer up a monitor, computer (mac or pc), a marker board, and a table for up to about 6-7 people for Pop Up workshops or office hours. The [blog post](https://fredhutch.github.io/FHBig/FallPopUps/) from fall has more information. 
+**About Meeting Spaces**
+
+Amy Paguirigan's room is in M4-A220 in the Arnold Building and she can offer up a monitor, computer (mac or pc), a marker board, and a table for up to about 6-7 people for Pop Up workshops or office hours. The [blog post](https://fredhutch.github.io/FHBig/FallPopUps/) from fall has more information.
+
+The Coop Studio reservations are TBD.
