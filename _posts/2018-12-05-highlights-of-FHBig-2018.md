@@ -6,13 +6,13 @@ author_profile: false
 ---
 <figure>
   <img src="../assets/images/first-meeting_notes.jpg" alt="first meeting note">
-  <figcaption>This is where FHBig began</figcaption>
+  <figcaption>This is where FHBig begins</figcaption>
 </figure>
 
 Almost a year ago we organized two community meetings and set up goals for FHBig. Together we have built a supportive community encouraging knowledge exchange and cross-group cooperation. Here are some highlights of our effort in 2018:
 
 - two community meetings
-- created communication channel: email list, slack and gh-pages (fhbig.io)
+- created communication channel: gh-pages (fhbig.io), slack, and email list
 - Seveal __lightning talks__ given by volunteers:
 
 | Speaker/Organizers | Topics |
