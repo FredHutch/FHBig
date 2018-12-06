@@ -1,5 +1,5 @@
 ---
-title: Summary of the Lean Coffee Meeting on October
+title: Summary of the Lean Coffee Meeting in October
 tags: Organizing Meeting
 author: Chao-Jen Wong
 ---
@@ -11,7 +11,6 @@ author: Chao-Jen Wong
 On October 4th, 2018, FHBig hosted a lean coffee meeting 
 gathering thoughts from our members about FHBig's future 
 activities and direction.  Below is the summary:
-
 
 - Better use of Beagle on Rhino/Gizmo  
 <div class="notice--success" style="text-align:left;">
@@ -26,20 +25,25 @@ activities and direction.  Below is the summary:
 </div> 
 
 - A lot of different groups forming/extablised. How to integerate or not?
+<div class="notice--success" style="text-align:left;">
+  <p style="fontsize: 140%;"><strong>Follow-up:</strong> COOP to the resecue.
+  </p>
+</div> 
+
 - Topics in data science you are passinate about or interested in
 - Building pipleline on AWS  
 - Should FHBig invite peple from UW/ISB/Allen, etc?  
 - HACKATHONS  
-- Protips for commonly used programs like _picard_, _granges_, and etc
-- How do we start having office hours?
 - Should FHBig organize tutorials?
-- Technical application focused groups?
+- Protips for commonly used programs like _picard_, _granges_, and etc
 - More lightning talk on demo of people's day-to-day work
+- Technical application focused groups?
+- How do we start having office hours?
 - Journal club and its co-ordinators?
-- Bi-weekly pop-up workshops?
+- How do we start having office hours?
 
 ## Follow-up
 - find experts of _picard_ and _bioconductor_?
 - create co-working-polls to find peple interested in methyl-seq and methods?
 - have pop-up workshops for day-to-day works such as Bioconductor 101 and other topics?
-- What tutorial we need? More specific? Post request on co-working poll channel?
+- What tutorial we need? Post request on co-working poll channel?
