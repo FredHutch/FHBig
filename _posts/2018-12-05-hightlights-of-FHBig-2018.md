@@ -9,7 +9,7 @@ author_profile: false
   <figcaption>FHBig's first meeting note.</figcaption>
 </figure>
 
-Almost a year ago we organized two community meetings and set up goals for this interest group. In the following ten months we togehter have built a supportive community that encourage knowledge exchange and cross-group cooperation. Here are some hightlights of our effort in 2018:
+Almost a year ago we organized two community meetings and set up goals for FHBig. Together we have built a supportive community that encourage knowledge exchange and cross-group cooperation. Here are some hightlights of our effort in 2018:
 
 - two community meetings
 - created communication channel: email list, slack and github repo
