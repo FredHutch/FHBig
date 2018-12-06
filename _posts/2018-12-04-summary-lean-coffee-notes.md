@@ -24,23 +24,38 @@ activities and direction.  Below is the summary:
   </p>
 </div> 
 
-- A lot of different groups forming/extablised. How to integerate or not?
+- A lot of different groups forming/established. How to integrate or not?
 <div class="notice--success" style="text-align:left;">
-  <p style="fontsize: 140%;"><strong>Follow-up:</strong> COOP to the resecue.
+  <p style="fontsize: 140%;"><strong>Follow-up:</strong> COOP is working on integrating groups with similar insterest (bioinformatics and data science) .
   </p>
 </div> 
 
-- Topics in data science you are passinate about or interested in
-- Building pipleline on AWS  
+- Building pipelines on AWS  
+<div class="notice--success" style="text-align:left;">
+  <p style="fontsize: 140%;"><strong>Follow-up:</strong> SciComp/Sam/Amy/Jenny huddle up to build workflow on AWS using scientific workflow engine. 
+  </p>
+</div> 
+
 - Should FHBig invite peple from UW/ISB/Allen, etc?  
+<div class="notice--success" style="text-align:left;">
+  <p style="fontsize: 140%;"><strong>Follow-up:</strong> We already have members from other institution. Please invide people who are interested in FHBig.
+  </p>
+</div> 
+
 - HACKATHONS  
+<div class="notice--success" style="text-align:left;">
+  <p style="fontsize: 140%;"><strong>Follow-up:</strong> The COOP is hosting a community-focused NCBI-style Hackathon in February. Propose a project <a href="https://docs.google.com/forms/d/e/1FAIpQLScZ7glWMtTgQJ6spUGyvHRQSKzoxeLhNtZbsSdCQbE6-Q2biQ/viewform">here</a>.
+  </p>
+</div> 
+
 - Should FHBig organize tutorials?
+- Topics in data science you are passinate about or interested in
 - Protips for commonly used programs like _picard_, _granges_, and etc
 - More lightning talk on demo of people's day-to-day work
 - Technical application focused groups?
 - How do we start having office hours?
 - Journal club and its co-ordinators?
-- How do we start having office hours?
+
 
 ## Follow-up
 - find experts of _picard_ and _bioconductor_?
