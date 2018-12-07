@@ -10,7 +10,7 @@ author: Chao-Jen Wong
 
 On October 4th, 2018, FHBig hosted a lean coffee meeting 
 gathering thoughts from our members about FHBig's future 
-activities and direction.  Below is the summary:
+activities and direction.  Below is the summary and follow-ups:
 
 - Better use of Beagle on Rhino/Gizmo  
 <div class="notice--success" style="text-align:left;">
@@ -48,18 +48,26 @@ activities and direction.  Below is the summary:
   </p>
 </div> 
 
-## And more
+- Journal club
+<div class="notice--success" style="text-align:left;">
+  <p style="fontsize: 140%;"><strong>Follow-up:</strong> We will start our first journal club on Feb. and discuss DNA-seq data. Please make proposal on <a href="https://fhbig.slack.com">slace</a> so that we can keep the journal club going.
+  </p>
+</div> 
+
+## Miscellaneous topics
 - Should FHBig organize tutorials?
 - Topics in data science you are passinate about or interested in
 - Protips for commonly used programs like _picard_, _granges_, and etc
 - More lightning talk on demo of people's day-to-day work
 - Technical application focused groups?
-- How do we start having office hours?
-- Journal club and its co-ordinators?
+- How do we start office hour?
+- Journal club
 
 
-## Follow-up
-- find experts of _picard_ and _bioconductor_?
-- create co-working-polls to find peple interested in methyl-seq and methods?
-- have pop-up workshops for day-to-day works such as Bioconductor 101 and other topics?
-- What tutorial we need? Post request on co-working poll channel?
+### Follow-up 
+- Find experts of _picard_ and _bioconductor_ and offer pop-up workshops
+- Create co-working-polls to find peple interested in methyl-seq and methods
+- Organize pop-up workshops for day-to-day works and journal clubs. But what specific topics should we cover? Please post requests on `#co-working-poll` or even `#general` channel on [slack](https://fhbig.slack.com) and we can ask local experts to help us.
+- It is highly encouraged to create an interest and co-working group of your interest. The blog post, [How to Start a Co-working Group](https://fredhutch.github.io/FHBig/How-To-Start-Co-Working-Groups/), suggests the tactics and resources.
+
+
