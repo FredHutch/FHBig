@@ -5,18 +5,18 @@ permalink: /whats-new/
 
 <div class="notice--info" style="text-align:center;">
     <h1><i class="fas fa-book fa-2x"></i> FHBig Journal Club</h1>
-  <p style="font-family:cursive;font-size: 140%;"> DNAp:a DNA-seq pipeline and analysis method 
+  <p style="font-size: 140%;"> DNAp: a DNA-seq pipeline and analysis method 
   </p>
-  <a href="https://fredhutch.github.io/FHBig/Dec-Meeting-Agenda/">Details</a>
+  <a href="https://www.nature.com/articles/s41598-018-25022-6">Link to Paper</a>
   <br>
   <br>
   <p style="color:steelblue;font-size:120%">
-  Ballard Pizza Company | Local beer <br>Thu 6 Dec 2018 | 1-2pm | M4-A803/815
+  Thursday Jan. 10th 2019 | 1-2pm | M3-A805
   </p>
 </div> 
 
 
-## <i class="fab fa-meetup fa-2x"></i> SciWiki Working Meetup
+<i class="fas fa-pencil-alt fa-2x"></i> SciWiki Working Meetup
 The [SciWiki](https://github.com/FredHutch/wiki) meetup is a standing event for any interviews, editing sessions or discussions regarding Wiki Pull requests that need to happen.  Please contact Amy Paguirigan if you'd like to swing by and discuss your contribution.  
 
 
