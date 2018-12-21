@@ -4,8 +4,8 @@ permalink: /whats-new/
 ---
 
 <div class="notice--info" style="text-align:center;">
-    <h1><i class="fas fa-beer fa-2x"></i> SciWiki Milestone and FHBig Holiday Party</h1>
-  <p style="font-family:cursive;font-size: 140%;"> Thank you for your participation,<br> contribution and support<br>  in the year of 2018. 
+    <h1><i class="fas fa-book fa-2x"></i> FHBig Journal Club</h1>
+  <p style="font-family:cursive;font-size: 140%;"> DNAp:a DNA-seq pipeline and analysis method 
   </p>
   <a href="https://fredhutch.github.io/FHBig/Dec-Meeting-Agenda/">Details</a>
   <br>
