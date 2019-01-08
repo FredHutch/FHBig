@@ -3,19 +3,21 @@ title: Three Useful Channels in the FHBig Slack
 tags: Organizing
 author: Chao-Jen Wong
 ---
-How can you receive information and communicate with FHBig members
+How can you receive information and communicate with COOP Community members
 without exploring hundreds of conversations across several Slack
 channels? These three channels can save you some hassle: `#general`,
 `#co-working-polls` and `#question-and-answer`.
 
 <p class="notice--info"><strong>ProTip:</strong> Anyone who has <code class="highlighter-rouge">@fredhutch.org</code>,  <code class="highlighter-rouge">@sagebase.org</code>, <code class="highlighter-rouge">@sharp.org</code> and <code class="highlighter-rouge">@uw.edu</code> email address can join without invitation. The list can be expended upon request.</p>
 
-<p class="notice--info"><strong>ProTip:</strong> You can send this link to invite people: https://join.slack.com/t/fhbig/signup</p>
+<p class="notice--info"><strong>ProTip:</strong> You can send this link to invite people: <a href=https://join.slack.com/t/fhbig/signup</a></p>
 
 ## `#general`
 We use this channel to make announcements, display the weekly calendar and ask general questions. It’s a great place to make your voice reach most FHBig members.
 
 <p class="notice--info"><strong>ProTip:</strong> To mention or notify everyone on the channel, embed <a href="#">@everyone</a> or <a href="#">@channel</a> in your message. </p>
+
+<p class="notice--info"><strong>ProTip:</strong> Threads allow us to reply directly to a message, preserve context and encourage conversation without distracting a channel's flow.  To start a thread, hover over the message and click the <strong>Start a thread icon</strong>. </p>
 
 ## `#co-working-polls`
 This channel is for curating ideas for co-working projects, forming or
@@ -28,7 +30,7 @@ with similar interests. Here is an example of making a poll:
 at 1am at Arnold’s Atrium? “Yes” “Maybe”
 ```
 
-<p class="notice--info"><strong>Info:</strong> If you form your group of interest and need a meetup space, email Amy Paguirigan, <code class="highlighter-rouge">apaguiri</code>. </p>
+<p class="notice--info"><strong>Info:</strong> If you form your group of interest and need a meetup space, email Amy Paguirigan, <code class="highlighter-rouge">apaguiri@fredhutch.org</code>. </p>
 
 ## `#question-and-answer`
 This is the place to ask questions related to scientific computing, bioinformatics, statistics, data sciences, programming or anything technical/academic. And please help us and share your knowledge here as well. 
