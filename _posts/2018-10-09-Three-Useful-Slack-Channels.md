@@ -10,10 +10,8 @@ channels? These three channels can save you some hassle: `#general`,
 
 <p class="notice--info"><strong>ProTip:</strong> Anyone who has <code class="highlighter-rouge">@fredhutch.org</code>,  <code class="highlighter-rouge">@sagebase.org</code>, <code class="highlighter-rouge">@sharp.org</code> and <code class="highlighter-rouge">@uw.edu</code> email address can join without invitation. The list can be expended upon request.</p>
 
-<p class="notice--info"><strong>ProTip:</strong> You can send this link to invite people: <a href="https://join.slack.com/t/fhbig/signup"</a></p>
-
 ## `#general`
-We use this channel to make announcements, display the weekly calendar and ask general questions. It’s a great place to make your voice reach most FHBig members.
+We use this channel to make announcements, display the weekly calendar and ask general questions. It’s a great place to make your voice reach most COOP/FHBig members.
 
 <p class="notice--info"><strong>ProTip:</strong> To mention or notify everyone on the channel, embed <a href="#">@everyone</a> or <a href="#">@channel</a> in your message. </p>
 
@@ -40,8 +38,8 @@ This is the place to ask questions related to scientific computing, bioinformati
 - __How to send private messages?__ `Direct Messages` allows you to send private messages to one or multiple members.
 - __Interested in hackathon?__ Some members have already started conversation about NCBI-style hackathon
   on `#event-organizing`. 
-- __How to announce a new channel?__ Please announce and _mention_ everyone on `#general` so that people know its existance. 
-- __Who can join the Slack?__ Anyone with `@fredhutch.org`, `@sagebase.org`, `sharp@org`, and `@uw.edu` email address can join without invitation. In addition, any member can send invitation to whom are interested to join.
+- __How to announce a new channel?__ Please announce and _mention_ everyone (i.e., `@channel` or `@everyone`) on `#general` so that people know its existance. 
+- __How to invite people?__ You can send this link to invite people: <a href="https://join.slack.com/t/fhbig/signup">
 
 -----
 FHBig is a self-organized community providing peer-to-peer support.  Please feel free to throw out ideas or form your group of interest. If you need help finding meeting space, please contact coordinators Chao-Jen Wong, Jenny Smith or Amy Paguirigan. We will try our best to provide support. 
