@@ -10,7 +10,7 @@ channels? These three channels can save you some hassle: `#general`,
 
 <p class="notice--info"><strong>ProTip:</strong> Anyone who has <code class="highlighter-rouge">@fredhutch.org</code>,  <code class="highlighter-rouge">@sagebase.org</code>, <code class="highlighter-rouge">@sharp.org</code> and <code class="highlighter-rouge">@uw.edu</code> email address can join without invitation. The list can be expended upon request.</p>
 
-<p class="notice--info"><strong>ProTip:</strong> You can send this link to invite people: <a href=https://join.slack.com/t/fhbig/signup</a></p>
+<p class="notice--info"><strong>ProTip:</strong> You can send this link to invite people: <a href="https://join.slack.com/t/fhbig/signup"</a></p>
 
 ## `#general`
 We use this channel to make announcements, display the weekly calendar and ask general questions. It’s a great place to make your voice reach most FHBig members.
