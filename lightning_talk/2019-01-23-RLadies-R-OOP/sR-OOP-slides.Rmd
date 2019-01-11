@@ -8,12 +8,22 @@ output: ioslides_presentation
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+## Terminalogy
+Method
+Dispatch
+
+S3 - linear hierarch
+
+
 ## Create class
 
 ```{r passenger}
 #' superclass
 setClass("Passenger", 
-  representation(name = "character",
+  representation(fist_name = "character",
+                 last_name = "character",
                  origin = "character",
                  destination = "character")
 #' subclass inheriting properties of superclass
@@ -21,7 +31,26 @@ setClass("FreqFlyer",
   representation(contains = "Passenger"),
                  ffnumber = "numeric")
 
-getClass("FreqFlyer")   
-subClassNames("Passenger")
-superClassNames("FreyFlyer")              
+#getClass("FreqFlyer")   
+#subClassNames("Passenger")
+#superClassNames("FreyFlyer")              
 ```
+
+## S3  - dispatch
+Method - specialized function applied to instances of one or more classes.
+Dispatch - process of determining the appropriate method to invoke 
+
+S3  
+- very little code is needee  
+- only examines the first argument and dispatches depending on its class
+- dispatch by function naming convention that is describred .*  
+
+
+```{r show_passenger}
+show.Passenger <- function(x) {
+  NextMethod("show", x)
+}
+```
+
+## Self-describing data
+A self-describing data object can be used to carry out a reasonable analysis of the data.
