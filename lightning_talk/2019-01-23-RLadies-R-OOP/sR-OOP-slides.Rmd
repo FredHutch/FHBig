@@ -1,0 +1,27 @@
+---
+title: "R OOP"
+author: "Chao-Jen Wong"
+date: "January 23, 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Create class
+
+```{r passenger}
+#' superclass
+setClass("Passenger", 
+  representation(name = "character",
+                 origin = "character",
+                 destination = "character")
+#' subclass inheriting properties of superclass
+setClass("FreqFlyer",
+  representation(contains = "Passenger"),
+                 ffnumber = "numeric")
+
+getClass("FreqFlyer")   
+subClassNames("Passenger")
+superClassNames("FreyFlyer")              
+```
