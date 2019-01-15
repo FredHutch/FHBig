@@ -11,46 +11,198 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Terminalogy
-Method
+Object - data object which has a class attribute
+heritance
+polymorphism
 Dispatch
+Generic function
+Method
 
-S3 - linear hierarch
+R OOP  
+- S3: generic functions, linear hierarch 
+- S4: classes and generic functions, polymorphism  
 
-
-## Create class
-
-```{r passenger}
-#' superclass
-setClass("Passenger", 
-  representation(fist_name = "character",
-                 last_name = "character",
-                 origin = "character",
-                 destination = "character")
-#' subclass inheriting properties of superclass
-setClass("FreqFlyer",
-  representation(contains = "Passenger"),
-                 ffnumber = "numeric")
-
-#getClass("FreqFlyer")   
-#subClassNames("Passenger")
-#superClassNames("FreyFlyer")              
-```
-
-## S3  - dispatch
-Method - specialized function applied to instances of one or more classes.
-Dispatch - process of determining the appropriate method to invoke 
-
-S3  
-- very little code is needee  
+## S3 system
+- dispatch system for generic functions 
+- loessly define classes
+- easy to describe and use
+- less code is needee  
 - only examines the first argument and dispatches depending on its class
 - dispatch by function naming convention that is describred .*  
 
+```{r S3_method}
+print
+```
+A singel expression which is the call to `UseMethod`, which is the mechanism that 
+helps to dispatch to the appropriate method.
+`print()` is a generic function. A generic function does dispatch throughed a call to `
+UseMethod` that initaites the dispatch ona single argument, usually the first one.
 
-```{r show_passenger}
-show.Passenger <- function(x) {
-  NextMethod("show", x)
-}
+
+```{r method_pring, eval=FALSE}
+methods(print)
 ```
 
-## Self-describing data
-A self-describing data object can be used to carry out a reasonable analysis of the data.
+```
+ [90] print.ftable*                                     
+ [91] print.function                                    
+ [92] print.getAnywhere*                                
+ [93] print.glm*                                        
+ [94] print.hclust*                                  
+```
+
+```{r exp_glm}
+#getS3method("print", "glm")
+#methods(class="glm")
+```
+
+## S3: dummy example
+Lossely defien an S3 class `Passenger`:
+
+```{r s3_classa}
+Lossely define an S3 class
+# Define S3 class
+x <- list(name="John Alber", origin="SEA", destination="KCM")
+class(x) <- "Passenger"
+```
+
+## S3: dummy example
+Generic functions and methods
+
+```{r s3_method}
+# define foo generic funciton
+foo <- function(x, ...) UseMethod("foo")
+# define default
+foo.default <- function(x, ...) {
+   print(x)
+}
+# define method applied to Passenger
+foo.Passenger <- function(x) {
+  cat(paste0("Name: ", x$name, "\n"))
+  cat(paste0("Origin: ", x$origin, "\n"))
+  cat(paste0("Dest: ", x$destination), "\n")
+  NextMethod()
+}
+# getS3method("foo", "Passenger")
+```
+
+`NextMethod()` transfers contorl to the next most specific method, which is `foo.default()`.
+
+When `NextMethod("print")` applied to an object with class attribute `Passenger`, the system 
+search for a function called `print.Passenger`. If it finds it, applie to the object. Otherwise,
+it uses `print.default()`, if it exists.
+
+## S4 system
+- overcome the deficientices of S3 system
+- explicit representatio of classes
+- multiple dispatch
+
+## S4: class
+
+Goal: define self-describing data object can be used to carry out a reasonable 
+analysis of the data
+
+Establish clasess: `Passenger` and `FreqFlyer`:
+- class 
+- presentation  
+- contins    
+- prototype  
+- validity
+
+## S4: class
+Establish two classes: `Passenger` and `FreqFlyer`
+
+```{r define_passenger}
+#' class and representation (slots)
+setClass("Passenger", 
+  representation(name = "character",
+                 origin = "character",
+                 destination = "character"),
+  prototype = prototype(name = character(0),
+                        origin = character(0),
+                        destination = character(0)))
+```
+
+```{r subclass}
+#' contains
+#' subclass inheriting properties of superclass
+setClass("FreqFlyer",
+  contains = "Passenger",
+  representation(ffnumber = "numeric"))
+```
+
+## tools to find out about class
+
+```{r tools, eval=FALSE}
+getClass("FreqFlyer")   
+subClassNames("Passenger")
+superClassNames("FreyFlyer") 
+slotNames("Passenger")  
+```
+
+
+## S4: generic functions/methods
+constructor(prototype, validation, initialization), initializer, getter, setter, show, 
+coercion, and accessories.
+
+```{r example_passenger}
+#' S4 classes
+x <- new("Passenger", name="Josephine Andre", 
+         origin = "SEA",
+         destination = "KCM")
+x
+#inherits(x, "Passenger")          
+```
+
+## S4: generic functions/methods/accessories
+S4 method `print`
+
+```{r passenger_print}
+#` methods("show")
+#` show is already a generic functions for S4 methods 
+setMethod("show", signature="Passenger",
+          function(object) {
+          cat(paste0("Name: ", object@name, "\n"))
+          cat(paste0("Origin: ", object@origin, "\n"))
+          cat(paste0("Destination: ", object@destination, "\n"))
+          })
+show(x)
+```
+
+## S4: generic functions/methods/accessories
+constructor: initialization, validation
+getter: name, origin, destination
+setter: ffnumber
+unit test!
+
+```{r constructor_passenger}
+#` constructor
+setGeneric("Passenger", function(...) standardGeneric("Passenger"))
+setMethod("Passenger", signature("ANY"),
+    function(...) {
+        new("Passenger", name=name,
+            origin = origin,
+            destination = destination)
+    })
+```
+
+```{r getter_passenger}
+#' getter
+setGeneric("name", function(object) standardGeneric("name"))
+setMethod("name", signature("Passenger"),
+    function(object) {object@name})
+#' setter (replacement methods)
+setGeneric("name<-", function(object, value) standardGeneric("name<-"))
+setMethod("name<-", signature("Passenger"),
+    function(object, value) {
+        object@name <- value
+        object
+    })
+
+name(x) <- "Josie W. Andre"
+```
+
+## tools
+getMethod, getGenerics, 
+
+## Bioconductor's GRanges/SummarizedExperiments
