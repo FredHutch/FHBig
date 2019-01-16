@@ -1,0 +1,341 @@
+---
+title: "S3 and S4 system in R"
+author: "Chao-Jen Wong"
+date: "January 23, 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Terminalogy
+Object - data object which has a class attribute
+heritance
+polymorphism
+Dispatch
+Generic function
+Method
+
+R OOP  
+- S3: generic functions, linear hierarch 
+- S4: classes and generic functions, polymorphism  
+
+## S3 system
+- dispatch system for generic functions 
+- loessly define classes
+- easy to describe and use
+- less code is needee  
+- only examines the first argument and dispatches depending on its class
+- dispatch by function naming convention that is describred .*  
+
+Start with an glm class and pring (generic function) and method print.glm
+```{r S3_method}
+print
+```
+A singel expression which is the call to `UseMethod`, which is the mechanism that 
+helps to dispatch to the appropriate method.
+`print()` is a generic function. A generic function does dispatch throughed a call to `
+UseMethod` that initaites the dispatch ona single argument, usually the first one.
+
+
+```{r example_glm, eval=FALSE}
+methods(print)
+```
+
+```
+ [90] print.ftable*                                     
+ [91] print.function                                    
+ [92] print.getAnywhere*                                
+ [93] print.glm*                                        
+ [94] print.hclust*                                  
+```
+
+```{r exp_glm}
+#getS3method("print", "glm")
+#methods(class="glm")
+```
+
+## S3: dummy example
+Lossely defien an S3 class `Passenger`:
+
+```{r s3_classa}
+Lossely define an S3 class
+# Define S3 class
+x <- list(name="John Alber", origin="SEA", destination="KCM")
+class(x) <- "Passenger"
+```
+
+## S3: dummy example
+Generic functions and methods
+
+```{r s3_method}
+# define foo generic funciton
+foo <- function(x, ...) UseMethod("foo")
+# define default
+foo.default <- function(x, ...) {
+   print(x)
+}
+# define method applied to Passenger
+foo.Passenger <- function(x) {
+  cat(paste0("Name: ", x$name, "\n"))
+  cat(paste0("Origin: ", x$origin, "\n"))
+  cat(paste0("Dest: ", x$destination), "\n")
+  NextMethod()
+}
+# getS3method("foo", "Passenger")
+```
+
+`NextMethod()` transfers contorl to the next most specific method, which is `foo.default()`.
+
+When `NextMethod("print")` applied to an object with class attribute `Passenger`, the system 
+search for a function called `print.Passenger`. If it finds it, applie to the object. Otherwise,
+it uses `print.default()`, if it exists.
+
+## S4 system
+
+- overcome the deficientices of S3 system  
+  - multiple dispatch  
+  - object validation  
+  - coercion system
+  - explicit representation of classes virtual/concrete classes
+  - multiple inheritance
+  - class unions
+
+
+
+## S4: class
+Goal: define self-describing data object can be used to carry out a reasonable 
+analysis of the data
+
+Core component: 
+- class definition  
+- validation  
+- constructor function (named as the class)
+- generic and methods: getters, setters, and other accessories
+- `show` method
+
+## S4: concrete class
+define classes: `setClass`, `slots`, `presentation`, `contains`, `prototype`, `validity`.
+
+```{r define_passenger}
+#' class and representation (slots)
+setClass("Passenger", 
+  slots = c(name = "character",
+            origin = "character",
+            destination = "character"),
+  prototype = prototype(name = NA_character_,
+                        origin = NA_character_,
+                        destination = NA_character_))                        
+```
+
+```{r subclass}
+#' contains
+#' subclass inheriting properties of superclass
+setClass("FreqFlyer",
+  contains = "Passenger",
+  slots= c(ffnumber = "numeric"))
+```
+
+## S4: classes
+coercion, and accessories.
+
+```{r example_passenger}
+#' S4 classes
+x <- new("Passenger", name="Josephine Andre", 
+         origin = "SEA",
+         destination = "KCM")
+x
+# inherits(x, "Passenger")    
+# showClass("Passenger")
+# slotNames("Passenger")      
+```
+
+## S4: Validation
+Validation (`setValidity()`): each slot has length 1.
+
+```{r passenger_validate}
+
+```
+
+## S4: generic functions/methods
+constructor, validation, initialization, getters, setters, show, 
+coercion, and accessories.
+
+### Define `show` method
+```{r passenger_show}
+#` methods("show")
+#` show is already a generic functions for S4 methods 
+setMethod("show", signature="Passenger",
+          function(object) {
+          cat(paste0("name: ", object@name, "\n"))
+          cat(paste0("origin: ", object@origin, "\n"))
+          cat(paste0("destination: ", object@destination, "\n"))
+          })
+show(x)
+# showMethods("show")
+# selectMethod("show", "Passenger")
+```
+
+## S4: constructor
+Instead of `new()`:
+
+```{r constructor_passenger}
+#` constructor
+Passenger <- function(name, origin, destination) {
+    new("Passenger", name=name, origin=origin, destination=destination)
+}
+x <- Passenger(name="Josie Andre", origin="SEA", destination="NYC")
+```
+
+## S4: accessors
+- prefer user to access the internal of an object via accessors (getters and setters). R does not have provision of encapsulation.
+- crafted setters ensure the object remains valid 
+- allow developers to make object more memory compact and efficient
+
+```{r getter_passenger}
+#' getter
+setGeneric("name", function(object) standardGeneric("name"))
+setMethod("name", signature("Passenger"),
+    function(object) {object@name})
+#' setter (replacement methods)
+setGeneric("name<-", function(object, value) standardGeneric("name<-"))
+setMethod("name<-", signature("Passenger"),
+    function(object, value) {
+        # validate value
+        if (is.character(value))
+            object@name <- value
+        if (!is.character(value))
+            warning("`name` in a Passenger class must be character")
+        object
+    })
+
+name(x) <- "Josie W. Andre"
+name(x) <- c("A", "B")
+```
+
+## S4: coercion
+Coerce `Passenger` to `data.frame`
+
+```{r coerce_passenger}
+setAs("Passenger", "data.frame", 
+      function(from)
+          data.frame(name = from@name,
+                     origin = from@origin,
+                     destination = from@destination))
+as(x, "data.frame")                     
+```
+
+## S4: virtual classes 
+Cannot be instantiated. Used as the parent of one or more concrete classes. 
+
+```{r virtual_class, eval=FALSE}
+setClass("A", representation("VIRTUAL")) # can have slots or not
+# can define generic functions delicate to the virtual class
+setClass("A1", contains = "A", slots = ...add slots here...)
+setClass("A2", contains = "A", slots = ...add slots here...)
+```
+
+## S4: virtual class example
+`GenomicRanges`, superclass of widely-used subclassed in BioConductor
+
+```{r example_vartual}
+suppressPackageStartupMessages(library(GenomicRanges))
+showClass("GenomicRanges")
+```
+
+- Subclasses such as `GRanges` and `GPos` inherite the properties of the superclass.
+- Methods are inherited and can be applied to `GRanges` adn `GPos`
+
+```{r name_method, eval=FALSE}
+selectMethod("names", "GRanges")
+```
+
+## S4: multiple inheritance
+Powerful but code with caution.
+
+```{r compressed_iranges}
+showClass("COmpressedIRangesList")
+```
+
+## S4: class unions
+setClassUnion
+
+## Reference classes
+pass-by-copy and pass-by-reference semantic
+
+## Applications: S4Vectors package
+- Rle  
+- DataFrame 
+- CompressIntegerList? 
+
+## Applications - Bioconductor's `RangedSummarizedExperiments`
+
+## Install Bioconductor package
+
+```{r biocmanager, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("S4Vectors", version = "3.8")
+```
+
+## Excercise
+Implement the SNP location class with slots
+- genome, character, i.e., hg19, hg38 (homo sapiens genome built)
+- snpid, character vector indicating the ID of the snp 
+- chrom, character vector indicating the chromsome 
+- pos, integer indicating the position in the chromsome
+
+```{r do_excercise, echo=FALSE}
+#` define class
+setClass("SNPLocations",
+         slots=c(genome="character", # a single string
+                 snpid="character", # a character vector of length N
+                 chrom="character", # a character vector of length N
+                 pos="integer" # an integer vector of length N
+                 ),
+         prototype=list(genome=NA_character_)
+#` Constructor
+SNPLocations <- function(genome, snpid, chrom, pos)
+    new("SNPLocations", genome=genome, snpid=snpid, chrom=chrom, pos=pos)
+snplocs <- SNPLocations("hg19",
+                        snpid=c("rs0001", "rs0002"),
+                        chrom=c("chr1", "chrX"),
+                        pos=c(224033L, 1266886L)) 
+# validation: length of snpid, chrom and pos must be equal
+setValidity("SNPLocations",
+    function(object)
+    {
+        if (length(object@genome) != 1)
+            return("'genome' slot must have length 1")
+        slot_lengths <- c(length(object@snpid),
+                          length(object@chrom),
+                          length(object@pos))
+        if (length(unique(slot_lengths)) != 1)
+            return("'snpid', 'chrom' and 'pos' slots must have the same length")
+        TRUE
+    }
+)
+
+#' define length method
+setMethod("length", "SNPLocations", function(x) length(x@snpid))                           
+```
+Set validationg such that all slots ahve the some length
+Define `length` method 
+
+## Session info
+```{r session_info}
+sessionInfo()
+```
+
+## Reference
+
+- The _R Programming fro Bioinformatics_ by Robert Gentleman  
+- The _Writing R Extensions manual_ 
+- Vignette of `S4Vectors` package: A quick overview of S4 class system by Herv´e Pag`es,
+  https://bioconductor.org/packages/release/bioc/vignettes/S4Vectors/inst/doc/S4QuickOverview.pdf    
+- Bioconductor training courses:
+  https://master.bioconductor.org/help/course-materials/2017/Zurich/S4-classes-and-methods.html
+
+## Excercise
