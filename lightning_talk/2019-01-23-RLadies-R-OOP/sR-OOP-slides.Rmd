@@ -122,12 +122,12 @@ Establish two classes: `Passenger` and `FreqFlyer`
 ```{r define_passenger}
 #' class and representation (slots)
 setClass("Passenger", 
-  representation(name = "character",
-                 origin = "character",
-                 destination = "character"),
+  slots = c(name = "character",
+            origin = "character",
+            destination = "character"),
   prototype = prototype(name = NA_character_,
-                        origin = character(0),
-                        destination = character(0)))
+                        origin = NA_character_,
+                        destination = NA_character_))                        
 ```
 
 ```{r subclass}
@@ -135,22 +135,10 @@ setClass("Passenger",
 #' subclass inheriting properties of superclass
 setClass("FreqFlyer",
   contains = "Passenger",
-  representation(ffnumber = "numeric"))
+  slots= c(ffnumber = "numeric"))
 ```
 
-## tools to find out about class
-
-```{r tools, eval=FALSE}
-getClass("FreqFlyer")   
-showClass("FreqFlyer")
-subClassNames("Passenger")
-superClassNames("FreyFlyer") 
-slotNames("Passenger")  
-```
-
-
-## S4: generic functions/methods
-constructor(prototype, validation, initialization), getters, setters, show, 
+## S4: classes
 coercion, and accessories.
 
 ```{r example_passenger}
@@ -159,12 +147,23 @@ x <- new("Passenger", name="Josephine Andre",
          origin = "SEA",
          destination = "KCM")
 x
-#inherits(x, "Passenger")          
+# inherits(x, "Passenger")    
+# showClass("Passenger")
+# slotNames("Passenger")      
+```
+
+## S4: Validation
+Validation (`setValidity()`): each slot has length 1.
+
+```{r passenger_validate}
+
 ```
 
 ## S4: generic functions/methods
-How does the dispatch work? how about multiple dispatch?
+constructor, validation, initialization, getters, setters, show, 
+coercion, and accessories.
 
+### Define `show` method
 ```{r passenger_show}
 #` methods("show")
 #` show is already a generic functions for S4 methods 
@@ -175,44 +174,23 @@ setMethod("show", signature="Passenger",
           cat(paste0("destination: ", object@destination, "\n"))
           })
 show(x)
-# showMethod("show")
+# showMethods("show")
 # selectMethod("show", "Passenger")
 ```
 
-## S4: generic functions/methods
-Validation (`setValidity()`): each slot has length 1.
-
-```{r passenger_validate}
-#` methods("show")
-#` show is already a generic functions for S4 methods 
-setMethod("show", signature="Passenger",
-          function(object) {
-          cat(paste0("name: ", object@name, "\n"))
-          cat(paste0("origin: ", object@origin, "\n"))
-          cat(paste0("destination: ", object@destination, "\n"))
-          })
-show(x)
-# showMethod("show")
-# selectMethod("show", "Passenger")
-```
-## S4: generic functions/methods
-constructor: initialization, validation
-getters: name, origin, destination
-setters: ffnumber
-unit test
+## S4: constructor
+Instead of `new()`:
 
 ```{r constructor_passenger}
 #` constructor
-setGeneric("Passenger", function(...) standardGeneric("Passenger"))
-setMethod("Passenger", signature("ANY"),
-    function(...) {
-        new("Passenger", name=name,
-            origin = origin,
-            destination = destination)
-    })
+Passenger <- function(name, origin, destination) {
+    new("Passenger", name=name, origin=origin, destination=destination)
+}
+x <- Passenger(name="Josie Andre", origin="SEA", destination="NYC")
 ```
-## S4: class accessor 
-- prefer user to access the internal of an object via accessos (getters and setters). R does not have provision of encapsulation.
+
+## S4: accessors
+- prefer user to access the internal of an object via accessors (getters and setters). R does not have provision of encapsulation.
 - crafted setters ensure the object remains valid 
 - allow developers to make object more memory compact and efficient
 
@@ -234,23 +212,72 @@ setMethod("name<-", signature("Passenger"),
     })
 
 name(x) <- "Josie W. Andre"
-name(x) <- 1
+name(x) <- c("A", "B")
 ```
-## S4: virtual class
-Cannot be instantiated. Used as the parent of one or more concrete class
+
+## S4: coercion
+Coerce `Passenger` to `data.frame`
+
+```{r coerce_passenger}
+setAs("Passenger", "data.frame", 
+      function(from)
+          data.frame(name = from@name,
+                     origin = from@origin,
+                     destination = from@destination))
+as(x, "data.frame")                     
+```
+
+## S4: virtual classes 
+Cannot be instantiated. Used as the parent of one or more concrete class. 
 
 ```{r virtual_class, eval=FALSE}
-setClass("A", representation("VIRTUAL"))
-setClass("subA1", contains = "A", slot = ...add slot here...)
+setClass("A", representation("VIRTUAL")) # can have slots or not
+# can define generic functions delicate to the virtual class
+setClass("A1", contains = "A", slots = ...add slots here...)
+setClass("A2", contains = "A", slots = ...add slots here...)
 ```
+
+## S4: virtual class example
+`GenomicRanges`, superclass of widely-used subclassed in BioConductor
+
 ```{r example_vartual}
 suppressPackageStartupMessages(library(GenomicRanges))
 showClass("GenomicRanges")
 ```
+
+- Subclasses such as `GRanges` and `GPos` inherite the properties of the superclass.
+- Methods are inherited and can be applied to `GRanges` adn `GPos`
+
+```{r name_method, eval=FALSE}
+selectMethod("names", "GRanges")
+```
+
+## S4: multiple inheritance
+Powerful but code with caution.
+
+```{r compressed_iranges}
+showClass("COmpressedIRangesList")
+```
+
+## S4: class unions
+## Reference classes
+pass-by-copy and pass-by-reference semantic
+
 ## Applications - Bioconductor's GRanges/SummarizedExperiments
 
-## Applications - S4Vectors
+## Install Bioconductor package
+
+```{r biocmanager, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("S4Vectors", version = "3.8")
+```
+
 ## Reference
 
-Bioconductor training courses:
-https://master.bioconductor.org/help/course-materials/2017/Zurich/S4-classes-and-methods.html
+- The _R Programming fro Bioinformatics_ by Robert Gentleman  
+- The _Writing R Extensions manual_ 
+- A quick overview of S4 class system by Herv´e Pag`es,
+  https://bioconductor.org/packages/release/bioc/vignettes/S4Vectors/inst/doc/S4QuickOverview.pdf    
+- Bioconductor training courses:
+  https://master.bioconductor.org/help/course-materials/2017/Zurich/S4-classes-and-methods.html
