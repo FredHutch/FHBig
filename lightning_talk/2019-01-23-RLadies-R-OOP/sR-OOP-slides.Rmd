@@ -30,6 +30,7 @@ R OOP
 - only examines the first argument and dispatches depending on its class
 - dispatch by function naming convention that is describred .*  
 
+Start with an glm class and pring (generic function) and method print.glm
 ```{r S3_method}
 print
 ```
@@ -39,7 +40,7 @@ helps to dispatch to the appropriate method.
 UseMethod` that initaites the dispatch ona single argument, usually the first one.
 
 
-```{r method_pring, eval=FALSE}
+```{r example_glm, eval=FALSE}
 methods(print)
 ```
 
@@ -93,23 +94,29 @@ search for a function called `print.Passenger`. If it finds it, applie to the ob
 it uses `print.default()`, if it exists.
 
 ## S4 system
-- overcome the deficientices of S3 system
-- explicit representatio of classes
-- multiple dispatch
+
+- overcome the deficientices of S3 system  
+  - multiple dispatch  
+  - object validation  
+  - coercion system
+  - explicit representation of classes virtual/concrete classes
+  - multiple inheritance
+  - class unions
+
+
 
 ## S4: class
-
 Goal: define self-describing data object can be used to carry out a reasonable 
 analysis of the data
 
-Establish clasess: `Passenger` and `FreqFlyer`:
-- class 
-- presentation  
-- contins    
-- prototype  
-- validity
+Concrete Class
+- `class` 
+- `presentation`  
+- `contains`    
+- `prototype`  
+- `validity`
 
-## S4: class
+## S4: concrete class
 Establish two classes: `Passenger` and `FreqFlyer`
 
 ```{r define_passenger}
@@ -118,7 +125,7 @@ setClass("Passenger",
   representation(name = "character",
                  origin = "character",
                  destination = "character"),
-  prototype = prototype(name = character(0),
+  prototype = prototype(name = NA_character_,
                         origin = character(0),
                         destination = character(0)))
 ```
@@ -135,6 +142,7 @@ setClass("FreqFlyer",
 
 ```{r tools, eval=FALSE}
 getClass("FreqFlyer")   
+showClass("FreqFlyer")
 subClassNames("Passenger")
 superClassNames("FreyFlyer") 
 slotNames("Passenger")  
@@ -142,7 +150,7 @@ slotNames("Passenger")
 
 
 ## S4: generic functions/methods
-constructor(prototype, validation, initialization), initializer, getter, setter, show, 
+constructor(prototype, validation, initialization), getters, setters, show, 
 coercion, and accessories.
 
 ```{r example_passenger}
@@ -154,26 +162,44 @@ x
 #inherits(x, "Passenger")          
 ```
 
-## S4: generic functions/methods/accessories
-S4 method `print`
+## S4: generic functions/methods
+How does the dispatch work? how about multiple dispatch?
 
-```{r passenger_print}
+```{r passenger_show}
 #` methods("show")
 #` show is already a generic functions for S4 methods 
 setMethod("show", signature="Passenger",
           function(object) {
-          cat(paste0("Name: ", object@name, "\n"))
-          cat(paste0("Origin: ", object@origin, "\n"))
-          cat(paste0("Destination: ", object@destination, "\n"))
+          cat(paste0("name: ", object@name, "\n"))
+          cat(paste0("origin: ", object@origin, "\n"))
+          cat(paste0("destination: ", object@destination, "\n"))
           })
 show(x)
+# showMethod("show")
+# selectMethod("show", "Passenger")
 ```
 
-## S4: generic functions/methods/accessories
+## S4: generic functions/methods
+Validation (`setValidity()`): each slot has length 1.
+
+```{r passenger_validate}
+#` methods("show")
+#` show is already a generic functions for S4 methods 
+setMethod("show", signature="Passenger",
+          function(object) {
+          cat(paste0("name: ", object@name, "\n"))
+          cat(paste0("origin: ", object@origin, "\n"))
+          cat(paste0("destination: ", object@destination, "\n"))
+          })
+show(x)
+# showMethod("show")
+# selectMethod("show", "Passenger")
+```
+## S4: generic functions/methods
 constructor: initialization, validation
-getter: name, origin, destination
-setter: ffnumber
-unit test!
+getters: name, origin, destination
+setters: ffnumber
+unit test
 
 ```{r constructor_passenger}
 #` constructor
@@ -185,6 +211,10 @@ setMethod("Passenger", signature("ANY"),
             destination = destination)
     })
 ```
+## S4: class accessor 
+- prefer user to access the internal of an object via accessos (getters and setters). R does not have provision of encapsulation.
+- crafted setters ensure the object remains valid 
+- allow developers to make object more memory compact and efficient
 
 ```{r getter_passenger}
 #' getter
@@ -195,14 +225,32 @@ setMethod("name", signature("Passenger"),
 setGeneric("name<-", function(object, value) standardGeneric("name<-"))
 setMethod("name<-", signature("Passenger"),
     function(object, value) {
-        object@name <- value
+        # validate value
+        if (is.character(value))
+            object@name <- value
+        if (!is.character(value))
+            warning("`name` in a Passenger class must be character")
         object
     })
 
 name(x) <- "Josie W. Andre"
+name(x) <- 1
 ```
+## S4: virtual class
+Cannot be instantiated. Used as the parent of one or more concrete class
 
-## tools
-getMethod, getGenerics, 
+```{r virtual_class, eval=FALSE}
+setClass("A", representation("VIRTUAL"))
+setClass("subA1", contains = "A", slot = ...add slot here...)
+```
+```{r example_vartual}
+suppressPackageStartupMessages(library(GenomicRanges))
+showClass("GenomicRanges")
+```
+## Applications - Bioconductor's GRanges/SummarizedExperiments
 
-## Bioconductor's GRanges/SummarizedExperiments
+## Applications - S4Vectors
+## Reference
+
+Bioconductor training courses:
+https://master.bioconductor.org/help/course-materials/2017/Zurich/S4-classes-and-methods.html
