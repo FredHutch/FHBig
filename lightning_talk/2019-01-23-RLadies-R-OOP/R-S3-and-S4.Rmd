@@ -1,8 +1,10 @@
 ---
 title: "S3 and S4 system in R"
-author: "Chao-Jen Wong"
+author: "Chao-Jen Wong @ RLadies"
 date: "January 23, 2019"
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+    widescreen: true
 ---
 
 ```{r setup, include=FALSE}
@@ -11,16 +13,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Terminalogy
-Object - data object which has a class attribute
-heritance
-polymorphism
-Dispatch
-Generic function
-Method
+- Object - data object which has a class attribute
+- heritance    
+- polymorphism  
+- Dispatch  
+- Generic function  
+- Method  
 
-R OOP  
-- S3: generic functions, linear hierarch 
-- S4: classes and generic functions, polymorphism  
+## R's object oriented programming  
+- S3: generic functions, linear hierarch   
+- S4: classes and generic functions, polymorphism    
 
 ## S3 system
 - dispatch system for generic functions 
@@ -28,8 +30,9 @@ R OOP
 - easy to describe and use
 - less code is needee  
 - only examines the first argument and dispatches depending on its class
-- dispatch by function naming convention that is describred .*  
+- dispatch by function naming convention that is describred
 
+## S3: dispatch system
 Start with an glm class and pring (generic function) and method print.glm
 ```{r S3_method}
 print
@@ -39,9 +42,9 @@ helps to dispatch to the appropriate method.
 `print()` is a generic function. A generic function does dispatch throughed a call to `
 UseMethod` that initaites the dispatch ona single argument, usually the first one.
 
-
-```{r example_glm, eval=FALSE}
-methods(print)
+## S3: dispatch system
+```{r example_glm}
+methods(print)[90:94]
 ```
 
 ```
@@ -51,42 +54,42 @@ methods(print)
  [93] print.glm*                                        
  [94] print.hclust*                                  
 ```
-
-```{r exp_glm}
-#getS3method("print", "glm")
-#methods(class="glm")
+Some useful functions:
+```{r exp_glm, eval=FALSE}
+getS3method("print", "glm")
+methods(class="glm")
 ```
 
-## S3: dummy example
-Lossely defien an S3 class `Passenger`:
+## S3: class
+Defind an S3 class `Passenger`. Loose definition. No valid checkt. No initialization.
 
-```{r s3_classa}
-Lossely define an S3 class
+```{r s3_class}
 # Define S3 class
 x <- list(name="John Alber", origin="SEA", destination="KCM")
 class(x) <- "Passenger"
 ```
 
-## S3: dummy example
-Generic functions and methods
+## S3: generic functions and methods
 
 ```{r s3_method}
 # define foo generic funciton
 foo <- function(x, ...) UseMethod("foo")
 # define default
 foo.default <- function(x, ...) {
-   print(x)
+   print.default(x)
 }
 # define method applied to Passenger
 foo.Passenger <- function(x) {
-  cat(paste0("Name: ", x$name, "\n"))
-  cat(paste0("Origin: ", x$origin, "\n"))
-  cat(paste0("Dest: ", x$destination), "\n")
-  NextMethod()
+  cat(paste0("name: ", x$name, "\n"))
+  cat(paste0("origin: ", x$origin, "\n"))
+  cat(paste0("dest: ", x$destination), "\n")
+  #NextMethod()
 }
+foo(x)
 # getS3method("foo", "Passenger")
 ```
 
+My note:
 `NextMethod()` transfers contorl to the next most specific method, which is `foo.default()`.
 
 When `NextMethod("print")` applied to an object with class attribute `Passenger`, the system 
@@ -95,7 +98,7 @@ it uses `print.default()`, if it exists.
 
 ## S4 system
 
-- overcome the deficientices of S3 system  
+Overcome the deficientices of S3 system  
   - multiple dispatch  
   - object validation  
   - coercion system
@@ -104,12 +107,11 @@ it uses `print.default()`, if it exists.
   - class unions
 
 
-
-## S4: class
+## S4: core components
 Goal: define self-describing data object can be used to carry out a reasonable 
 analysis of the data
 
-Core component: 
+Core components: 
 - class definition  
 - validation  
 - constructor function (named as the class)
@@ -117,7 +119,7 @@ Core component:
 - `show` method
 
 ## S4: concrete class
-define classes: `setClass`, `slots`, `presentation`, `contains`, `prototype`, `validity`.
+Define classes: `setClass`, `slots`, `presentation`, `contains`, `prototype` (initialization), `validity` (validation).
 
 ```{r define_passenger}
 #' class and representation (slots)
@@ -153,10 +155,18 @@ x
 ```
 
 ## S4: Validation
-Validation (`setValidity()`): each slot has length 1.
+Validation (`setValidity()`): slots must have the same length
 
-```{r passenger_validate}
-
+```{r passenger_validate, include=FALSE}
+setValidity("Passenger", function(object) {
+  slot_lengths <- c(length(object@name),
+                    length(object@origin),
+                    length(object@destination))
+  if (length(unique(slot_lengths)) != 1)
+    return("'name', 'origin' and 'destinatio' must have the same length")
+  
+  return(TRUE)
+})
 ```
 
 ## S4: generic functions/methods
@@ -179,14 +189,14 @@ show(x)
 ```
 
 ## S4: constructor
-Instead of `new()`:
+Instead of `new()`, make a constructor function using the same name as the object.
 
 ```{r constructor_passenger}
 #` constructor
 Passenger <- function(name, origin, destination) {
-    new("Passenger", name=name, origin=origin, destination=destination)
+    new("Passenger", name=name, origin=origin,                             destination=destination)
 }
-x <- Passenger(name="Josie Andre", origin="SEA", destination="NYC")
+y <- Passenger(name="Josie Andre", origin="SEA", destination="NYC")
 ```
 
 ## S4: accessors
@@ -194,7 +204,7 @@ x <- Passenger(name="Josie Andre", origin="SEA", destination="NYC")
 - crafted setters ensure the object remains valid 
 - allow developers to make object more memory compact and efficient
 
-```{r getter_passenger}
+```{r getter_passenger, include=FALSE}
 #' getter
 setGeneric("name", function(object) standardGeneric("name"))
 setMethod("name", signature("Passenger"),
@@ -203,6 +213,7 @@ setMethod("name", signature("Passenger"),
 setGeneric("name<-", function(object, value) standardGeneric("name<-"))
 setMethod("name<-", signature("Passenger"),
     function(object, value) {
+        #validate length
         # validate value
         if (is.character(value))
             object@name <- value
@@ -210,9 +221,8 @@ setMethod("name<-", signature("Passenger"),
             warning("`name` in a Passenger class must be character")
         object
     })
-
-name(x) <- "Josie W. Andre"
-name(x) <- c("A", "B")
+name(x)
+name(x) <- "Josie Andre"
 ```
 
 ## S4: coercion
@@ -240,7 +250,7 @@ setClass("A2", contains = "A", slots = ...add slots here...)
 ## S4: virtual class example
 `GenomicRanges`, superclass of widely-used subclassed in BioConductor
 
-```{r example_vartual}
+```{r example_vartual, eval=FALSE}
 suppressPackageStartupMessages(library(GenomicRanges))
 showClass("GenomicRanges")
 ```
@@ -256,7 +266,8 @@ selectMethod("names", "GRanges")
 Powerful but code with caution.
 
 ```{r compressed_iranges}
-showClass("COmpressedIRangesList")
+suppressPackageStartupMessages(library(IRanges))
+showClass("CompressedIRangesList")
 ```
 
 ## S4: class unions
@@ -281,11 +292,14 @@ BiocManager::install("S4Vectors", version = "3.8")
 ```
 
 ## Excercise
-Implement the SNP location class with slots
-- genome, character, i.e., hg19, hg38 (homo sapiens genome built)
-- snpid, character vector indicating the ID of the snp 
-- chrom, character vector indicating the chromsome 
-- pos, integer indicating the position in the chromsome
+1. Implement the SNP location class with slots
+  - genome, character, i.e., hg19, hg38 (homo sapiens genome built)
+  - snpid, character vector indicating the ID of the snp 
+  - chrom, character vector indicating the chromsome 
+  - pos, integer indicating the position in the chromsome
+
+2. Set validationg such that all slots ahve the some length
+3. Define `length` method 
 
 ```{r do_excercise, echo=FALSE}
 #` define class
@@ -296,9 +310,11 @@ setClass("SNPLocations",
                  pos="integer" # an integer vector of length N
                  ),
          prototype=list(genome=NA_character_)
+)
 #` Constructor
 SNPLocations <- function(genome, snpid, chrom, pos)
     new("SNPLocations", genome=genome, snpid=snpid, chrom=chrom, pos=pos)
+#' construct an instance
 snplocs <- SNPLocations("hg19",
                         snpid=c("rs0001", "rs0002"),
                         chrom=c("chr1", "chrX"),
@@ -319,10 +335,9 @@ setValidity("SNPLocations",
 )
 
 #' define length method
-setMethod("length", "SNPLocations", function(x) length(x@snpid))                           
+setMethod("length", "SNPLocations", function(object) length(object@snpid))
+length(snplocs)             
 ```
-Set validationg such that all slots ahve the some length
-Define `length` method 
 
 ## Session info
 ```{r session_info}
@@ -338,4 +353,4 @@ sessionInfo()
 - Bioconductor training courses:
   https://master.bioconductor.org/help/course-materials/2017/Zurich/S4-classes-and-methods.html
 
-## Excercise
+
