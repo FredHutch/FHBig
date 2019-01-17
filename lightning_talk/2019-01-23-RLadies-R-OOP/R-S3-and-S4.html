@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>S3 and S4 system in R</title>
+  <title>S3 and S4 systems in R</title>
 
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -21,7 +21,7 @@
     var SLIDE_CONFIG = {
       // Slide settings
       settings: {
-                title: 'S3 and S4 system in R',
+                title: 'S3 and S4 systems in R',
                         useBuilds: true,
         usePrettify: true,
         enableSlideAreas: true,
@@ -31,7 +31,7 @@
       // Author information
       presenters: [
             {
-        name:  'Chao-Jen Wong' ,
+        name:  'Chao-Jen Wong @ RLadies' ,
         company: '',
         gplus: '',
         twitter: '',
@@ -102,74 +102,116 @@
           </hgroup>
   </slide>
 
-<slide class=""><hgroup><h2>Terminalogy</h2></hgroup><article  id="terminalogy">
+<slide class=""><hgroup><h2>Object-oriented programming in R</h2></hgroup><article  id="object-oriented-programming-in-r">
+
+<p><strong>Major uses</strong></p>
 
 <ul>
-<li>Object - data object which has a class attribute</li>
-<li>heritance<br/></li>
-<li>polymorphism<br/></li>
-<li>Dispatch<br/></li>
-<li>Generic function<br/></li>
-<li>Method</li>
+<li>construction of self-describing data classes, (easier to store and share)</li>
+<li>functions and methods to handle the different manipulations to performed on teh objects</li>
+<li>more maintainable and reliable packges</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>R&#39;s object oriented programming</h2></hgroup><article  id="rs-object-oriented-programming">
+<p><strong>Supports</strong></p>
 
 <ul>
-<li>S3: generic functions, linear hierarch<br/></li>
-<li>S4: classes and generic functions, polymorphism</li>
+<li>objects<br/></li>
+<li>classes<br/></li>
+<li>inheritance<br/></li>
+<li>polymorphism</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>S3 system</h2></hgroup><article  id="s3-system">
+</article></slide><slide class=""><hgroup><h2>Two internal OOP systems</h2></hgroup><article  id="two-internal-oop-systems">
+
+<p>Not class-centeric.</p>
+
+<p>Discussion: classes and generic functions/methods</p>
+
+<p><strong>S3</strong> (1992)</p>
 
 <ul>
-<li>dispatch system for generic functions</li>
-<li>loessly define classes</li>
-<li>easy to describe and use</li>
-<li>less code is needee<br/></li>
-<li>only examines the first argument and dispatches depending on its class</li>
-<li>dispatch by function naming convention that is describred</li>
+<li>classes are loosely defined<br/></li>
+<li>single inheritance</li>
+<li>single dispatch system for generic functions and methods</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>S3: dispatch system</h2></hgroup><article  id="s3-dispatch-system">
+<p><strong>S4</strong> (1998, 2008)</p>
 
-<p>Start with an glm class and pring (generic function) and method print.glm</p>
+<ul>
+<li>overcome many deficiencies of S3</li>
+<li>explicited defined classes and generic function</li>
+<li>multiple inheritance</li>
+<li>increased complexity of use</li>
+</ul>
 
-<pre class = 'prettyprint lang-r'>print</pre>
+</article></slide><slide class=""><hgroup><h2>S3: generic functions</h2></hgroup><article  id="s3-generic-functions">
+
+<p>A generic function has a single expression wich is the call to <code>UseMethod</code>.</p>
+
+<pre class = 'prettyprint lang-r'>#&#39; print() is a generic function
+print</pre>
 
 <pre >## function (x, ...) 
 ## UseMethod(&quot;print&quot;)
-## &lt;bytecode: 0x7fc1fb7dba60&gt;
+## &lt;bytecode: 0x7f97f7effbe0&gt;
 ## &lt;environment: namespace:base&gt;</pre>
 
-<p>A singel expression which is the call to <code>UseMethod</code>, which is the mechanism that helps to dispatch to the appropriate method. <code>print()</code> is a generic function. A generic function does dispatch throughed a call to <code>UseMethod</code> that initaites the dispatch ona single argument, usually the first one.</p>
+<p><code>UseMethod</code> is the mechanism that helps to dispatch to the appropriate method. A generic function does dispatch through a call to <code>UseMethod</code> that initaites the dispatch one single argument, usually the first one.</p>
 
-</article></slide><slide class=""><hgroup><h2>S3: dispatch system</h2></hgroup><article  id="s3-dispatch-system-1">
+</article></slide><slide class=""><hgroup><h2>S3: methods and dispatch system</h2></hgroup><article  id="s3-methods-and-dispatch-system">
 
-<pre class = 'prettyprint lang-r'>methods(print)[90:94]</pre>
+<p>A type of function invoked depending on the class of one or more of its argument.</p>
 
-<pre >## [1] &quot;print.findLineNumResult&quot; &quot;print.formula&quot;          
-## [3] &quot;print.fseq&quot;              &quot;print.ftable&quot;           
-## [5] &quot;print.function&quot;</pre>
+<pre class = 'prettyprint lang-r'>#&#39; print.name_of_the_class methods
+methods(print)[92:96]</pre>
 
-<pre > [90] print.ftable*                                     
- [91] print.function                                    
- [92] print.getAnywhere*                                
- [93] print.glm*                                        
- [94] print.hclust*                                  </pre>
+<pre >## [1] &quot;print.fseq&quot;        &quot;print.ftable&quot;      &quot;print.function&quot;   
+## [4] &quot;print.getAnywhere&quot; &quot;print.glm&quot;</pre>
+
+<p>Dispatch:<br/>- examine the first argument and dispatches via a generic function depending on its class<br/>- dispatch by function naming convention that is describeed</p>
 
 <p>Some useful functions:</p>
 
 <pre class = 'prettyprint lang-r'>getS3method(&quot;print&quot;, &quot;glm&quot;)
 methods(class=&quot;glm&quot;)</pre>
 
-</article></slide><slide class=""><hgroup><h2>S3: class</h2></hgroup><article  id="s3-class">
+</article></slide><slide class=""><hgroup><h2>S3: classes</h2></hgroup><article  id="s3-classes">
 
-<p>Defind an S3 class <code>Passenger</code>. Loose definition. No valid checkt. No initialization.</p>
+<p>Defind an S3 class <code>Passenger</code>.</p>
+
+<p>Loose definition. No valid check. No initialization. Single inheritance.</p>
 
 <pre class = 'prettyprint lang-r'># Define S3 class
-x &lt;- list(name=&quot;John Alber&quot;, origin=&quot;SEA&quot;, destination=&quot;KCM&quot;)
-class(x) &lt;- &quot;Passenger&quot;</pre>
+x &lt;- list(name=&quot;Josie Andre&quot;, origin=&quot;SEA&quot;, destination=&quot;KCM&quot;)
+class(x) &lt;- &quot;Passenger&quot; # set valuse of the class attribute
+y &lt;- list(name=&quot;Josie Andre&quot;, origin=&quot;SEA&quot;, destination=&quot;KCM&quot;,
+          ffnumber=10)
+class(y) &lt;- c(&quot;FreqFlyer&quot;, &quot;Passenger&quot;)
+class(x)</pre>
+
+<pre >## [1] &quot;Passenger&quot;</pre>
+
+<pre class = 'prettyprint lang-r'>inherits(y, &quot;Passenger&quot;)</pre>
+
+<pre >## [1] TRUE</pre>
+
+</article></slide><slide class=""><hgroup><h2>S3: geneirc functions and methods</h2></hgroup><article  id="s3-geneirc-functions-and-methods">
+
+<p>Using <code>print.default()</code> to print a <code>Passenger</code> instance.</p>
+
+<pre class = 'prettyprint lang-r'>print(x)</pre>
+
+<pre >## $name
+## [1] &quot;Josie Andre&quot;
+## 
+## $origin
+## [1] &quot;SEA&quot;
+## 
+## $destination
+## [1] &quot;KCM&quot;
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;Passenger&quot;</pre>
 
 </article></slide><slide class=""><hgroup><h2>S3: generic functions and methods</h2></hgroup><article  id="s3-generic-functions-and-methods">
 
@@ -188,7 +230,7 @@ foo.Passenger &lt;- function(x) {
 }
 foo(x)</pre>
 
-<pre >## name: John Alber
+<pre >## name: Josie Andre
 ## origin: SEA
 ## dest: KCM</pre>
 
@@ -200,20 +242,31 @@ foo(x)</pre>
 
 </article></slide><slide class=""><hgroup><h2>S4 system</h2></hgroup><article  id="s4-system">
 
-<p>Overcome the deficientices of S3 system<br/>- multiple dispatch<br/>- object validation<br/>- coercion system - explicit representation of classes virtual/concrete classes - multiple inheritance - class unions</p>
+<p><strong>Overcome the deficientices of S3 system</strong></p>
 
-</article></slide><slide class=""><hgroup><h2>S4: core components</h2></hgroup><article  id="s4-core-components">
+<ul>
+<li>multiple dispatch<br/></li>
+<li>object validation<br/></li>
+<li>explicit representation of classes virtual/concrete classes<br/></li>
+<li>multiple inheritance<br/></li>
+<li>class unions</li>
+</ul>
 
-<p>Goal: define self-describing data object can be used to carry out a reasonable analysis of the data</p>
+<p><strong>Core components</strong></p>
 
-<p>Core components: - class definition<br/>- validation<br/>- constructor function (named as the class) - generic and methods: getters, setters, and other accessories - <code>show</code> method</p>
+<ul>
+<li>class definition<br/></li>
+<li>validation<br/></li>
+<li>constructor function (named as the class)</li>
+<li>generic and methods: getters, setters, and other accessories</li>
+<li><code>show</code> method</li>
+</ul>
 
 </article></slide><slide class=""><hgroup><h2>S4: concrete class</h2></hgroup><article  id="s4-concrete-class">
 
 <p>Define classes: <code>setClass</code>, <code>slots</code>, <code>presentation</code>, <code>contains</code>, <code>prototype</code> (initialization), <code>validity</code> (validation).</p>
 
-<pre class = 'prettyprint lang-r'>#&#39; class and representation (slots)
-setClass(&quot;Passenger&quot;, 
+<pre class = 'prettyprint lang-r'>setClass(&quot;Passenger&quot;, 
   slots = c(name = &quot;character&quot;,
             origin = &quot;character&quot;,
             destination = &quot;character&quot;),
@@ -221,18 +274,16 @@ setClass(&quot;Passenger&quot;,
                         origin = NA_character_,
                         destination = NA_character_))                        </pre>
 
-<pre class = 'prettyprint lang-r'>#&#39; contains
-#&#39; subclass inheriting properties of superclass
+<pre class = 'prettyprint lang-r'>#&#39; subclass inheriting properties of superclass
 setClass(&quot;FreqFlyer&quot;,
   contains = &quot;Passenger&quot;,
   slots= c(ffnumber = &quot;numeric&quot;))</pre>
 
 </article></slide><slide class=""><hgroup><h2>S4: classes</h2></hgroup><article  id="s4-classes">
 
-<p>coercion, and accessories.</p>
+<p>Create a <code>Passenger</code> instance:</p>
 
-<pre class = 'prettyprint lang-r'>#&#39; S4 classes
-x &lt;- new(&quot;Passenger&quot;, name=&quot;Josephine Andre&quot;, 
+<pre class = 'prettyprint lang-r'>x &lt;- new(&quot;Passenger&quot;, name=&quot;Josephine Andre&quot;, 
          origin = &quot;SEA&quot;,
          destination = &quot;KCM&quot;)
 x</pre>
@@ -247,22 +298,38 @@ x</pre>
 ## Slot &quot;destination&quot;:
 ## [1] &quot;KCM&quot;</pre>
 
-<pre class = 'prettyprint lang-r'># inherits(x, &quot;Passenger&quot;)    
-# showClass(&quot;Passenger&quot;)
+<pre class = 'prettyprint lang-r'># showClass(&quot;Passenger&quot;)
 # slotNames(&quot;Passenger&quot;)      </pre>
 
 </article></slide><slide class=""><hgroup><h2>S4: Validation</h2></hgroup><article  id="s4-validation">
 
-<p>Validation (<code>setValidity()</code>): slots must have the same length</p>
+<p>Validation: slots must have the same length</p>
+
+<pre class = 'prettyprint lang-r'>setValidity(&quot;Passenger&quot;, function(object) {
+  slot_lengths &lt;- c(length(object@name),
+                    length(object@origin),
+                    length(object@destination))
+  if (length(unique(slot_lengths)) != 1)
+    return(&quot;&#39;name&#39;, &#39;origin&#39; and &#39;destinatio&#39; must have the same length&quot;)
+  
+  return(TRUE)
+})</pre>
+
+<pre >## Class &quot;Passenger&quot; [in &quot;.GlobalEnv&quot;]
+## 
+## Slots:
+##                                           
+## Name:         name      origin destination
+## Class:   character   character   character
+## 
+## Known Subclasses: &quot;FreqFlyer&quot;</pre>
 
 </article></slide><slide class=""><hgroup><h2>S4: generic functions/methods</h2></hgroup><article  id="s4-generic-functionsmethods">
-
-<p>constructor, validation, initialization, getters, setters, show, coercion, and accessories.</p>
 
 <h3>Define <code>show</code> method</h3>
 
 <pre class = 'prettyprint lang-r'>#` methods(&quot;show&quot;)
-#` show is already a generic functions for S4 methods 
+#` show is already a generic function for S4 classes
 setMethod(&quot;show&quot;, signature=&quot;Passenger&quot;,
           function(object) {
           cat(paste0(&quot;name: &quot;, object@name, &quot;\n&quot;))
@@ -284,9 +351,17 @@ show(x)</pre>
 
 <pre class = 'prettyprint lang-r'>#` constructor
 Passenger &lt;- function(name, origin, destination) {
-    new(&quot;Passenger&quot;, name=name, origin=origin,                             destination=destination)
+    new(&quot;Passenger&quot;, name=name, origin=origin,    
+        destination=destination)
 }
 y &lt;- Passenger(name=&quot;Josie Andre&quot;, origin=&quot;SEA&quot;, destination=&quot;NYC&quot;)</pre>
+
+<p><strong>How to access the internal of an instance of S4 classes ?</strong></p>
+
+<pre class = 'prettyprint lang-r'>#` example
+y@name</pre>
+
+<pre >## [1] &quot;Josie Andre&quot;</pre>
 
 </article></slide><slide class=""><hgroup><h2>S4: accessors</h2></hgroup><article  id="s4-accessors">
 
@@ -295,6 +370,37 @@ y &lt;- Passenger(name=&quot;Josie Andre&quot;, origin=&quot;SEA&quot;, destinat
 <li>crafted setters ensure the object remains valid</li>
 <li>allow developers to make object more memory compact and efficient</li>
 </ul>
+
+<pre class = 'prettyprint lang-r'>#&#39; generic getter
+setGeneric(&quot;name&quot;, function(object) standardGeneric(&quot;name&quot;))</pre>
+
+<pre >## [1] &quot;name&quot;</pre>
+
+<pre class = 'prettyprint lang-r'>setMethod(&quot;name&quot;, signature(&quot;Passenger&quot;),
+    function(object) {object@name})</pre>
+
+</article></slide><slide class=""><hgroup><h2>S4: accessors</h2></hgroup><article  id="s4-accessors-1">
+
+<pre class = 'prettyprint lang-r'>#&#39; setter (replacement methods)
+setGeneric(&quot;name&lt;-&quot;, function(object, value) standardGeneric(&quot;name&lt;-&quot;))</pre>
+
+<pre >## [1] &quot;name&lt;-&quot;</pre>
+
+<pre class = 'prettyprint lang-r'>setMethod(&quot;name&lt;-&quot;, signature(&quot;Passenger&quot;),
+    function(object, value) {
+        #validate length
+        # validate value
+        if (is.character(value))
+            object@name &lt;- value
+        if (!is.character(value))
+            warning(&quot;`name` in a Passenger class must be character&quot;)
+        object
+    })
+name(x)</pre>
+
+<pre >## [1] &quot;Josephine Andre&quot;</pre>
+
+<pre class = 'prettyprint lang-r'>name(x) &lt;- &quot;Josie Andre&quot;</pre>
 
 </article></slide><slide class=""><hgroup><h2>S4: coercion</h2></hgroup><article  id="s4-coercion">
 
@@ -319,19 +425,55 @@ as(x, &quot;data.frame&quot;)                     </pre>
 setClass(&quot;A1&quot;, contains = &quot;A&quot;, slots = ...add slots here...)
 setClass(&quot;A2&quot;, contains = &quot;A&quot;, slots = ...add slots here...)</pre>
 
-</article></slide><slide class=""><hgroup><h2>S4: virtual class example</h2></hgroup><article  id="s4-virtual-class-example">
-
-<p><code>GenomicRanges</code>, superclass of widely-used subclassed in BioConductor</p>
+</article></slide><slide class=""><hgroup><h2>S4: virtual class example - <code>GenomicRanges</code></h2></hgroup><article  id="s4-virtual-class-example---genomicranges">
 
 <pre class = 'prettyprint lang-r'>suppressPackageStartupMessages(library(GenomicRanges))
 showClass(&quot;GenomicRanges&quot;)</pre>
 
+<pre >## Virtual Class &quot;GenomicRanges&quot; [package &quot;GenomicRanges&quot;]
+## 
+## Slots:
+##                                                       
+## Name:  elementMetadata     elementType        metadata
+## Class:       DataFrame       character            list
+## 
+## Extends: 
+## Class &quot;Ranges&quot;, directly
+## Class &quot;GenomicRanges_OR_missing&quot;, directly
+## Class &quot;GenomicRanges_OR_GRangesList&quot;, directly
+## Class &quot;List&quot;, by class &quot;Ranges&quot;, distance 2
+## Class &quot;Vector&quot;, by class &quot;Ranges&quot;, distance 3
+## Class &quot;list_OR_List&quot;, by class &quot;Ranges&quot;, distance 3
+## Class &quot;Annotated&quot;, by class &quot;Ranges&quot;, distance 4
+## 
+## Known Subclasses: 
+## Class &quot;GenomicPos&quot;, directly
+## Class &quot;GRanges&quot;, directly
+## Class &quot;DelegatingGenomicRanges&quot;, directly
+## Class &quot;GNCList&quot;, directly
+## Class &quot;GPos&quot;, by class &quot;GenomicPos&quot;, distance 2
+## Class &quot;GPos&quot;, by class &quot;GRanges&quot;, distance 2</pre>
+
+</article></slide><slide class=""><hgroup><h2>S4: virtual class example - <code>GenomicRanges</code></h2></hgroup><article  id="s4-virtual-class-example---genomicranges-1">
+
 <ul>
-<li>Subclasses such as <code>GRanges</code> and <code>GPos</code> inherite the properties of the superclass.</li>
-<li>Methods are inherited and can be applied to <code>GRanges</code> adn <code>GPos</code></li>
+<li>A virtul class of three virtual superclass.</li>
+<li>Widely-used subclasses in Bioconductor. Subclasses such as <code>GRanges</code> and <code>GPos</code> inherite the properties of <code>GenomicRanges</code></li>
 </ul>
 
 <pre class = 'prettyprint lang-r'>selectMethod(&quot;names&quot;, &quot;GRanges&quot;)</pre>
+
+<pre >## Method Definition:
+## 
+## function (x) 
+## names(ranges(x))
+## &lt;bytecode: 0x7f98012320b0&gt;
+## &lt;environment: namespace:GenomicRanges&gt;
+## 
+## Signatures:
+##         x              
+## target  &quot;GRanges&quot;      
+## defined &quot;GenomicRanges&quot;</pre>
 
 </article></slide><slide class=""><hgroup><h2>S4: multiple inheritance</h2></hgroup><article  id="s4-multiple-inheritance">
 
@@ -364,29 +506,59 @@ showClass(&quot;CompressedIRangesList&quot;)</pre>
 ## 
 ## Known Subclasses: &quot;CompressedNormalIRangesList&quot;</pre>
 
-</article></slide><slide class=""><hgroup><h2>S4: class unions</h2></hgroup><article  id="s4-class-unions">
+</article></slide><slide class=""><hgroup><h2>S4: class union</h2></hgroup><article  id="s4-class-union">
 
-<p>setClassUnion</p>
+<p><code>setClassUnion()</code>: defined classes as the union of other classes</p>
+
+<pre class = 'prettyprint lang-r'>## a class for either numeric or logical data
+setClassUnion(&quot;maybeNumber&quot;, c(&quot;numeric&quot;, &quot;logical&quot;))</pre>
 
 </article></slide><slide class=""><hgroup><h2>Reference classes</h2></hgroup><article  id="reference-classes">
 
-<p>pass-by-copy and pass-by-reference semantic</p>
-
-</article></slide><slide class=""><hgroup><h2>Applications: S4Vectors package</h2></hgroup><article  id="applications-s4vectors-package">
+<pre class = 'prettyprint lang-r'>?ReferenceClasses</pre>
 
 <ul>
-<li>Rle<br/></li>
-<li>DataFrame</li>
-<li>CompressIntegerList?</li>
+<li>pass-by-reference semantic</li>
+<li>methods are encapsulated in the class definition</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Applications - Bioconductor&#39;s <code>RangedSummarizedExperiments</code></h2></hgroup><article  id="applications---bioconductors-rangedsummarizedexperiments">
+</article></slide><slide class=""><hgroup><h2>Applications - Bioconductor</h2></hgroup><article  id="applications---bioconductor">
 
-</article></slide><slide class=""><hgroup><h2>Install Bioconductor package</h2></hgroup><article  id="install-bioconductor-package">
+<p><code>RangedSummarizedExperiment</code> <img width="550" align="center" alt="se_view" src="summarized_experiment.svg"></p>
+
+</article></slide><slide class=""><hgroup><h2>Applications - Bioconductor</h2></hgroup><article  id="applications---bioconductor-1">
+
+<p>The <code>airway</code> package contains an example dataset (<code>RangedSummarizedExperiment</code>) from an RNA-Seq experiment of read counts per gene for airway smooth muscles.</p>
+
+<pre class = 'prettyprint lang-r'>suppressPackageStartupMessages(library(SummarizedExperiment))
+data(airway, package=&quot;airway&quot;)
+se &lt;- airway
+se</pre>
+
+<pre >## class: RangedSummarizedExperiment 
+## dim: 64102 8 
+## metadata(1): &#39;&#39;
+## assays(1): counts
+## rownames(64102): ENSG00000000003 ENSG00000000005 ... LRG_98 LRG_99
+## rowData names(0):
+## colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521
+## colData names(9): SampleName cell ... Sample BioSample</pre>
+
+</article></slide><slide class=""><hgroup><h2>Install Bioconductor packages</h2></hgroup><article  id="install-bioconductor-packages">
 
 <pre class = 'prettyprint lang-r'>if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
 BiocManager::install(&quot;S4Vectors&quot;, version = &quot;3.8&quot;)</pre>
+
+<p>Bioconductor packages used for this presentation</p>
+
+<ul>
+<li><code>GenomicRanges</code></li>
+<li><code>IRanges</code></li>
+<li><code>S4Vectors</code></li>
+<li><code>SummarizedExperiment</code></li>
+<li><code>airway</code></li>
+</ul>
 
 </article></slide><slide class=""><hgroup><h2>Excercise</h2></hgroup><article  id="excercise">
 
@@ -406,18 +578,6 @@ BiocManager::install(&quot;S4Vectors&quot;, version = &quot;3.8&quot;)</pre>
 <li>Define <code>length</code> method</li>
 </ol>
 
-<pre >## Class &quot;SNPLocations&quot; [in &quot;.GlobalEnv&quot;]
-## 
-## Slots:
-##                                               
-## Name:     genome     snpid     chrom       pos
-## Class: character character character   integer</pre>
-
-<pre >## Warning: For function &#39;length&#39;, signature &#39;SNPLocations&#39;: argument in
-## method definition changed from (object) to (x)</pre>
-
-<pre >## [1] 2</pre>
-
 </article></slide><slide class=""><hgroup><h2>Session info</h2></hgroup><article  id="session-info">
 
 <pre class = 'prettyprint lang-r'>sessionInfo()</pre>
@@ -434,17 +594,25 @@ BiocManager::install(&quot;S4Vectors&quot;, version = &quot;3.8&quot;)</pre>
 ## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
-## [1] stats4    parallel  stats     graphics  grDevices utils     datasets 
+## [1] parallel  stats4    stats     graphics  grDevices utils     datasets 
 ## [8] methods   base     
 ## 
 ## other attached packages:
-## [1] IRanges_2.14.12     S4Vectors_0.18.3    BiocGenerics_0.26.0
+##  [1] SummarizedExperiment_1.10.1 DelayedArray_0.6.6         
+##  [3] BiocParallel_1.14.2         matrixStats_0.54.0         
+##  [5] Biobase_2.40.0              GenomicRanges_1.32.7       
+##  [7] GenomeInfoDb_1.16.0         IRanges_2.14.12            
+##  [9] S4Vectors_0.18.3            BiocGenerics_0.26.0        
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_1.0.0      digest_0.6.18   magrittr_1.5    evaluate_0.12  
-##  [5] stringi_1.2.4   rmarkdown_1.11  tools_3.5.1     stringr_1.3.1  
-##  [9] xfun_0.4        yaml_2.2.0      compiler_3.5.1  htmltools_0.3.6
-## [13] knitr_1.21</pre>
+##  [1] Rcpp_1.0.0             knitr_1.21             XVector_0.20.0        
+##  [4] magrittr_1.5           zlibbioc_1.26.0        lattice_0.20-38       
+##  [7] stringr_1.3.1          tools_3.5.1            grid_3.5.1            
+## [10] xfun_0.4               htmltools_0.3.6        yaml_2.2.0            
+## [13] digest_0.6.18          Matrix_1.2-15          GenomeInfoDbData_1.1.0
+## [16] formatR_1.5            bitops_1.0-6           RCurl_1.95-4.11       
+## [19] evaluate_0.12          rmarkdown_1.11         stringi_1.2.4         
+## [22] compiler_3.5.1</pre>
 
 </article></slide><slide class=""><hgroup><h2>Reference</h2></hgroup><article  id="reference">
 
