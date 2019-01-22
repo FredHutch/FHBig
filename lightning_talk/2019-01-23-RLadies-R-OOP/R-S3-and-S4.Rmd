@@ -15,9 +15,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 __Major uses__  
 
-- construction of self-describing data classes, (easier to store and share)
-- functions and methods to handle the different manipulations to performed on teh objects
-- more maintainable and reliable packges  
+- construction of self-describing data classes, easier to store and share
+- different manipulations performed on the objects
+- more maintainable and reliable packages  
+
+## Object-oriented programming in R
 
 __Supports__  
 
@@ -26,11 +28,9 @@ __Supports__
 - inheritance  
 - polymorphism  
 
+
+
 ## Two internal OOP systems
-Not class-centeric.  
-
-Discussion: classes and generic functions/methods
-
 __S3__ (1992) 
 
 - classes are loosely defined  
@@ -44,30 +44,38 @@ __S4__ (1998, 2008)
 - multiple inheritance
 - increased complexity of use
 
-## S3: generic functions 
-A generic function has a single expression wich is the call to `UseMethod`.
+Both are not _class-centric_.
+
+## S3: characteristics of generic functions
+
 ```{r S3_method}
 #' print() is a generic function
 print
 ```
-`UseMethod` is the mechanism that helps to dispatch to the appropriate method.
-A generic function does dispatch through a call to `UseMethod` that initaites the dispatch one single argument, usually the first one.
+- a single expression which is the call to `UseMethod`
+- `UseMethod` initaites the dispatch one single argument, usually the first one
 
-## S3: methods and dispatch system
-A type of function invoked depending on the class of one or more of its argument.
+## S3: methods and dispatch mechanism
+_Methods_ are regular functions identified by their names.
+
+_Naming convention:_ a concatenation of the name of the generic and the name of the class, seperated by a dot.
 
 ```{r example_glm}
-#' print.name_of_the_class methods
+#' list of all available methods for a generic function
 methods(print)[92:96]
 ```
-Dispatch:  
-- examine the first argument and dispatches via a generic function depending on its class  
-- dispatch by function naming convention that is describeed  
+__Dispatch__:
 
-Some useful functions:
+- a call to `UseMethod` and find most specific method
+- make a new function call iwth arguments in the same order as there were supplied to the generic function
+
+
+## S3: some useful funtions
 ```{r exp_glm, eval=FALSE}
-getS3method("print", "glm")
-methods(class="glm")
+#' Find available methods for a give class 
+methods(class="glm") 
+#' get a method for a given class and print
+getS3method("print", "glm") 
 ```
 
 ## S3: classes
@@ -78,7 +86,8 @@ Loose definition. No valid check. No initialization. Single inheritance.
 ```{r s3_class}
 # Define S3 class
 x <- list(name="Josie Andre", origin="SEA", destination="KCM")
-class(x) <- "Passenger" # set valuse of the class attribute
+class(x) <- "Passenger" # set value of the class attribute
+# define a child of Passenger
 y <- list(name="Josie Andre", origin="SEA", destination="KCM",
           ffnumber=10)
 class(y) <- c("FreqFlyer", "Passenger")
@@ -97,7 +106,7 @@ print(x)
 ```{r s3_method}
 # define foo generic funciton
 foo <- function(x, ...) UseMethod("foo")
-# define default
+# define default. invoked when no applicable methods are found
 foo.default <- function(x, ...) {
    print.default(x)
 }
@@ -106,7 +115,7 @@ foo.Passenger <- function(x) {
   cat(paste0("name: ", x$name, "\n"))
   cat(paste0("origin: ", x$origin, "\n"))
   cat(paste0("dest: ", x$destination), "\n")
-  #NextMethod()
+  #NextMethod() - transfer control to the next most specific method
 }
 foo(x)
 # getS3method("foo", "Passenger")
@@ -138,7 +147,7 @@ __Core components__
 - `show` method
 
 ## S4: concrete class
-Define classes: `setClass`, `slots`, `presentation`, `contains`, `prototype` (initialization), `validity` (validation).
+Define classes: `setClass`, `slots`, `contains`, `prototype` (initialization), `validity` (validation).
 
 ```{r define_passenger}
 setClass("Passenger", 
@@ -169,10 +178,11 @@ x
 ```
 
 ## S4: Validation
-Validation: slots must have the same length
+Better practice: instead of `setClass(..., validity=...)`, use `setValidity()`
 
 ```{r passenger_validate}
 setValidity("Passenger", function(object) {
+  #' slots must have the same length
   slot_lengths <- c(length(object@name),
                     length(object@origin),
                     length(object@destination))
@@ -257,12 +267,15 @@ setAs("Passenger", "data.frame",
                      destination = from@destination))
 as(x, "data.frame")                     
 ```
-
+Method discovery: `methods()`, `.S3methods()`, `.S4methods()` 
+```{r methods}
+.S4methods(class="Passenger")
+```
 ## S4: virtual classes 
 Cannot be instantiated. Used as the parent of one or more concrete classes. 
 
 ```{r virtual_class, eval=FALSE}
-setClass("A", representation("VIRTUAL")) # can have slots or not
+setClass("A", contains="VIRTUAL") # can have slots or not
 # can define generic functions delicate to the virtual class
 setClass("A1", contains = "A", slots = ...add slots here...)
 setClass("A2", contains = "A", slots = ...add slots here...)
@@ -298,12 +311,14 @@ showClass("CompressedIRangesList")
 setClassUnion("maybeNumber", c("numeric", "logical"))
 ```
 
-## Reference classes
+## Reference classes (R5)
 ```{r ref, eval=FALSE}
 ?ReferenceClasses
 ```
+- appeared in R-2.21
 - pass-by-reference semantic
 - methods are encapsulated in the class definition
+- John Chambers (2016), _Extending R_, Capman & Hall
 
 ## Applications - Bioconductor
 `RangedSummarizedExperiment`
