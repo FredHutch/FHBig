@@ -34,23 +34,23 @@ __Supports__
 __S3__ (1992) 
 
 - classes are loosely defined  
-- single inheritance
+- simple, linear inheritance
 - single dispatch system for generic functions and methods   
 
 __S4__ (1998, 2008)
 
 - overcome many deficiencies of S3
-- explicited defined classes and generic function
+- explicit defined classes and generic function
 - multiple inheritance
 - increased complexity of use
 
 Both are not _class-centric_ systems.
 
 ## S3: generic functions
-__Responsibilies__
+Responsibilities
 
 - setting up evaluation environment
-- initiate dispach system
+- initiate dispatch system
 
 __Example__
 ```{r S3_method}
@@ -63,7 +63,7 @@ print
 ## S3: methods and dispatch mechanism
 _Methods_ are regular functions identified by their names.
 
-_Naming convention:_ a concatenation of the name of the generic and the name of the class, seperated by a dot.
+_Naming convention:_ a concatenation of the name of the generic and the name of the class, separated by a dot.
 
 ```{r example_glm}
 #' list of all available methods for a generic function
@@ -75,7 +75,7 @@ __Dispatch__
 - make a new function call with arguments in the same order as there were supplied to the generic function
 
 
-## S3: some useful funtions
+## S3: some useful functions
 ```{r exp_glm, eval=FALSE}
 #' Find available methods for a given class 
 methods(class="glm") 
@@ -99,7 +99,7 @@ class(x)
 inherits(y, "Passenger")
 ```
 
-## S3: geneirc functions and methods
+## S3: generic functions and methods
 Using `print.default()` to print a `Passenger` instance.
 
 ```{r example_print_passenger}
@@ -126,15 +126,15 @@ foo(x)
 ```
 
 My note:
-`NextMethod()` transfers contorl to the next most specific method, which is `foo.default()`.
+`NextMethod()` transfers control to the next most specific method, which is `foo.default()`.
 
 When `NextMethod("print")` applied to an object with class attribute `Passenger`, the system 
-search for a function called `print.Passenger`. If it finds it, applie to the object. Otherwise,
+search for a function called `print.Passenger`. If it finds it, applied to the object. Otherwise,
 it uses `print.default()`, if it exists.
 
 ## S4 system
 
-__Overcome the deficientices of S3 system__
+__Overcome the deficiencies of S3 system__
 
 - multiple dispatch    
 - object validation    
@@ -192,7 +192,7 @@ setValidity("Passenger", function(object) {
                     length(object@origin),
                     length(object@destination))
   if (length(unique(slot_lengths)) != 1)
-    return("'name', 'origin' and 'destinatio' must have the same length")
+    return("'name', 'origin' and 'destination' must have the same length")
   
   return(TRUE)
 })
@@ -297,7 +297,7 @@ showClass("GenomicRanges")
 ```
 ## S4: virtual class example - `GenomicRanges`
 
-- A virtul class of three virtual superclass. 
+- A virtual class of three virtual superclass. 
 - Widely-used subclasses in Bioconductor. Subclasses such as `GRanges` and `GPos` inherite the properties of `GenomicRanges`
 
 ```{r names_method_GRanges}
@@ -372,7 +372,7 @@ Bioconductor packages used for this presentation
 - `SummarizedExperiment`
 - `airway`
 
-## Excercise
+## Exercise
 Single nucleotide polymorphisms (SNPs) is a genetic variation in a single nucleotide.
 
 1. Implement an S4 class for the SNP location with slots
@@ -381,7 +381,7 @@ Single nucleotide polymorphisms (SNPs) is a genetic variation in a single nucleo
   - chrom, character vector indicating the chromsome (i.e., "ch1")
   - pos, integer indicating the position in the chromsome
 
-2. Set validationg such that all slots have the some length
+2. Set validation such that all slots have the some length
 3. Define `length` method 
 
 ```{r do_excercise, echo=FALSE, include=FALSE}
