@@ -129,7 +129,7 @@
 
 <ul>
 <li>classes are loosely defined<br/></li>
-<li>single inheritance</li>
+<li>simple, linear inheritance</li>
 <li>single dispatch system for generic functions and methods</li>
 </ul>
 
@@ -137,7 +137,7 @@
 
 <ul>
 <li>overcome many deficiencies of S3</li>
-<li>explicited defined classes and generic function</li>
+<li>explicit defined classes and generic function</li>
 <li>multiple inheritance</li>
 <li>increased complexity of use</li>
 </ul>
@@ -146,11 +146,11 @@
 
 </article></slide><slide class=""><hgroup><h2>S3: generic functions</h2></hgroup><article  id="s3-generic-functions">
 
-<p><strong>Responsibilies</strong></p>
+<p>Responsibilities</p>
 
 <ul>
 <li>setting up evaluation environment</li>
-<li>initiate dispach system</li>
+<li>initiate dispatch system</li>
 </ul>
 
 <p><strong>Example</strong></p>
@@ -160,7 +160,7 @@ print</pre>
 
 <pre >## function (x, ...) 
 ## UseMethod(&quot;print&quot;)
-## &lt;bytecode: 0x7fd08d55cc38&gt;
+## &lt;bytecode: 0x7fe607189638&gt;
 ## &lt;environment: namespace:base&gt;</pre>
 
 <ul>
@@ -172,7 +172,7 @@ print</pre>
 
 <p><em>Methods</em> are regular functions identified by their names.</p>
 
-<p><em>Naming convention:</em> a concatenation of the name of the generic and the name of the class, seperated by a dot.</p>
+<p><em>Naming convention:</em> a concatenation of the name of the generic and the name of the class, separated by a dot.</p>
 
 <pre class = 'prettyprint lang-r'>#&#39; list of all available methods for a generic function
 methods(print)[92:96]</pre>
@@ -187,7 +187,7 @@ methods(print)[92:96]</pre>
 <li>make a new function call with arguments in the same order as there were supplied to the generic function</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>S3: some useful funtions</h2></hgroup><article  id="s3-some-useful-funtions">
+</article></slide><slide class=""><hgroup><h2>S3: some useful functions</h2></hgroup><article  id="s3-some-useful-functions">
 
 <pre class = 'prettyprint lang-r'>#&#39; Find available methods for a given class 
 methods(class=&quot;glm&quot;) 
@@ -215,7 +215,7 @@ class(x)</pre>
 
 <pre >## [1] TRUE</pre>
 
-</article></slide><slide class=""><hgroup><h2>S3: geneirc functions and methods</h2></hgroup><article  id="s3-geneirc-functions-and-methods">
+</article></slide><slide class=""><hgroup><h2>S3: generic functions and methods</h2></hgroup><article  id="s3-generic-functions-and-methods">
 
 <p>Using <code>print.default()</code> to print a <code>Passenger</code> instance.</p>
 
@@ -233,7 +233,7 @@ class(x)</pre>
 ## attr(,&quot;class&quot;)
 ## [1] &quot;Passenger&quot;</pre>
 
-</article></slide><slide class=""><hgroup><h2>S3: generic functions and methods</h2></hgroup><article  id="s3-generic-functions-and-methods">
+</article></slide><slide class=""><hgroup><h2>S3: generic functions and methods</h2></hgroup><article  id="s3-generic-functions-and-methods-1">
 
 <pre class = 'prettyprint lang-r'># define foo generic function
 foo &lt;- function(x, ...) UseMethod(&quot;foo&quot;)
@@ -256,13 +256,13 @@ foo(x)</pre>
 
 <pre class = 'prettyprint lang-r'># getS3method(&quot;foo&quot;, &quot;Passenger&quot;)</pre>
 
-<p>My note: <code>NextMethod()</code> transfers contorl to the next most specific method, which is <code>foo.default()</code>.</p>
+<p>My note: <code>NextMethod()</code> transfers control to the next most specific method, which is <code>foo.default()</code>.</p>
 
-<p>When <code>NextMethod(&quot;print&quot;)</code> applied to an object with class attribute <code>Passenger</code>, the system search for a function called <code>print.Passenger</code>. If it finds it, applie to the object. Otherwise, it uses <code>print.default()</code>, if it exists.</p>
+<p>When <code>NextMethod(&quot;print&quot;)</code> applied to an object with class attribute <code>Passenger</code>, the system search for a function called <code>print.Passenger</code>. If it finds it, applied to the object. Otherwise, it uses <code>print.default()</code>, if it exists.</p>
 
 </article></slide><slide class=""><hgroup><h2>S4 system</h2></hgroup><article  id="s4-system">
 
-<p><strong>Overcome the deficientices of S3 system</strong></p>
+<p><strong>Overcome the deficiencies of S3 system</strong></p>
 
 <ul>
 <li>multiple dispatch<br/></li>
@@ -333,7 +333,7 @@ x</pre>
                     length(object@origin),
                     length(object@destination))
   if (length(unique(slot_lengths)) != 1)
-    return(&quot;&#39;name&#39;, &#39;origin&#39; and &#39;destinatio&#39; must have the same length&quot;)
+    return(&quot;&#39;name&#39;, &#39;origin&#39; and &#39;destination&#39; must have the same length&quot;)
   
   return(TRUE)
 })</pre>
@@ -372,7 +372,7 @@ show(x)</pre>
 
 <p>Instead of <code>new()</code>, make a constructor function using the same name as the object.</p>
 
-<pre class = 'prettyprint lang-r'>#` constructor, user-friendly, should have a man page
+<pre class = 'prettyprint lang-r'>#` constructor, user-friendly, should be documented
 Passenger &lt;- function(name, origin, destination) {
     new(&quot;Passenger&quot;, name=name, origin=origin,    
         destination=destination)
@@ -495,7 +495,7 @@ showClass(&quot;GenomicRanges&quot;)</pre>
 </article></slide><slide class=""><hgroup><h2>S4: virtual class example - <code>GenomicRanges</code></h2></hgroup><article  id="s4-virtual-class-example---genomicranges-1">
 
 <ul>
-<li>A virtul class of three virtual superclass.</li>
+<li>A virtual class of three virtual superclass.</li>
 <li>Widely-used subclasses in Bioconductor. Subclasses such as <code>GRanges</code> and <code>GPos</code> inherite the properties of <code>GenomicRanges</code></li>
 </ul>
 
@@ -505,7 +505,7 @@ showClass(&quot;GenomicRanges&quot;)</pre>
 ## 
 ## function (x) 
 ## names(ranges(x))
-## &lt;bytecode: 0x7fd099871000&gt;
+## &lt;bytecode: 0x7fe610569000&gt;
 ## &lt;environment: namespace:GenomicRanges&gt;
 ## 
 ## Signatures:
@@ -531,7 +531,7 @@ setClassUnion(&quot;maybeNumber&quot;, c(&quot;numeric&quot;, &quot;logical&quot
 <li>John Chambers (2016), <em>Extending R</em>, Capman &amp; Hall</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Application - Bioconductor</h2></hgroup><article  id="application---bioconductor">
+</article></slide><slide class=""><hgroup><h2>Application - Bioconductor (S4Vectors)</h2></hgroup><article  id="application---bioconductor-s4vectors">
 
 <pre >                  rtracklayer
                        |
@@ -575,7 +575,7 @@ se</pre>
 ## colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521
 ## colData names(9): SampleName cell ... Sample BioSample</pre>
 
-</article></slide><slide class=""><hgroup><h2>Install Bioconductor packages</h2></hgroup><article  id="install-bioconductor-packages">
+</article></slide><slide class=""><hgroup><h2>How to install Bioconductor packages</h2></hgroup><article  id="how-to-install-bioconductor-packages">
 
 <pre class = 'prettyprint lang-r'>if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -591,21 +591,23 @@ BiocManager::install(&quot;S4Vectors&quot;, version = &quot;3.8&quot;)</pre>
 <li><code>airway</code></li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Excercise</h2></hgroup><article  id="excercise">
+</article></slide><slide class=""><hgroup><h2>Exercise</h2></hgroup><article  id="exercise">
+
+<p>Single nucleotide polymorphisms (SNPs) is a genetic variation in a single nucleotide.</p>
 
 <ol>
-<li>Implement the SNP location class with slots</li>
+<li>Implement an S4 class for the SNP location with slots</li>
 </ol>
 
 <ul>
-<li>genome, character, i.e., hg19, hg38 (homo sapiens genome built)</li>
-<li>snpid, character vector indicating the ID of the snp</li>
-<li>chrom, character vector indicating the chromsome</li>
+<li>genome, character, (i.e., &quot;hg38&quot; for latest homo sapiens genome built)</li>
+<li>snpid, character vector indicating the ID of the snp (i.e., &quot;rs_xxx&quot;)</li>
+<li>chrom, character vector indicating the chromsome (i.e., &quot;ch1&quot;)</li>
 <li>pos, integer indicating the position in the chromsome</li>
 </ul>
 
 <ol>
-<li>Set validationg such that all slots ahve the some length</li>
+<li>Set validation such that all slots have the some length</li>
 <li>Define <code>length</code> method</li>
 </ol>
 
