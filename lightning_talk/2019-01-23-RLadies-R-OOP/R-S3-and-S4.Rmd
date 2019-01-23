@@ -44,16 +44,21 @@ __S4__ (1998, 2008)
 - multiple inheritance
 - increased complexity of use
 
-Both are not _class-centric_.
+Both are not _class-centric_ systems.
 
-## S3: characteristics of generic functions
+## S3: generic functions
+__Responsibilies__
 
+- setting up evaluation environment
+- initiate dispach system
+
+__Example__
 ```{r S3_method}
 #' print() is a generic function
 print
 ```
 - a single expression which is the call to `UseMethod`
-- `UseMethod` initaites the dispatch one single argument, usually the first one
+- `UseMethod` initiates the dispatch on single argument, usually the first one
 
 ## S3: methods and dispatch mechanism
 _Methods_ are regular functions identified by their names.
@@ -64,27 +69,26 @@ _Naming convention:_ a concatenation of the name of the generic and the name of 
 #' list of all available methods for a generic function
 methods(print)[92:96]
 ```
-__Dispatch__:
+__Dispatch__
 
 - a call to `UseMethod` and find most specific method
-- make a new function call iwth arguments in the same order as there were supplied to the generic function
+- make a new function call with arguments in the same order as there were supplied to the generic function
 
 
 ## S3: some useful funtions
 ```{r exp_glm, eval=FALSE}
-#' Find available methods for a give class 
+#' Find available methods for a given class 
 methods(class="glm") 
-#' get a method for a given class and print
+#' get a specific method for a given class 
 getS3method("print", "glm") 
 ```
 
 ## S3: classes
-Defind an S3 class `Passenger`.   
+Loose definition. No valid check. No initialization. 
 
-Loose definition. No valid check. No initialization. Single inheritance.  
-
+__Example: `Passenger` class__
 ```{r s3_class}
-# Define S3 class
+# Define S3 class: set value of the class attribute
 x <- list(name="Josie Andre", origin="SEA", destination="KCM")
 class(x) <- "Passenger" # set value of the class attribute
 # define a child of Passenger
@@ -104,7 +108,7 @@ print(x)
 ## S3: generic functions and methods
 
 ```{r s3_method}
-# define foo generic funciton
+# define foo generic function
 foo <- function(x, ...) UseMethod("foo")
 # define default. invoked when no applicable methods are found
 foo.default <- function(x, ...) {
@@ -138,6 +142,7 @@ __Overcome the deficientices of S3 system__
 - multiple inheritance  
 - class unions  
 
+## S4 system
 __Core components__
 
 - class definition  
@@ -213,7 +218,7 @@ show(x)
 Instead of `new()`, make a constructor function using the same name as the object.
 
 ```{r constructor_passenger}
-#` constructor
+#` constructor, user-friendly, should be documented
 Passenger <- function(name, origin, destination) {
     new("Passenger", name=name, origin=origin,    
         destination=destination)
@@ -227,9 +232,8 @@ y@name
 ```
 
 ## S4: accessors
-- prefer user to access the internal of an object via accessors (getters and setters). R does not have provision of encapsulation.
+- allow user to access the internal of an object via accessors (getters and setters). R does not have provision of encapsulation.
 - crafted setters ensure the object remains valid 
-- allow developers to make object more memory compact and efficient
 
 ```{r getter_passenger}
 #' generic getter
@@ -252,10 +256,15 @@ setMethod("name<-", signature("Passenger"),
             warning("`name` in a Passenger class must be character")
         object
     })
-name(x)
-name(x) <- "Josie Andre"
 ```
 
+## S4: accessors
+Test
+```{r test}
+name(y)
+name(y) <- "Derek Andre"
+name(y) <- 0
+```
 ## S4: coercion
 Coerce `Passenger` to `data.frame`
 
@@ -265,7 +274,7 @@ setAs("Passenger", "data.frame",
           data.frame(name = from@name,
                      origin = from@origin,
                      destination = from@destination))
-as(x, "data.frame")                     
+as(y, "data.frame")                     
 ```
 Method discovery: `methods()`, `.S3methods()`, `.S4methods()` 
 ```{r methods}
@@ -295,14 +304,6 @@ showClass("GenomicRanges")
 selectMethod("names", "GRanges")
 ```
 
-## S4: multiple inheritance
-Powerful but code with caution.
-
-```{r compressed_iranges}
-suppressPackageStartupMessages(library(IRanges))
-showClass("CompressedIRangesList")
-```
-
 ## S4: class union
 `setClassUnion()`: defined classes as the union of other classes
 
@@ -320,6 +321,28 @@ setClassUnion("maybeNumber", c("numeric", "logical"))
 - methods are encapsulated in the class definition
 - John Chambers (2016), _Extending R_, Capman & Hall
 
+## Application - Bioconductor (S4Vectors)
+                      rtracklayer
+                           |
+                           v
+                   GenomicAlignments
+                      |         |
+                      v         v
+     SummarizedExperiment   Rsamtools
+                    |       |      |
+                    v       v      v
+                GenomicRanges   Biostrings
+                        |          |
+                        v          v
+               GenomeInfoDb   XVector
+                        |     |
+                        v     v
+                        IRanges
+                           |
+                           v
+                       S4Vectors
+
+
 ## Applications - Bioconductor
 `RangedSummarizedExperiment`
 <img width="550" align="center" alt="se_view" src="summarized_experiment.svg">
@@ -333,7 +356,7 @@ se <- airway
 se
 ```
 
-## Install Bioconductor packages
+## How to install Bioconductor packages
 
 ```{r biocmanager, eval=FALSE}
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -350,13 +373,15 @@ Bioconductor packages used for this presentation
 - `airway`
 
 ## Excercise
-1. Implement the SNP location class with slots
-  - genome, character, i.e., hg19, hg38 (homo sapiens genome built)
-  - snpid, character vector indicating the ID of the snp 
-  - chrom, character vector indicating the chromsome 
+Single nucleotide polymorphisms (SNPs) is a genetic variation in a single nucleotide.
+
+1. Implement an S4 class for the SNP location with slots
+  - genome, character, (i.e., "hg38" for latest homo sapiens genome built)
+  - snpid, character vector indicating the ID of the snp  (i.e., "rs_xxx")
+  - chrom, character vector indicating the chromsome (i.e., "ch1")
   - pos, integer indicating the position in the chromsome
 
-2. Set validationg such that all slots ahve the some length
+2. Set validationg such that all slots have the some length
 3. Define `length` method 
 
 ```{r do_excercise, echo=FALSE, include=FALSE}

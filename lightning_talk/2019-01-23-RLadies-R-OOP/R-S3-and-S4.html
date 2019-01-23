@@ -142,21 +142,30 @@
 <li>increased complexity of use</li>
 </ul>
 
-<p>Both are not <em>class-centric</em>.</p>
+<p>Both are not <em>class-centric</em> systems.</p>
 
-</article></slide><slide class=""><hgroup><h2>S3: characteristics of generic functions</h2></hgroup><article  id="s3-characteristics-of-generic-functions">
+</article></slide><slide class=""><hgroup><h2>S3: generic functions</h2></hgroup><article  id="s3-generic-functions">
+
+<p><strong>Responsibilies</strong></p>
+
+<ul>
+<li>setting up evaluation environment</li>
+<li>initiate dispach system</li>
+</ul>
+
+<p><strong>Example</strong></p>
 
 <pre class = 'prettyprint lang-r'>#&#39; print() is a generic function
 print</pre>
 
 <pre >## function (x, ...) 
 ## UseMethod(&quot;print&quot;)
-## &lt;bytecode: 0x7ff5a0f27c38&gt;
+## &lt;bytecode: 0x7fd08d55cc38&gt;
 ## &lt;environment: namespace:base&gt;</pre>
 
 <ul>
 <li>a single expression which is the call to <code>UseMethod</code></li>
-<li><code>UseMethod</code> initaites the dispatch one single argument, usually the first one</li>
+<li><code>UseMethod</code> initiates the dispatch on single argument, usually the first one</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>S3: methods and dispatch mechanism</h2></hgroup><article  id="s3-methods-and-dispatch-mechanism">
@@ -171,27 +180,27 @@ methods(print)[92:96]</pre>
 <pre >## [1] &quot;print.fseq&quot;        &quot;print.ftable&quot;      &quot;print.function&quot;   
 ## [4] &quot;print.getAnywhere&quot; &quot;print.glm&quot;</pre>
 
-<p><strong>Dispatch</strong>:</p>
+<p><strong>Dispatch</strong></p>
 
 <ul>
 <li>a call to <code>UseMethod</code> and find most specific method</li>
-<li>make a new function call iwth arguments in the same order as there were supplied to the generic function</li>
+<li>make a new function call with arguments in the same order as there were supplied to the generic function</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>S3: some useful funtions</h2></hgroup><article  id="s3-some-useful-funtions">
 
-<pre class = 'prettyprint lang-r'>#&#39; Find available methods for a give class 
+<pre class = 'prettyprint lang-r'>#&#39; Find available methods for a given class 
 methods(class=&quot;glm&quot;) 
-#&#39; get a method for a given class and print
+#&#39; get a specific method for a given class 
 getS3method(&quot;print&quot;, &quot;glm&quot;) </pre>
 
 </article></slide><slide class=""><hgroup><h2>S3: classes</h2></hgroup><article  id="s3-classes">
 
-<p>Defind an S3 class <code>Passenger</code>.</p>
+<p>Loose definition. No valid check. No initialization.</p>
 
-<p>Loose definition. No valid check. No initialization. Single inheritance.</p>
+<p><strong>Example: <code>Passenger</code> class</strong></p>
 
-<pre class = 'prettyprint lang-r'># Define S3 class
+<pre class = 'prettyprint lang-r'># Define S3 class: set value of the class attribute
 x &lt;- list(name=&quot;Josie Andre&quot;, origin=&quot;SEA&quot;, destination=&quot;KCM&quot;)
 class(x) &lt;- &quot;Passenger&quot; # set value of the class attribute
 # define a child of Passenger
@@ -226,7 +235,7 @@ class(x)</pre>
 
 </article></slide><slide class=""><hgroup><h2>S3: generic functions and methods</h2></hgroup><article  id="s3-generic-functions-and-methods">
 
-<pre class = 'prettyprint lang-r'># define foo generic funciton
+<pre class = 'prettyprint lang-r'># define foo generic function
 foo &lt;- function(x, ...) UseMethod(&quot;foo&quot;)
 # define default. invoked when no applicable methods are found
 foo.default &lt;- function(x, ...) {
@@ -262,6 +271,8 @@ foo(x)</pre>
 <li>multiple inheritance<br/></li>
 <li>class unions</li>
 </ul>
+
+</article></slide><slide class=""><hgroup><h2>S4 system</h2></hgroup><article  id="s4-system-1">
 
 <p><strong>Core components</strong></p>
 
@@ -361,7 +372,7 @@ show(x)</pre>
 
 <p>Instead of <code>new()</code>, make a constructor function using the same name as the object.</p>
 
-<pre class = 'prettyprint lang-r'>#` constructor
+<pre class = 'prettyprint lang-r'>#` constructor, user-friendly, should have a man page
 Passenger &lt;- function(name, origin, destination) {
     new(&quot;Passenger&quot;, name=name, origin=origin,    
         destination=destination)
@@ -378,9 +389,8 @@ y@name</pre>
 </article></slide><slide class=""><hgroup><h2>S4: accessors</h2></hgroup><article  id="s4-accessors">
 
 <ul>
-<li>prefer user to access the internal of an object via accessors (getters and setters). R does not have provision of encapsulation.</li>
+<li>allow user to access the internal of an object via accessors (getters and setters). R does not have provision of encapsulation.</li>
 <li>crafted setters ensure the object remains valid</li>
-<li>allow developers to make object more memory compact and efficient</li>
 </ul>
 
 <pre class = 'prettyprint lang-r'>#&#39; generic getter
@@ -407,12 +417,21 @@ setGeneric(&quot;name&lt;-&quot;, function(object, value) standardGeneric(&quot;
         if (!is.character(value))
             warning(&quot;`name` in a Passenger class must be character&quot;)
         object
-    })
-name(x)</pre>
+    })</pre>
 
-<pre >## [1] &quot;Josephine Andre&quot;</pre>
+</article></slide><slide class=""><hgroup><h2>S4: accessors</h2></hgroup><article  id="s4-accessors-2">
 
-<pre class = 'prettyprint lang-r'>name(x) &lt;- &quot;Josie Andre&quot;</pre>
+<p>Test</p>
+
+<pre class = 'prettyprint lang-r'>name(y)</pre>
+
+<pre >## [1] &quot;Josie Andre&quot;</pre>
+
+<pre class = 'prettyprint lang-r'>name(y) &lt;- &quot;Derek Andre&quot;
+name(y) &lt;- 0</pre>
+
+<pre >## Warning in `name&lt;-`(`*tmp*`, value = 0): `name` in a Passenger class must
+## be character</pre>
 
 </article></slide><slide class=""><hgroup><h2>S4: coercion</h2></hgroup><article  id="s4-coercion">
 
@@ -423,10 +442,10 @@ name(x)</pre>
           data.frame(name = from@name,
                      origin = from@origin,
                      destination = from@destination))
-as(x, &quot;data.frame&quot;)                     </pre>
+as(y, &quot;data.frame&quot;)                     </pre>
 
 <pre >##          name origin destination
-## 1 Josie Andre    SEA         KCM</pre>
+## 1 Derek Andre    SEA         NYC</pre>
 
 <p>Method discovery: <code>methods()</code>, <code>.S3methods()</code>, <code>.S4methods()</code></p>
 
@@ -486,44 +505,13 @@ showClass(&quot;GenomicRanges&quot;)</pre>
 ## 
 ## function (x) 
 ## names(ranges(x))
-## &lt;bytecode: 0x7ff5ac238270&gt;
+## &lt;bytecode: 0x7fd099871000&gt;
 ## &lt;environment: namespace:GenomicRanges&gt;
 ## 
 ## Signatures:
 ##         x              
 ## target  &quot;GRanges&quot;      
 ## defined &quot;GenomicRanges&quot;</pre>
-
-</article></slide><slide class=""><hgroup><h2>S4: multiple inheritance</h2></hgroup><article  id="s4-multiple-inheritance">
-
-<p>Powerful but code with caution.</p>
-
-<pre class = 'prettyprint lang-r'>suppressPackageStartupMessages(library(IRanges))
-showClass(&quot;CompressedIRangesList&quot;)</pre>
-
-<pre >## Class &quot;CompressedIRangesList&quot; [package &quot;IRanges&quot;]
-## 
-## Slots:
-##                                                             
-## Name:        elementType   elementMetadata          metadata
-## Class:         character DataTable_OR_NULL              list
-##                                           
-## Name:         unlistData      partitioning
-## Class:               ANY PartitioningByEnd
-## 
-## Extends: 
-## Class &quot;IRangesList&quot;, directly
-## Class &quot;CompressedIntegerRangesList&quot;, directly
-## Class &quot;IntegerRangesList&quot;, by class &quot;IRangesList&quot;, distance 2
-## Class &quot;CompressedRangesList&quot;, by class &quot;CompressedIntegerRangesList&quot;, distance 2
-## Class &quot;RangesList&quot;, by class &quot;IRangesList&quot;, distance 3
-## Class &quot;CompressedList&quot;, by class &quot;CompressedIntegerRangesList&quot;, distance 3
-## Class &quot;List&quot;, by class &quot;IRangesList&quot;, distance 4
-## Class &quot;Vector&quot;, by class &quot;IRangesList&quot;, distance 5
-## Class &quot;list_OR_List&quot;, by class &quot;IRangesList&quot;, distance 5
-## Class &quot;Annotated&quot;, by class &quot;IRangesList&quot;, distance 6
-## 
-## Known Subclasses: &quot;CompressedNormalIRangesList&quot;</pre>
 
 </article></slide><slide class=""><hgroup><h2>S4: class union</h2></hgroup><article  id="s4-class-union">
 
@@ -542,6 +530,28 @@ setClassUnion(&quot;maybeNumber&quot;, c(&quot;numeric&quot;, &quot;logical&quot
 <li>methods are encapsulated in the class definition</li>
 <li>John Chambers (2016), <em>Extending R</em>, Capman &amp; Hall</li>
 </ul>
+
+</article></slide><slide class=""><hgroup><h2>Application - Bioconductor</h2></hgroup><article  id="application---bioconductor">
+
+<pre >                  rtracklayer
+                       |
+                       v
+               GenomicAlignments
+                  |         |
+                  v         v
+ SummarizedExperiment   Rsamtools
+                |       |      |
+                v       v      v
+            GenomicRanges   Biostrings
+                    |          |
+                    v          v
+           GenomeInfoDb   XVector
+                    |     |
+                    v     v
+                    IRanges
+                       |
+                       v
+                   S4Vectors</pre>
 
 </article></slide><slide class=""><hgroup><h2>Applications - Bioconductor</h2></hgroup><article  id="applications---bioconductor">
 
