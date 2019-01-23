@@ -160,7 +160,7 @@ print</pre>
 
 <pre >## function (x, ...) 
 ## UseMethod(&quot;print&quot;)
-## &lt;bytecode: 0x7fe607189638&gt;
+## &lt;bytecode: 0x7fb6c24c1438&gt;
 ## &lt;environment: namespace:base&gt;</pre>
 
 <ul>
@@ -505,7 +505,7 @@ showClass(&quot;GenomicRanges&quot;)</pre>
 ## 
 ## function (x) 
 ## names(ranges(x))
-## &lt;bytecode: 0x7fe610569000&gt;
+## &lt;bytecode: 0x7fb6cd6cf2a0&gt;
 ## &lt;environment: namespace:GenomicRanges&gt;
 ## 
 ## Signatures:
@@ -531,7 +531,7 @@ setClassUnion(&quot;maybeNumber&quot;, c(&quot;numeric&quot;, &quot;logical&quot
 <li>John Chambers (2016), <em>Extending R</em>, Capman &amp; Hall</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Application - Bioconductor (S4Vectors)</h2></hgroup><article  id="application---bioconductor-s4vectors">
+</article></slide><slide class=""><hgroup><h2>Application - Bioconductor (S4Vectors)</h2></hgroup><article  id="application---bioconductor-s4vectors" class="flexbox vcenter">
 
 <pre >                  rtracklayer
                        |
@@ -553,9 +553,12 @@ setClassUnion(&quot;maybeNumber&quot;, c(&quot;numeric&quot;, &quot;logical&quot
                        v
                    S4Vectors</pre>
 
-</article></slide><slide class=""><hgroup><h2>Applications - Bioconductor</h2></hgroup><article  id="applications---bioconductor">
+</article></slide><slide class=""><hgroup><h2>Applications - Bioconductor</h2></hgroup><article  id="applications---bioconductor" class="flexbox vcenter">
 
-<p><code>RangedSummarizedExperiment</code> <img width="550" align="center" alt="se_view" src="summarized_experiment.svg"></p>
+<code>RangedSummarizedExperiment</code>
+
+<div class="centered">
+<p><img width="550" align="center" alt="se_view" src="summarized_experiment.svg"></p></div>
 
 </article></slide><slide class=""><hgroup><h2>Applications - Bioconductor</h2></hgroup><article  id="applications---bioconductor-1">
 
@@ -563,8 +566,7 @@ setClassUnion(&quot;maybeNumber&quot;, c(&quot;numeric&quot;, &quot;logical&quot
 
 <pre class = 'prettyprint lang-r'>suppressPackageStartupMessages(library(SummarizedExperiment))
 data(airway, package=&quot;airway&quot;)
-se &lt;- airway
-se</pre>
+airway</pre>
 
 <pre >## class: RangedSummarizedExperiment 
 ## dim: 64102 8 

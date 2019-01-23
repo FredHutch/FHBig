@@ -321,7 +321,7 @@ setClassUnion("maybeNumber", c("numeric", "logical"))
 - methods are encapsulated in the class definition
 - John Chambers (2016), _Extending R_, Capman & Hall
 
-## Application - Bioconductor (S4Vectors)
+## Application - Bioconductor (S4Vectors) {.flexbox .vcenter}
                       rtracklayer
                            |
                            v
@@ -343,17 +343,18 @@ setClassUnion("maybeNumber", c("numeric", "logical"))
                        S4Vectors
 
 
-## Applications - Bioconductor
+## Applications - Bioconductor {.flexbox .vcenter}
 `RangedSummarizedExperiment`
+<div class="centered">
 <img width="550" align="center" alt="se_view" src="summarized_experiment.svg">
+</div>
 
 ## Applications - Bioconductor
 The `airway` package contains an example dataset (`RangedSummarizedExperiment`) from an RNA-Seq experiment of read counts per gene for airway smooth muscles. 
 ```{r se}
 suppressPackageStartupMessages(library(SummarizedExperiment))
 data(airway, package="airway")
-se <- airway
-se
+airway
 ```
 
 ## How to install Bioconductor packages
