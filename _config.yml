@@ -6,7 +6,6 @@ plugins:
   - jekyll-archives
   - jekyll-remote-theme
   - jekyll-include-cache
-  - jekyll-last-modified-at
 
 remote_theme: "mmistakes/minimal-mistakes"
 
