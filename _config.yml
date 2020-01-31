@@ -206,3 +206,9 @@ tag_archive:
 #   permalinks:
 #     category: /categories/:name/
 #     tag: /tags/:name/
+
+# Analytics
+analytics:
+  provider: "google" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id: UA-153287171-1
