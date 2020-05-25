@@ -142,8 +142,5 @@ A tangential opinion
 --------------------
 
 We can make many scenarios to create significantly lower
-*t*<sub>*D*</sub> than *t*<sub>*C*</sub>. But my point is that, due to
-the way this specific *t*-statistics is constructed, the cause of the
-stochastic expression changes between the control and disease samples
-must relay to the gene expression matrix itself. More sophisticated
-examinations must be done to claim a causality for the changes.
+*t*<sub>*D*</sub> compared to *t*<sub>*C*</sub>. But my point is that, due to
+the way this specific *t*-statistics is constructed, even if the association with the disease is obvious by trained eyes, the causality should not be claimed by speculations. One must look back to the gene expression matrix itself and observe it more carefully.
